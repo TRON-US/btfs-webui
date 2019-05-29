@@ -1,7 +1,6 @@
-# IPFS Web UI
+# BTFS Web UI
 
-> A web interface to [IPFS](https://ipfs.io).
->
+
 > Check on your node stats, explore the IPLD powered merkle forest, see peers around the world and manage your files, without needing to touch the CLI.
 
 ![Screenshot of the status page](docs/screenshots/ipfs-webui-status.png)
@@ -11,11 +10,8 @@
 | ![Screenshot of the file browser page](docs/screenshots/ipfs-webui-files.png) | ![Screenshot of the IPLD explorer page](docs/screenshots/ipfs-webui-explore.png) | ![Screenshot of the swarm peers map](docs/screenshots/ipfs-webui-peers.png) | ![Screenshot of the settings page](docs/screenshots/ipfs-webui-settings.png) |
 
 
-[![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg)](https://protocol.ai/) [![](https://img.shields.io/badge/freenode-%23ipfs-blue.svg)](http://webchat.freenode.net/?channels=%23ipfs) [![dependencies Status](https://david-dm.org/ipfs-shipyard/ipfs-webui/revamp/status.svg)](https://david-dm.org/ipfs-shipyard/ipfs-webui/revamp) [![CircleCI](https://img.shields.io/circleci/project/github/ipfs-shipyard/ipfs-webui/master.svg)](https://circleci.com/gh/ipfs-shipyard/ipfs-webui)
 
-The IPFS WebUI is a **work-in-progress**. Help us make it better! We use the issues on this repo to track the work and it's part of the wider [IPFS GUI project](https://github.com/ipfs/ipfs-gui).
-
-The app uses [`ipfs-http-client`](https://github.com/ipfs/js-ipfs-http-client) to communicate with your local IPFS node.
+The app uses [`ipfs-http-client`](https://github.com/ipfs/js-ipfs-http-client) to communicate with your local BTFS node.
 
 The app is built with [`create-react-app`](https://github.com/facebook/create-react-app). Please read the [docs](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#table-of-contents).
 
@@ -29,13 +25,13 @@ With `node` >= 8.12 and `npm` >= 6.4.1 installed, run
 
 ## Usage
 
-**When working on the code**, run an ipfs daemon, the local [dev server](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#npm-start), the [unit tests](https://facebook.github.io/jest/), and the [storybook](https://storybook.js.org/) component viewer and see the results of your changes as you save files.
+**When working on the code**, run a btfs daemon, the local [dev server](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#npm-start), the [unit tests](https://facebook.github.io/jest/), and the [storybook](https://storybook.js.org/) component viewer and see the results of your changes as you save files.
 
 In separate shells run the following:
 
 ```sh
-# Run IPFS
-> ipfs daemon
+# Run BTFS
+> btfs daemon
 ```
 
 ```sh
@@ -53,9 +49,9 @@ In separate shells run the following:
 > npm run storybook
 ```
 
-### Configure IPFS API CORS headers
+### Configure BTFS API CORS headers
 
-You must configure your IPFS API at http://127.0.0.1:5001  to allow [cross-origin (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests from your dev server at http://localhost:3000
+You must configure your BTFS API at http://127.0.0.1:5001  to allow [cross-origin (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests from your dev server at http://localhost:3000
 
 Similarly if you want to try out pre-release versions at https://webui.ipfs.io you need to add that as an allowed domain too.
 
@@ -70,8 +66,8 @@ Run the **[cors-config.sh](./cors-config.sh)** script with:
 #### The manual way
 
 ```console
-> ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["http://localhost:3000", "https://webui.ipfs.io"]'
-> ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "GET", "POST"]'
+> btfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["http://localhost:3000", "https://webui.ipfs.io"]'
+> btfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "GET", "POST"]'
 ```
 
 #### Reverting
@@ -79,10 +75,10 @@ Run the **[cors-config.sh](./cors-config.sh)** script with:
 To reset your config back to the default configuration, run the following command.
 
 ```console
-> ipfs config --json API.HTTPHeaders {}
+> btfs config --json API.HTTPHeaders {}
 ```
 
-You might also like to copy the `~/.ipfs/config` file somewhere with a useful name so you can use `ipfs config replace <file>` to switch your node between default and dev mode easily.
+You might also like to copy the `~/.btfs/config` file somewhere with a useful name so you can use `btfs config replace <file>` to switch your node between default and dev mode easily.
 
 ## Build
 
@@ -159,6 +155,9 @@ To inspect the built bundle for bundled modules and their size, first `build` th
 
 The translations are stored on [./public/locales](./public/locales) and the English version is the source of truth. We use Transifex to help us translate WebUI to another languages.
 
+<!---
+TODO: Do we allow contributions?
+--> 
 **If you're interested in contributing a translation**, go to [our page on Transifex](https://www.transifex.com/ipfs/ipfs-webui/translate/), create an account, pick a language and start translating.
 
 You can read more on how we use Transifex and i18next in this app at [`docs/LOCALIZATION.md`](docs/LOCALIZATION.md)
