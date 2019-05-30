@@ -1,12 +1,12 @@
 #!/bin/bash
 
-ALLOW_ORIGINS='"http://localhost:3000", "https://webui.ipfs.io"'
+ALLOW_ORIGINS='"http://localhost:3000"'
 
 # stop executing if anything fails
 set -e
 
-ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin "[$ALLOW_ORIGINS]"
-ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "GET", "POST"]'
+btfs config --json API.HTTPHeaders.Access-Control-Allow-Origin "[$ALLOW_ORIGINS]"
+btfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "GET", "POST"]'
 
-echo "IPFS API CORS headers configured for $ALLOW_ORIGINS"
-echo "Please restart your IPFS daemon"
+echo "BTFS API CORS headers configured for $ALLOW_ORIGINS"
+echo "Please restart your BTFS daemon"
