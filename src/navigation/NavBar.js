@@ -2,14 +2,13 @@ import React from 'react'
 import { connect } from 'redux-bundler-react'
 import { translate } from 'react-i18next'
 import classnames from 'classnames'
-import ipfsLogo from './ipfs-logo.svg'
-import ipfsLogoText from './ipfs-logo-text.svg'
 import StrokeMarketing from '../icons/StrokeMarketing'
 import StrokeWeb from '../icons/StrokeWeb'
 import StrokeCube from '../icons/StrokeCube'
 import StrokeSettings from '../icons/StrokeSettings'
 import StrokeIpld from '../icons/StrokeIpld'
-
+import btfsLogo from './btfs-logo.png'
+import btfsLogoText from './btfs-logo-text.png'
 // Styles
 import './NavBar.css'
 
@@ -60,8 +59,8 @@ export const NavBar = ({ t, width, open, onToggle }) => {
     <div className='h-100 fixed-l flex flex-column justify-between' style={{ width: 'inherit' }}>
       <div className='flex flex-column'>
         <div className='pointer navy pv3 pv4-l' onClick={onToggle}>
-          <img className='center' style={{ height: 70, display: open ? 'block' : 'none' }} src={ipfsLogoText} alt='IPFS' title='Toggle navbar' />
-          <img className='center' style={{ height: 70, display: open ? 'none' : 'block' }} src={ipfsLogo} alt='IPFS' title='Toggle navbar' />
+          <img className='center' style={{ height: 70, display: open ? 'block' : 'none' }} src={btfsLogoText} alt='BTFS' title='Toggle navbar' />
+          <img className='center' style={{ height: 70, display: open ? 'none' : 'block' }} src={btfsLogo} alt='BTFS' title='Toggle navbar' />
         </div>
         <nav className='db overflow-x-scroll overflow-x-hidden-l nowrap tc' role='menubar'>
           <NavLink to='/' exact icon={StrokeMarketing} open={open}>{t('status:title')}</NavLink>
