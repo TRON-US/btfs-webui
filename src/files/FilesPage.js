@@ -184,7 +184,7 @@ class FilesPage extends React.Component {
     return (
       <div data-id='FilesPage' className='mw9 center'>
         <Helmet>
-          <title>{t('title')} - IPFS</title>
+          <title>{t('title')} - BTFS</title>
         </Helmet>
 
         <ContextMenu

@@ -11,7 +11,7 @@ import AddConnection from './AddConnection/AddConnection'
 const PeersPage = ({ t }) => (
   <div data-id='PeersPage'>
     <Helmet>
-      <title>{t('title')} - IPFS</title>
+      <title>{t('title')} - BTFS</title>
     </Helmet>
 
     <div className='flex justify-end mb3'>

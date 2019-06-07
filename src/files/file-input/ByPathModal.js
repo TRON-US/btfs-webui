@@ -6,6 +6,7 @@ import Icon from '../../icons/StrokeDecentralization'
 import TextInputModal from '../../components/text-input-modal/TextInputModal'
 
 function ByPathModal ({ t, tReady, onCancel, onSubmit, className, ...props }) {
+  //TODO: This needs to be updated for isBTFS
   const validatePath = (p) => {
     if (!p.startsWith('/ipfs/')) {
       p = `/ipfs/${p}`
@@ -21,7 +22,7 @@ function ByPathModal ({ t, tReady, onCancel, onSubmit, className, ...props }) {
       <div className='mb3 flex flex-column items-center'>
         <p className='gray w-80'>{t('addByPathModal.description')}</p>
         <span className='w-80 mv2 f7 charcoal-muted'>{t('addByPathModal.examples')}</span>
-        <code className={codeClass}>/ipfs/QmZTR5bcpQD7cFgTorqxZDYaew1Wqgfbd2ud9QqGPAkK2V</code>
+        <code className={codeClass}>/btfs/QmZTR5bcpQD7cFgTorqxZDYaew1Wqgfbd2ud9QqGPAkK2V</code>
         <code className={codeClass}>QmPZ9gcCEpqKTo6aq61g2nXGUhM4iCL3ewB6LDXZCtioEB</code>
       </div>
     )

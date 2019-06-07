@@ -51,13 +51,13 @@ const ConnectionStatus = ({ t, connected, sameOrigin }) => {
           <p>Now, it's time for you to explore your node. Head to <a className='link blue' href='#/files/'>Files page</a> to manage and share your files, or explore the <a className='link blue' href='https://www.youtube.com/watch?v=Bqs_LzBjQyk'>Merkle Forest</a> of peer-hosted hash-linked data via <a className='link blue' href='#/explore'>IPLD explorer</a>.</p>
         </Trans>
         <Trans i18nKey='connected.paragraph2'>
-          <p>You can always come back to this address to change the IPFS node you're connected to.</p>
+          <p>You can always come back to this address to change the BTFS node you're connected to.</p>
         </Trans>
       </div>
     )
   }
 
-  const defaultDomains = ['http://127.0.0.1:5001', 'https://webui.ipfs.io']
+  const defaultDomains = ['http://0.0.0.0:5001']
   const origin = window.location.origin
   const addOrigin = defaultDomains.indexOf(origin) === -1
 
@@ -73,21 +73,21 @@ const ConnectionStatus = ({ t, connected, sameOrigin }) => {
             <p>Make sure you <a className='link blue' href='https://github.com/ipfs-shipyard/ipfs-webui#configure-ipfs-api-cors-headers'>configure your IPFS API</a> to allow cross-origin (CORS) requests, running the commands below:</p>
           </Trans>
           <Shell>
-            <code className='db'>$ ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '[{addOrigin && `"${origin}", `}"{defaultDomains.join('", "')}"]'</code>
-            <code className='db'>$ ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "GET", "POST"]'</code>
+            <code className='db'>$ btfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '[{addOrigin && `"${origin}", `}"{defaultDomains.join('", "')}"]'</code>
+            <code className='db'>$ btfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "GET", "POST"]'</code>
           </Shell>
         </div>
       )}
       <Trans i18nKey='notConnected.paragraph3'>
-        <p>Start an IPFS daemon in a terminal:</p>
+        <p>Start a BTFS daemon in a terminal:</p>
       </Trans>
       <Shell>
-        <code className='db'>$ ipfs daemon</code>
+        <code className='db'>$ btfs daemon</code>
         <code className='db'>Initializing daemon...</code>
         <code className='db'>API server listening on /ip4/127.0.0.1/tcp/5001</code>
       </Shell>
       <Trans i18nKey='notConnected.paragraph4'>
-        <p>For more info on how to get started with IPFS you can <a className='link blue' href='https://docs.ipfs.io/introduction/usage/'>read the guide</a>.</p>
+        <p>For more info on how to get started with BTFS you can <a className='link blue' href='https://docs.ipfs.io/introduction/usage/'>read the guide</a>.</p>
       </Trans>
     </div>
   )
