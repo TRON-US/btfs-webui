@@ -309,7 +309,7 @@ export default (opts = {}) => {
       for (const { path, hash } of res) {
         // Only go for direct children
         if (path.indexOf('/') === -1 && path !== '') {
-          const src = `/ipfs/${hash}`
+          const src = `/btfs/${hash}`
           const dst = join(root, path)
 
           try {
@@ -332,7 +332,7 @@ export default (opts = {}) => {
     doFilesAddPath: make(actions.ADD_BY_PATH, (ipfs, root, src) => {
       const name = src.split('/').pop()
       const dst = join(root, name)
-      const srcPath = src.startsWith('/') ? src : `/ipfs/${name}`
+      const srcPath = src.startsWith('/') ? src : `/btfs/${name}`
       return ipfs.files.cp([srcPath, dst])
     }),
 

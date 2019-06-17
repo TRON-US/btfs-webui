@@ -30,7 +30,7 @@ class FilesPreview extends React.Component {
     const { t, name, size, hash, gatewayUrl } = this.props
 
     const type = typeFromExt(name)
-    const src = `${gatewayUrl}/ipfs/${hash}`
+    const src = `${gatewayUrl}/btfs/${hash}`
     const className = 'mw-100 mt3 bg-snow-muted pa2 br2'
 
     switch (type) {

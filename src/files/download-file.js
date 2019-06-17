@@ -1,3 +1,4 @@
+
 export default (srcUrl, filename, progressCallback) => {
   let xhr = new window.XMLHttpRequest()
   let total = 0

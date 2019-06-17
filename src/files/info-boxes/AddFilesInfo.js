@@ -7,7 +7,7 @@ const AddFilesInfo = () => (
   <div className='mv4 tc navy f5' >
     <Box style={{ background: 'rgba(105, 196, 205, 0.1)' }}>
       <Trans i18nKey='addFilesInfo'>
-        <p className='ma0'>Add files to your local IPFS node by clicking the <strong>Add to IPFS</strong> button above.</p>
+        <p className='ma0'>Add files to your local BTFS node by clicking the <strong>Add to BTFS</strong> button above.</p>
       </Trans>
     </Box>
   </div>

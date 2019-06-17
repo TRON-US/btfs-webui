@@ -25,7 +25,7 @@ With `node` >= 8.12 and `npm` >= 6.4.1 installed, run
 
 ## Usage
 
-**When working on the code**, run a btfs daemon, the local [dev server](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#npm-start), the [unit tests](https://facebook.github.io/jest/), and the [storybook](https://storybook.js.org/) component viewer and see the results of your changes as you save files.
+**When working on the code**, run a btfs daemon, the local [dev server](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#npm-start), the [unit tests](https://facebook.github.io/jest/), and the [storybook](https://storybook.js.org/) component viewer and see the results of your changes as you save files. For **debugging** follow this [post](https://hackernoon.com/debugging-react-like-a-champ-with-vscode-66281760037)
 
 In separate shells run the following:
 
@@ -51,7 +51,7 @@ In separate shells run the following:
 
 ### Configure BTFS API CORS headers
 
-You must configure your BTFS API at http://127.0.0.1:5001  to allow [cross-origin (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests from your dev server at http://localhost:3000
+You must configure your BTFS API at http://0.0.0.0:5001  to allow [cross-origin (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests from your dev server at http://localhost:3000
 
 Similarly if you want to try out pre-release versions at https://webui.ipfs.io you need to add that as an allowed domain too.
 
@@ -66,7 +66,7 @@ Run the **[cors-config.sh](./cors-config.sh)** script with:
 #### The manual way
 
 ```console
-> btfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["http://localhost:3000", "https://webui.ipfs.io"]'
+> btfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["http://localhost:3000"]'
 > btfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "GET", "POST"]'
 ```
 
@@ -117,14 +117,6 @@ By default the test run headless, so you won't see the the browser. To debug tes
 > DEBUG=true npm run test:e2e
 ```
 
-In a **continuous integration** environment we lint the code, run the unit tests, build the app, start an http server and run the unit e2e tests.
-
-```sh
-> npm run lint
-> npm test
-> npm run build
-> npm run test:ci:e2e
-```
 
 ## Coverage
 
@@ -158,29 +150,12 @@ The translations are stored on [./public/locales](./public/locales) and the Engl
 <!---
 TODO: Do we allow contributions?
 --> 
-**If you're interested in contributing a translation**, go to [our page on Transifex](https://www.transifex.com/ipfs/ipfs-webui/translate/), create an account, pick a language and start translating.
-
-You can read more on how we use Transifex and i18next in this app at [`docs/LOCALIZATION.md`](docs/LOCALIZATION.md)
-
 ## Releasing a new version of the WebUI.
-
-1. PR master with the result of `tx pull -a` to pull the latest translations from transifex
-1. Tag it `npm version`, `git push`, `git push --tags`.
-1. Add release notes to https://github.com/ipfs-shipyard/ipfs-webui/releases
-1. Wait for master to [build on CI](https://circleci.com/gh/ipfs-shipyard/ipfs-webui), and grab the CID for the build
+1. retrieve files from build folder
+1. Add to bootstrap nodes
 1. Update the hash at:
-   - js-ipfs https://github.com/ipfs/js-ipfs/blob/master/src/http/api/routes/webui.js#L20
-   - go-ipfs https://github.com/ipfs/go-ipfs/blob/master/core/corehttp/webui.go#L4
-   - companion https://github.com/ipfs-shipyard/ipfs-companion/blob/master/add-on/src/lib/state.js#L27
-   - desktop https://github.com/ipfs-shipyard/ipfs-desktop/blob/master/package.json#L17
+   - go-btfs https://github.com/TRON-US/go-btfs/blob/master/core/corehttp/webui.go
 
-## Contribute
-
-Feel free to dive in! [Open an issue](https://github.com/ipfs-shipyard/ipfs-webui/issues/new) or submit PRs.
-
-To contribute to IPFS in general, see the [contributing guide](https://github.com/ipfs/community/blob/master/CONTRIBUTING.md).
-
-[![](https://cdn.rawgit.com/jbenet/contribute-ipfs-gif/master/img/contribute.gif)](https://github.com/ipfs/community/blob/master/CONTRIBUTING.md)
 
 
 ## License
