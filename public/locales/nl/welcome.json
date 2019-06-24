@@ -1,31 +1,30 @@
 {
-  "title": "Welkom bij IPFS",
+  "title": "Welkom bij BTFS",
   "configureApiPort": {
     "header": "Is je API poort anders dan 5001?",
-    "paragraph1": "<0>Als je IPFS node geconfigureerd is met een <1>gepersponalseerd API adres</1>, stel het dan hier in.</0>"
+    "paragraph1": "<0>Als je BTFS node geconfigureerd is met een <1>gepersponalseerd API adres</1>, stel het dan hier in.</0>"
   },
   "apiAddressForm": {
     "apiLabel": "API ADRES",
     "submitButton": "Verzend"
   },
   "connected": {
-    "header": "Verbind met IPFS",
-    "paragraph1": "<0>Verken nu je IPFS node. Ga naar de <1>bestanden pagina</1> om je gedeelde bestanden, het <3>Merkle forest</3>of gedeelde hash-gelinkte data via de <5>IPLD verkenner</5>te verkennen en beheren.</0>",
-    "paragraph2": "<0>Via dit adres kan je steeds de de IPFS node wijzigen waarmee je verbindt.</0>"
+    "header": "Verbind met BTFS",
+    "paragraph1": "<0>Verken nu je BTFS node. Ga naar de <1>bestanden pagina</1> om je gedeelde bestanden, het <3>Merkle forest</3>of gedeelde hash-gelinkte data via de <5>IPLD verkenner</5>te verkennen en beheren.</0>",
+    "paragraph2": "<0>Via dit adres kan je steeds de de BTFS node wijzigen waarmee je verbindt.</0>"
   },
   "notConnected": {
-    "header": "Draait je IPFS daemon?",
+    "header": "Draait je BTFS daemon?",
     "paragraph1": "<0>Verbinden het de API mislukt.</0>",
-    "paragraoh2": "<0>Configureer zeker je <1>IPFS API</1>om cross-origin (CORS) aanvragen toe te staan. Dit kan met volgende commando's:</0>",
-    "paragraph3": "<0>Start een IPFS daemon in een terminal:</0>",
-    "paragraph4": "<0>Lees <1>de handleiding</1> om te starten met IPFS.</0> "
+    "paragraoh2": "<0>Configureer zeker je <1>BTFS API</1>om cross-origin (CORS) aanvragen toe te staan. Dit kan met volgende commando's:</0>",
+    "paragraph3": "<0>Start een BTFS daemon in een terminal:</0>",
+    "paragraph4": "<0>Lees <1>de handleiding</1> om te starten met BTFS.</0> "
   },
   "aboutIpfs": {
-    "header": "Wat is IPFS?",
-    "paragraph1": "<0><0>IPFS is een protocol</0> dat een inhoud-geadresseerd file systeem definieert, het ophalen coördineer en ideeën van onder andere Kademlia, BitTorrent en Git combineert.</0>",
-    "paragraph2": "<0><0>IPFS is een bestandssysteem.</0> Het heeft bestanden en mappen en een mountbaar bestandssysteem door gebruik te maken van FUSE.</0>",
-    "paragraph3": "<0><0>IPFS is een web.</0> Bestanden zijn toegankelijk via HTTP gateways zoals <2>https://ipfs.io</2>. Browsers <4>kunnen uitgebreid worden</4> om rechtstreeks gebruik te maken van het <6>ipfs://</6> schema en hash-geadresseerde inhoud verzekerd de authenticiteit van de data</0>",
-    "paragraph4": "<0><0>IPFS is p2p.</0> Het ondersteund wereldwijde peer-to-peer overdracht van bestanden met een volledig gedecentraliseerde architectuur, zonder centrale zwakke punten.</0>",
-    "paragraph5": "<0><0>IPFS is een CDN.</0> Voeg bestanden toe aan je lokale repository en ze zijn wereldwijd beschikbaar met cache-vriendelijke inhoud-hash adressering en bandbreedteverdeling gelijk aan BitTorrent.</0>"
+    "header": "Wat is BTFS?",
+    "paragraph1": "<0><0>BTFS is een protocol</0> dat een inhoud-geadresseerd file systeem definieert, het ophalen coördineer en ideeën van onder andere Kademlia, BitTorrent en Git combineert.</0>",
+    "paragraph2": "<0><0>BTFS is een bestandssysteem.</0> Het heeft bestanden en mappen en een mountbaar bestandssysteem door gebruik te maken van FUSE.</0>",
+    "paragraph4": "<0><0>BTFS is p2p.</0> Het ondersteund wereldwijde peer-to-peer overdracht van bestanden met een volledig gedecentraliseerde architectuur, zonder centrale zwakke punten.</0>",
+    "paragraph5": "<0><0>BTFS is een CDN.</0> Voeg bestanden toe aan je lokale repository en ze zijn wereldwijd beschikbaar met cache-vriendelijke inhoud-hash adressering en bandbreedteverdeling gelijk aan BitTorrent.</0>"
   }
 }

@@ -8,7 +8,7 @@
   "StartExploringPage": {
     "title": "Explore - IPLD",
     "header": "Explore the Merkle Forest",
-    "leadParagraph": "Paste a CID into the box to fetch the IPLD node it addresses, or choose a featured dataset."
+    "leadParagraph": "Paste a CID into the box to fetch the IPLD node it addresses."
   },
   "AboutIpld": {
     "paragraph1":"<0>IPLD is <1>the data model of the content-addressable web.</1> It allows us to treat all hash-linked data structures as subsets of a unified information space, unifying all data models that link data with hashes as instances of IPLD.</0>",

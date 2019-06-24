@@ -25,7 +25,7 @@ const WelcomeInfo = ({ t }) => (
           <p className='mb4 f5'><a href='#/settings' className='link blue b'>Review the settings</a> for your IPFS node, and update them to better suit your needs.</p>
         </Trans>
         <Trans i18nKey='welcomeInfo.paragraph6'>
-          <p className='mb0 f5'>If you want to help push the Web UI forward, <a href='https://github.com/ipfs-shipyard/ipfs-webui' className='link blue'>check out its code</a> or <a href='https://github.com/ipfs-shipyard/ipfs-webui/issues' className='link blue'>report a bug</a>!</p>
+          <p className='mb0 f5'>If you want to help push the Web UI forward, <a href='https://github.com/TRON-US/btfs-webui' className='link blue'>check out its code</a> or <a href='https://github.com/TRON-US/btfs-webui/issues' className='link blue'>report a bug</a>!</p>
         </Trans>
       </Box>
     </div>

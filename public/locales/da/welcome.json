@@ -1,31 +1,30 @@
 {
-  "title": "Velkommen til IPFS",
+  "title": "Velkommen til BTFS",
   "configureApiPort": {
     "header": "Er dit API sat til anden port end 5001?",
-    "paragraph1": "<0>Hvis din IPFS klient er opsat med en <1>valgfri API adresse</1>, så sæt den venligst her</0>"
+    "paragraph1": "<0>Hvis din BTFS klient er opsat med en <1>valgfri API adresse</1>, så sæt den venligst her</0>"
   },
   "apiAddressForm": {
     "apiLabel": "API ADRESSE",
     "submitButton": "Benyt"
   },
   "connected": {
-    "header": "Forbundet til IPFS",
+    "header": "Forbundet til BTFS",
     "paragraph1": "<0>Nu er det tid til at udforske din klient. Besøg <1>Fil siden</1> for at håndtere og dele filer, eller udforsk <3>Merkle-skoven</3> af klient-delt hash-linket data via <5>IPLD udforskeren</5>.",
-    "paragraph2": "<0>Du kan altid vende tilbage til denne adresse ved at ændre hvilken IPFS klient du er forbundet til.</0>"
+    "paragraph2": "<0>Du kan altid vende tilbage til denne adresse ved at ændre hvilken BTFS klient du er forbundet til.</0>"
   },
   "notConnected": {
-    "header": "Kører din IPFS baggrunds-process?",
+    "header": "Kører din BTFS baggrunds-process?",
     "paragraph1": "<0>Mislykkedes med at forbinde til API'et.</0>",
-    "paragraoh2": "<0>Sørg for at du <1>konfigurerer dit IPFS API</1> til at tillade cross-origin (CORS) forespørgsler, som afvikler kommandoerne nedenfor:</0>",
-    "paragraph3": "<0>Kør en IPFS-baggrundsprocess fra en terminal:</0>",
-    "paragraph4": "<0>For mere info om at komme i gang med IPFS, kan du <1>læse guiden</1>.</0>"
+    "paragraoh2": "<0>Sørg for at du <1>konfigurerer dit BTFS API</1> til at tillade cross-origin (CORS) forespørgsler, som afvikler kommandoerne nedenfor:</0>",
+    "paragraph3": "<0>Kør en BTFS-baggrundsprocess fra en terminal:</0>",
+    "paragraph4": "<0>For mere info om at komme i gang med BTFS, kan du <1>læse guiden</1>.</0>"
   },
   "aboutIpfs": {
-    "header": "Hvad er IPFS?",
-    "paragraph1": "<0><0>IPFS er en protokol</0> som definerer et indholds-adresseret filsystem, koordinerer indholdslevering og kombinerer idéerne fra Kademlia, Bitorrent, Git mm.</0>",
-    "paragraph2": "<0><0>IPFS er et filsystem.</0> Det har biblioteker og filer og et monterbart filsystem ved hjælp af FUSE.</0>",
-    "paragraph3": "<0><0>IPFS er et net.</0> Filer er tilgængelige via HTTP gateways som f.eks. <2>https://ipfs.io</2>. Browsere <4>kan udvides</4> til at benytte <6>ipfs://</6> adresserings-ordningen direkte, og hash-adresseret indhold garantere ægthed</0>",
-    "paragraph4": "<0><0>IPFS er P2P.</0> Det understøtter verdensomspændende klient-til-klient overførsler med en decentral arkitektur og uden central single point of failure.</0>",
-    "paragraph5": "<0><0>IPFS er et CDN.</0> Tilføj en fil til dit lokale fil-bibliotek, og det er nu tilgængelig for verden med cache-hukommelsesvenlig indholdsbaseret hash-adressering og bittorrent-lignende båndbredde distribution.</0>"
+    "header": "Hvad er BTFS?",
+    "paragraph1": "<0><0>BTFS er en protokol</0> som definerer et indholds-adresseret filsystem, koordinerer indholdslevering og kombinerer idéerne fra Kademlia, Bitorrent, Git mm.</0>",
+    "paragraph2": "<0><0>BTFS er et filsystem.</0> Det har biblioteker og filer og et monterbart filsystem ved hjælp af FUSE.</0>",
+    "paragraph4": "<0><0>BTFS er P2P.</0> Det understøtter verdensomspændende klient-til-klient overførsler med en decentral arkitektur og uden central single point of failure.</0>",
+    "paragraph5": "<0><0>BTFS er et CDN.</0> Tilføj en fil til dit lokale fil-bibliotek, og det er nu tilgængelig for verden med cache-hukommelsesvenlig indholdsbaseret hash-adressering og bittorrent-lignende båndbredde distribution.</0>"
   }
 }
