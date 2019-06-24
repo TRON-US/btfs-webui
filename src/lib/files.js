@@ -93,5 +93,5 @@ export async function getShareableLink (files, ipfs) {
     hash = await makeHashFromFiles(files, ipfs)
   }
 
-  return `https://ipfs.io/ipfs/${hash}`
+  return `https://btfs.trongrid.io/btfs/${hash}`
 }

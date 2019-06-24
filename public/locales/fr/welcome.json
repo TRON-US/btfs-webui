@@ -24,7 +24,6 @@
     "header": "Qu'est-ce que IPFS ?",
     "paragraph1": "<0><0>IPFS est un protocole</0>qui définit un système de fichiers adressable par le contenu, coordonne la réception du contenu en combinant plusieurs idées comme Kadamélia, BitTorrent, Git et bien plus.</0>",
     "paragraph2": "<0><0>IPFS est un système de fichiers.</0>Il y a des répertoires et des fichiers montables sur votre système de fichiers via à FUSE.</0>",
-    "paragraph3": "<0><0>IPFS est un réseaux.</0> Les fichiers sont accessibles via des passerelles comme <2>https://ipfs.io</2>. Les navigateurs <4>peuvent être équipés d'extension</4> pour utiliser le format <6>ipfs://</6> directement, et adresser des signatures pour garantir l'authenticité du contenu.</0>",
     "paragraph4": "<0><0>IPFS est réseaux p2p.</0> Il prend en charge les transferts de fichiers peer-to-peer dans le monde entier avec une architecture complètement décentralisée et sans point de défaillance central.</0>",
     "paragraph5": "<0><0>IPFS est CDN.</0> Ajoutez un fichier à votre référentiel local. Il est désormais disponible dans le monde entier avec un adressage par hachage de contenu convivial pour le cache et une distribution de bande passante de type BitTorrent.</0>"
   }

@@ -24,7 +24,6 @@
     "header": "Hvad er IPFS?",
     "paragraph1": "<0><0>IPFS er en protokol</0> som definerer et indholds-adresseret filsystem, koordinerer indholdslevering og kombinerer idéerne fra Kademlia, Bitorrent, Git mm.</0>",
     "paragraph2": "<0><0>IPFS er et filsystem.</0> Det har biblioteker og filer og et monterbart filsystem ved hjælp af FUSE.</0>",
-    "paragraph3": "<0><0>IPFS er et net.</0> Filer er tilgængelige via HTTP gateways som f.eks. <2>https://ipfs.io</2>. Browsere <4>kan udvides</4> til at benytte <6>ipfs://</6> adresserings-ordningen direkte, og hash-adresseret indhold garantere ægthed</0>",
     "paragraph4": "<0><0>IPFS er P2P.</0> Det understøtter verdensomspændende klient-til-klient overførsler med en decentral arkitektur og uden central single point of failure.</0>",
     "paragraph5": "<0><0>IPFS er et CDN.</0> Tilføj en fil til dit lokale fil-bibliotek, og det er nu tilgængelig for verden med cache-hukommelsesvenlig indholdsbaseret hash-adressering og bittorrent-lignende båndbredde distribution.</0>"
   }

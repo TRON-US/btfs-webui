@@ -12,9 +12,6 @@ export const AboutIpfs = ({ t }) => {
       <Trans i18nKey='aboutIpfs.paragraph2'>
         <p><strong>BTFS is a filesystem.</strong> It has directories and files and mountable filesystem via FUSE.</p>
       </Trans>
-      <Trans i18nKey='aboutIpfs.paragraph3'>
-        <p><strong>BTFS is a web.</strong> iles are accessible via HTTP gateways like <code className='f7'>https://ipfs.io</code>. Browsers <a className='link blue' target='_blank' rel='noopener noreferrer' href='https://github.com/ipfs-shipyard/ipfs-companion#release-channel'>can be extended</a> to use the <code className='f7'>ipfs://</code> scheme directly, and hash-addressed content guarantees authenticity</p>
-      </Trans>
       <Trans i18nKey='aboutIpfs.paragraph4'>
         <p><strong>BTFS is p2p.</strong> It supports worldwide peer-to-peer file transfers with a completely decentralized architecture and no central point of failure.</p>
       </Trans>

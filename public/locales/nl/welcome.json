@@ -24,7 +24,6 @@
     "header": "Wat is IPFS?",
     "paragraph1": "<0><0>IPFS is een protocol</0> dat een inhoud-geadresseerd file systeem definieert, het ophalen coördineer en ideeën van onder andere Kademlia, BitTorrent en Git combineert.</0>",
     "paragraph2": "<0><0>IPFS is een bestandssysteem.</0> Het heeft bestanden en mappen en een mountbaar bestandssysteem door gebruik te maken van FUSE.</0>",
-    "paragraph3": "<0><0>IPFS is een web.</0> Bestanden zijn toegankelijk via HTTP gateways zoals <2>https://ipfs.io</2>. Browsers <4>kunnen uitgebreid worden</4> om rechtstreeks gebruik te maken van het <6>ipfs://</6> schema en hash-geadresseerde inhoud verzekerd de authenticiteit van de data</0>",
     "paragraph4": "<0><0>IPFS is p2p.</0> Het ondersteund wereldwijde peer-to-peer overdracht van bestanden met een volledig gedecentraliseerde architectuur, zonder centrale zwakke punten.</0>",
     "paragraph5": "<0><0>IPFS is een CDN.</0> Voeg bestanden toe aan je lokale repository en ze zijn wereldwijd beschikbaar met cache-vriendelijke inhoud-hash adressering en bandbreedteverdeling gelijk aan BitTorrent.</0>"
   }

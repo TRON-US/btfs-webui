@@ -8,7 +8,7 @@ import Tick from '../icons/GlyphSmallTick'
 import Box from '../components/box/Box'
 import Button from '../components/button/Button'
 import LanguageSelector from '../components/language-selector/LanguageSelector'
-import AnalyticsToggle from '../components/analytics-toggle/AnalyticsToggle'
+// import AnalyticsToggle from '../components/analytics-toggle/AnalyticsToggle'
 import JsonEditor from './editor/JsonEditor'
 import DesktopSettings from './DesktopSettings'
 import Title from './Title'
@@ -23,7 +23,7 @@ export const SettingsPage = ({
 }) => (
   <div data-id='SettingsPage' className='mw9 center'>
     <Helmet>
-      <title>{t('title')} - IPFS</title>
+      <title>{t('title')} - BTFS</title>
     </Helmet>
 
     { isIpfsDesktop &&
@@ -34,10 +34,6 @@ export const SettingsPage = ({
       <Title>{t('language')}</Title>
       <LanguageSelector t={t} />
 
-      <div className='pt4'>
-        <Title>{t('analytics')}</Title>
-        <AnalyticsToggle t={t} />
-      </div>
     </Box>
 
     <Box>
