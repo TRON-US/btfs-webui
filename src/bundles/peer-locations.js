@@ -1,8 +1,9 @@
 import { createSelector } from 'redux-bundler'
 import { getConfiguredCache } from 'money-clip'
-import geoip from 'ipfs-geoip'
 import Multiaddr from 'multiaddr'
 import ms from 'milliseconds'
+
+const axios = require('axios');
 
 // Depends on ipfsBundle, peersBundle
 export default function (opts) {
@@ -16,7 +17,7 @@ export default function (opts) {
     // Peer locations keyed by peer ID then peer address.
     // i.e. { [peerId]: { [multiaddr]: { state, data?, error? } } }
     // `state` can be queued, resolving, resolved or failed
-    // `data` is the resolved location data (see ipfs-geoip docs)
+    // `data` is the resolved location data
     // `error` is only present if state is 'failed'
     locations: {},
     // Peer IDs in the queue for resolving ONE of their queued addresses.
@@ -189,8 +190,6 @@ export default function (opts) {
         return
       }
 
-      const ipfs = getIpfs()
-
       try {
         const ipv4Tuple = Multiaddr(addr).stringTuples().find(isNonHomeIPv4)
 
@@ -198,10 +197,18 @@ export default function (opts) {
           throw new Error(`Unable to resolve location for non-IPv4 address ${addr}`)
         }
 
-        location = await new Promise((resolve, reject) => {
-          geoip.lookup(ipfs, ipv4Tuple[1], (err, data) => {
-            if (err) return reject(err)
-            resolve(data)
+        var url = "https://ipapi.co/"
+        var query = url.concat(ipv4Tuple[1], "/json/")
+        var data = {}
+        data = await new Promise((resolve, reject) => {
+          axios.get(query)
+          .then(function (response) {
+             console.log(response);
+             resolve(response.data)
+           })
+           .catch(function (error) {
+             console.log(error);
+             reject(error)
           })
         })
       } catch (err) {
@@ -210,6 +217,11 @@ export default function (opts) {
           payload: { peerId, addr, error: err }
         })
       }
+
+      location = {}
+      location['country_code'] = ('country' in data) ? data['country'] : ''
+      location['country_name'] = ('country_name' in data) ? data['country_name'] : ''
+      location['city'] = ('city' in data) ? data['city'] : ''
 
       cache.set(peerId, location)
 
