@@ -53,8 +53,6 @@ In separate shells run the following:
 
 You must configure your BTFS API at http://0.0.0.0:5001  to allow [cross-origin (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests from your dev server at http://localhost:3000
 
-Similarly if you want to try out pre-release versions at https://webui.ipfs.io you need to add that as an allowed domain too.
-
 #### Easy mode
 
 Run the **[cors-config.sh](./cors-config.sh)** script with:
