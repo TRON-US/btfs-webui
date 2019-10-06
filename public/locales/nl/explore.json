@@ -21,7 +21,7 @@
     "hashDigest": "Hash digest"
   },
   "ObjectInfo": {
-    "gatewayLink": "Bekijk via de IPFS Gateway"
+    "gatewayLink": "Bekijk via de BTFS Gateway"
   },
   "base": "basis",
   "version": "versie",
