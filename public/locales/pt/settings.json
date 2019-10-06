@@ -4,7 +4,7 @@
   "saving": "A guardar...",
   "reset": "Começar de novo",
   "language": "Linguagem",
-  "config": "Configuração do IPFS",
+  "config": "Configuração do BTFS",
   "analytics": "Analíticas",
   "languageModal": {
     "title": "Alterar a Linguagem",
@@ -15,16 +15,16 @@
     "close": "Fechar"
   },
   "fetchingSettings": "A obter as configurações...",
-  "configApiNotAvailable": "A API de configuração do IPFS não está disponível. Por favor desative a extensão \"IPFS Companion\" e tente novamente.",
-  "ipfsDaemonOffline": "O nó IPFS está offline. Por favor ative-o e tente novamente,",
-  "settingsUnavailable": "As configurações não estão disponíveis. Confira, por favor, se o seu nó IPFS está em execução.",
+  "configApiNotAvailable": "A API de configuração do BTFS não está disponível. Por favor desative a extensão \"BTFS Companion\" e tente novamente.",
+  "ipfsDaemonOffline": "O nó BTFS está offline. Por favor ative-o e tente novamente,",
+  "settingsUnavailable": "As configurações não estão disponíveis. Confira, por favor, se o seu nó BTFS está em execução.",
   "settingsHaveChanged": "As configurações foram alteradas, por favor clique em <1>Começar de novo</1> para atualizar os conteúdos do editor.",
   "errorOccured": "Ocorreu um erro enquanto guardávamos as configurações.",
   "checkConsole": "Confira a consola de desenvolvedor do seu navegador para mais informações.",
   "changesSaved": "As suas alterações foram guardadas",
-  "settingsWillBeUsedNextTime": "As novas configurações irão ser utilizadas da próxima vez que reiniciar o seu nó IPFS.",
-  "ipfsConfigDescription": "A configuração do IPFS é um documento json. Apenas é lida quando o nó IPFS é iniciado. Guarde as suas alterações e, de seguida, reinicie o nó IPFS para que estas entrem em efeito.",
-  "ipfsDesktop": "IPFS Desktop",
+  "settingsWillBeUsedNextTime": "As novas configurações irão ser utilizadas da próxima vez que reiniciar o seu nó BTFS.",
+  "ipfsConfigDescription": "A configuração do BTFS é um documento json. Apenas é lida quando o nó BTFS é iniciado. Guarde as suas alterações e, de seguida, reinicie o nó BTFS para que estas entrem em efeito.",
+  "ipfsDesktop": "BTFS Desktop",
   "launchOnStartup": "Iniciar com o arranque",
   "autoAddScreenshots": "Adicionar capturas de ecrã automaticamente",
   "autoAddScreenshotsDescription": "Utilize <0>{ctrlKey}</0>+<2>{altKey}</2>+<3>S</3> para tirar uma captura de ecrã e adicioná-la ao seu repositório.",
@@ -35,7 +35,7 @@
     "summary": "Configure o que é recolhido",
     "paragraph1": "Não são recolhidos CIDs (identificadores de conteúdos), nomes de ficheiros ou outras informações pessoais. Queremos que as métricas nos mostrem que funcionalidades são úteis para nos ajudar a saber a que devemos dar prioridade no desenvolvimento, assim como informações da configuração do sistema para nos ajudar nos testes do software.",
     "paragraph2": "O Protocol Labs aloja uma instância de <1>Contar</1> (Countly) para  registar a utilização de forma anónima desta aplicação.",
-    "basicInfo": "A seguinte informação adicional é enviada para countly.ipfs.io",
+    "basicInfo": "A seguinte informação adicional é enviada para",
     "optionalInfo": "Pode aceitar para enviar a seguinte informação:",
     "sessions": {
       "label": "Sessões",
@@ -63,6 +63,6 @@
       "details": "Grava mensagens de erro JavaScript e rastreamentos de pilha (stack traces) que ocorrem ao utilizar a aplicação, quando possível. É muito útil para saber onde a aplicação não está a funcionar, mas as <1>mensagens de erro podem conter informação pessoal</1>, como CIDs (identificadores de conteúdo) e caminhos de ficheiros, por isso ative esta opção apenas se estiver confortável em partilhar essa informação connosco."
     }
   },
-  "ipfsCmdTools": "Ferramentas de linha de comandos IPFS",
-  "ipfsCmdToolsDescription": "Adicione o binário <0>ipfs</0> ao <0>PATH</0> do seu sistema para que o possa usar na sua linha de comandos."
+  "ipfsCmdTools": "Ferramentas de linha de comandos BTFS",
+  "ipfsCmdToolsDescription": "Adicione o binário <0>btfs</0> ao <0>PATH</0> do seu sistema para que o possa usar na sua linha de comandos."
 }
