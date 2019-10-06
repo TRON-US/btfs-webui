@@ -21,7 +21,7 @@
     "hashDigest": "wynik funkcji haszującej"
   },
   "ObjectInfo": {
-    "gatewayLink": "Wyświetl przy użyciu bramy IPFS"
+    "gatewayLink": "Wyświetl przy użyciu bramy BTFS"
   },
   "base": "baza",
   "version": "wersja",
