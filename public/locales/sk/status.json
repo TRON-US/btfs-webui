@@ -29,14 +29,14 @@
   "bugsLink": "Nahláste chybu",
   "revision": "Revízia",
   "StatusConnected": {
-    "header1": "Pripojené k IPFS",
+    "header1": "Pripojené k BTFS",
     "paragraph1": "Hostuje <0>{repoSize} súborov</0>",
     "paragraph2": "{count, plural, one {Objavený <0>1 uzol</0>} few {Objavených <0>{peersCount} uzlov</0>} many {Objavených <0>{peersCount} </0>uzlov} other {Objavených <0>{peersCount} uzlov</0>}}"
   },
   "StatusNotConnected": {
     "header1": "Pripojenie k API zlyhalo",
-    "paragraph1": "<0>Spustite IPFS službu v terminále:</0>",
-    "paragraph2": "<0>Pre viac informácií ako začať s IPFS si môžete <1>prečítať príručku</1>.</0>"
+    "paragraph1": "<0>Spustite BTFS službu v terminále:</0>",
+    "paragraph2": "<0>Pre viac informácií ako začať s BTFS si môžete <1>prečítať príručku</1>.</0>"
   },
   "AskToEnable": {
     "label": "Help improve this app by sending anonymous usage data.",
@@ -45,5 +45,5 @@
     "detailsLabel": "More info"
   },
   "bandwidthStats": "Bandwidth Stats",
-  "bandwidthStatsDisabled": "You have the bandwidth metrics disabled. You can enable them by typing the command bellow or changing the key <1>Swarm.DisableBandwidthMetrics</1> to <3>false</3> on <5>Settings</5>. Then, you need to restart the IPFS daemon to apply the changes."
+  "bandwidthStatsDisabled": "You have the bandwidth metrics disabled. You can enable them by typing the command bellow or changing the key <1>Swarm.DisableBandwidthMetrics</1> to <3>false</3> on <5>Settings</5>. Then, you need to restart the BTFS daemon to apply the changes."
 }
