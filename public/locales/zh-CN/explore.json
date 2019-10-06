@@ -21,7 +21,7 @@
     "hashDigest": "Hash digest"
   },
   "ObjectInfo": {
-    "gatewayLink": "在IPFS网关上查看"
+    "gatewayLink": "在BTFS网关上查看"
   },
   "base": "base",
   "version": "version",
