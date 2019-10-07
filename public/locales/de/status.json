@@ -29,14 +29,14 @@
   "bugsLink": "Fehler melden",
   "revision": "Revision",
   "StatusConnected": {
-    "header1": "Mit dem IPFS verbunden",
+    "header1": "Mit dem BTFS verbunden",
     "paragraph1": "<0>{repoSize} an Dateien</0> gehostet",
     "paragraph2": "{count, plural, one {Discovered <0>1 peer</0>} other {<0>{peersCount} Peers</0> entdeckt}}"
   },
   "StatusNotConnected": {
     "header1": "Die API-Verbindung ist fehlgeschlagen",
-    "paragraph1": "<0>Starte einen IPFS-Daemon in einem Terminal.</0>",
-    "paragraph2": "<0><1>Lies die Anleitung</1> für mehr Informationen über das IPFS.</0>"
+    "paragraph1": "<0>Starte einen BTFS-Daemon in einem Terminal.</0>",
+    "paragraph2": "<0><1>Lies die Anleitung</1> für mehr Informationen über das BTFS.</0>"
   },
   "AskToEnable": {
     "label": "Help improve this app by sending anonymous usage data.",
@@ -45,5 +45,5 @@
     "detailsLabel": "More info"
   },
   "bandwidthStats": "Bandwidth Stats",
-  "bandwidthStatsDisabled": "You have the bandwidth metrics disabled. You can enable them by typing the command bellow or changing the key <1>Swarm.DisableBandwidthMetrics</1> to <3>false</3> on <5>Settings</5>. Then, you need to restart the IPFS daemon to apply the changes."
+  "bandwidthStatsDisabled": "You have the bandwidth metrics disabled. You can enable them by typing the command bellow or changing the key <1>Swarm.DisableBandwidthMetrics</1> to <3>false</3> on <5>Settings</5>. Then, you need to restart the BTFS daemon to apply the changes."
 }
