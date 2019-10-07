@@ -29,14 +29,14 @@
   "bugsLink": "Signaler un bug",
   "revision": "Révision",
   "StatusConnected": {
-    "header1": "Connecté à IPFS",
+    "header1": "Connecté à BTFS",
     "paragraph1": "Hébergement de <0>{repoSize} fichiers</0>",
     "paragraph2": "{count, plural, one {<0>1 pair</0> découvert} other {<0>{peersCount} pairs</0> découverts}}"
   },
   "StatusNotConnected": {
     "header1": "Échec de connexion à l'API",
-    "paragraph1": "<0>Démarrer un démon IPFS dans un terminal:</0>",
-    "paragraph2": "<0>Pour plus d'informations sur comment démarré avec IPFS vous pouvez <1> lire le manuel</1>.</0>"
+    "paragraph1": "<0>Démarrer un démon BTFS dans un terminal:</0>",
+    "paragraph2": "<0>Pour plus d'informations sur comment démarré avec BTFS vous pouvez <1> lire le manuel</1>.</0>"
   },
   "AskToEnable": {
     "label": "Aidez à améliorer cette application en envoyant des données d'utilisation anonymes.",
