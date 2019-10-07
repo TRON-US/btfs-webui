@@ -70,7 +70,7 @@ const ConnectionStatus = ({ t, connected, sameOrigin }) => {
       { !sameOrigin && (
         <div>
           <Trans i18nKey='notConnected.paragraph2'>
-            <p>Make sure you <a className='link blue' href='https://github.com/ipfs-shipyard/ipfs-webui#configure-ipfs-api-cors-headers'>configure your IPFS API</a> to allow cross-origin (CORS) requests, running the commands below:</p>
+            <p>Make sure you configure your BTFS API to allow cross-origin (CORS) requests, running the commands below:</p>
           </Trans>
           <Shell>
             <code className='db'>$ btfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '[{addOrigin && `"${origin}", `}"{defaultDomains.join('", "')}"]'</code>
