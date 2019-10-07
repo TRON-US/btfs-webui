@@ -1,4 +1,4 @@
-# IPFS Translation Project  🌐✍️🖖
+# BTFS Translation Project  🌐✍️🖖
 
 Thank you for caring about localization! You are a good person.
 
