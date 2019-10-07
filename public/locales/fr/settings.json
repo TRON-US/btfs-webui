@@ -4,7 +4,7 @@
   "saving": "Sauvegarde en cours...",
   "reset": "Réinitialiser",
   "language": "Langue",
-  "config": "Config IPFS",
+  "config": "Config BTFS",
   "analytics": "Analyses",
   "languageModal": {
     "title": "Changer de Langue",
@@ -15,16 +15,16 @@
     "close": "Fermer"
   },
   "fetchingSettings": "Récupération des paramètres...",
-  "configApiNotAvailable": "L'API de la configuration IPFS n'est pas disponible. Merci de désactiver l'extension IPFS-Companion et de réessayer.",
-  "ipfsDaemonOffline": "Le démon IPFS est hors-ligne. S'il vous plait relancez-le.",
-  "settingsUnavailable": "Paramètres non disponibles. Merci de vérifier que votre nœud IPFS est en cours d'exécution.",
+  "configApiNotAvailable": "L'API de la configuration BTFS n'est pas disponible. Merci de désactiver l'extension BTFS-Companion et de réessayer.",
+  "ipfsDaemonOffline": "Le démon BTFS est hors-ligne. S'il vous plait relancez-le.",
+  "settingsUnavailable": "Paramètres non disponibles. Merci de vérifier que votre nœud BTFS est en cours d'exécution.",
   "settingsHaveChanged": "Les paramètres ont changé, merci de cliquer sur<1>Reinitialisation</1>pour mettre à jour les changements",
   "errorOccured": "Une erreur s'est produite pendant l'enregistrement de vos modifications",
   "checkConsole": "Vérifier la console du navigateur pour plus d'information.",
   "changesSaved": "Vos modifications ont été enregistrées.",
-  "settingsWillBeUsedNextTime": "Les nouveaux paramètres seront utilisés après le prochain démarrage du nœud IPFS.",
-  "ipfsConfigDescription": "Le fichier de configuration d'IPFS est un document JSON. Il est lu une seule fois au démarrage du nœud IPFS. Enregistrez vos modifications puis redémarrez le nœud IPFS pour qu'elles soient prises en compte.",
-  "ipfsDesktop": "Bureau IPFS",
+  "settingsWillBeUsedNextTime": "Les nouveaux paramètres seront utilisés après le prochain démarrage du nœud BTFS.",
+  "ipfsConfigDescription": "Le fichier de configuration d'BTFS est un document JSON. Il est lu une seule fois au démarrage du nœud BTFS. Enregistrez vos modifications puis redémarrez le nœud BTFS pour qu'elles soient prises en compte.",
+  "ipfsDesktop": "Bureau BTFS",
   "launchOnStartup": "Exécuter au démarrage ",
   "autoAddScreenshots": "Ajout auto des captures d'écran",
   "autoAddScreenshotsDescription": "Utilisez la combinaison <0>{ctrlKey}</0> + <2>{altKey}</2> + <3>S</3> pour réaliser des captures d'écran et les ajouter au dépôt.",
@@ -35,7 +35,7 @@
     "summary": "Configurer ce qui est collecté",
     "paragraph1": "Aucun CID, nom de fichier ou autre information personnelle n'est collecté. Nous voulons que les métriques nous indiquent les fonctionnalités utiles pour nous aider à définir les priorités sur lesquelles travailler, et les informations de configuration du système pour guider nos tests.",
     "paragraph2": "Protocol Labs héberge <1>généreusement</1> une instance pour enregistrer les données anonymisées d'usage de cette application.",
-    "basicInfo": "Les informations supplémentaires suivantes sont envoyées à countly.ipfs.io",
+    "basicInfo": "Les informations supplémentaires suivantes sont envoyées",
     "optionalInfo": "Vous pouvez choisir d'envoyer les informations suivantes :",
     "sessions": {
       "label": "Sessions",
@@ -63,6 +63,6 @@
       "details": "Enregistre les messages d'erreur JavaScript et les traces de pile qui se produisent pendant l'utilisation de l'application, si possible. Il est très utile de savoir quand l'application ne fonctionne pas pour vous, mais<1>les messages d'erreur peuvent contenir des informations identifiables</1>comme les CID ou les chemins d'accès aux fichiers, donc n'activez cette option que si vous êtes à l'aise de partager ces informations avec nous."
     }
   },
-  "ipfsCmdTools": "IPFS outils en ligne de commandes",
-  "ipfsCmdToolsDescription": "Ajouter<0>ipfs</0>éxécutable sur votre système <0>PATH</0>vous pouvez utilisé cela en ligne de commande. "
+  "ipfsCmdTools": "BTFS outils en ligne de commandes",
+  "ipfsCmdToolsDescription": "Ajouter<0>btfs</0>éxécutable sur votre système <0>PATH</0>vous pouvez utilisé cela en ligne de commande. "
 }
