@@ -21,7 +21,7 @@
     "hashDigest": "해시 다이제스트"
   },
   "ObjectInfo": {
-    "gatewayLink": "IPFS 게이트웨이로 보기"
+    "gatewayLink": "BTFS 게이트웨이로 보기"
   },
   "base": "base",
   "version": "버전",
