@@ -21,7 +21,7 @@
     "hashDigest": "Hash"
   },
   "ObjectInfo": {
-    "gatewayLink": "Visualiser sur la passerelle IPFS"
+    "gatewayLink": "Visualiser sur la passerelle BTFS"
   },
   "base": "base",
   "version": "version",
