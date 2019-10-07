@@ -29,14 +29,14 @@
   "bugsLink": "报告bug",
   "revision": "Revision",
   "StatusConnected": {
-    "header1": "连接到IPFS",
+    "header1": "连接到BTFS",
     "paragraph1": "托管 <0>{repoSize} 文件</0>",
     "paragraph2": "{count, plural, other {发现 <0>{peersCount} 节点</0>}}"
   },
   "StatusNotConnected": {
     "header1": "无法连接API",
-    "paragraph1": "<0>在终端中启动IPFS守护进程:</0>",
-    "paragraph2": "<0>获取开始使用IPFS的更多信息你可以 <1>阅读此向导</1>.</0>"
+    "paragraph1": "<0>在终端中启动BTFS守护进程:</0>",
+    "paragraph2": "<0>获取开始使用BTFS的更多信息你可以 <1>阅读此向导</1>.</0>"
   },
   "AskToEnable": {
     "label": "Help improve this app by sending anonymous usage data.",
@@ -45,5 +45,5 @@
     "detailsLabel": "More info"
   },
   "bandwidthStats": "Bandwidth Stats",
-  "bandwidthStatsDisabled": "You have the bandwidth metrics disabled. You can enable them by typing the command bellow or changing the key <1>Swarm.DisableBandwidthMetrics</1> to <3>false</3> on <5>Settings</5>. Then, you need to restart the IPFS daemon to apply the changes."
+  "bandwidthStatsDisabled": "You have the bandwidth metrics disabled. You can enable them by typing the command below or changing the key <1>Swarm.DisableBandwidthMetrics</1> to <3>false</3> on <5>Settings</5>. Then, you need to restart the BTFS daemon to apply the changes."
 }

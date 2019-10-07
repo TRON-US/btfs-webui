@@ -14,7 +14,7 @@
   "cantBePreviewed": "Beklager, denne fil kan ikke forhåndvises.",
   "addFile": "Fil",
   "addFolder": "Mappe",
-  "addByPath": "Fra IPFS",
+  "addByPath": "Fra BTFS",
   "addToIPFS": "Tilføj",
   "newFolder": "Ny mappe",
   "generating": "Generating...",
@@ -53,8 +53,8 @@
     "descriptionFile": "{count, plural, one {Er du sikker på du ønsker at slette denne file? Denne handling er permanent og kan ikke omgøres.} other {Er du sikker på du ønsker at slette {count} filer? Denne handling er permanent og kan ikke omgøres.}}"
   },
   "addByPathModal": {
-    "title": "Tilføj fra IPFS",
-    "description": "Indsæt en IPFS sti (CID) for at tilføje.",
+    "title": "Tilføj fra BTFS",
+    "description": "Indsæt en BTFS sti (CID) for at tilføje.",
     "examples": "Eksempler:"
   },
   "newFolderModal": {
@@ -62,17 +62,17 @@
     "description": "Angiv navnet på mappen du ønsker at oprette."
   },
   "welcomeInfo": {
-    "header": "Velkommen til IPFS Web-grænsefladen",
+    "header": "Velkommen til BTFS Web-grænsefladen",
     "paragraph1": "<0><0>Tjek status</0> for din klient, dets klient-ID og forbindelsesinfo, netværkstrafik og antallet af forbundne klienter.</0>",
-    "paragraph2": "<0>Med lethed <1>administrer filer</1> i dit IPFS fil-bibliotek. Du kan trække og slippe for at tilføje filer, flytte og navneændre dem, slette, dele eller downloade dem.</0>",
-    "paragraph3": "<0>Du kan <1>udforske IPLD Data</1> som underbygger hvordan IPFS fungerer.</0>",
+    "paragraph2": "<0>Med lethed <1>administrer filer</1> i dit BTFS fil-bibliotek. Du kan trække og slippe for at tilføje filer, flytte og navneændre dem, slette, dele eller downloade dem.</0>",
+    "paragraph3": "<0>Du kan <1>udforske IPLD Data</1> som underbygger hvordan BTFS fungerer.</0>",
     "paragraph4": "<0>Se alle dine <1>forbundle klient-forbindelser</1>, geografisk placeret på baggrund af deres IP adresser.</0>",
-    "paragraph5": "<0><0>Gennemgå indstillinger</0> for din IPFS klient, og tilpas dem for bedre at understøtte dine behov.</0>",
+    "paragraph5": "<0><0>Gennemgå indstillinger</0> for din BTFS klient, og tilpas dem for bedre at understøtte dine behov.</0>",
     "paragraph6": "<0>Hvis du ønsker at bidrage med at skubbe Web brugergrænsegladen fremad, <1>så tjek koden</1> eller <3>indrapport en fejl </3>!</0>"
   },
   "filesList": {
     "noFiles": "<0>No files in this directory. Click the “Add” button to add some.</0>"
   },
-  "addFilesInfo": "<0>Tilføj filer til din lokale IPFS klient ved at klikke på <1>Tilføj til IPFS</1> knappen foroven.</0>",
-  "companionInfo": "<0>Eftersom du benytter <1>IPFS Følgesvend</1>, vil fil-visningen være begrænset til filer der benyttes mens udvidelsen benyttes.</0>"
+  "addFilesInfo": "<0>Tilføj filer til din lokale BTFS klient ved at klikke på <1>Tilføj til BTFS</1> knappen foroven.</0>",
+  "companionInfo": "<0>Eftersom du benytter <1>BTFS Følgesvend</1>, vil fil-visningen være begrænset til filer der benyttes mens udvidelsen benyttes.</0>"
 }

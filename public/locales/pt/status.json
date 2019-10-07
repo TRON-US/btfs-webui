@@ -29,14 +29,14 @@
   "bugsLink": "Reportar um erro",
   "revision": "Revisão",
   "StatusConnected": {
-    "header1": "Conectado ao IPFS",
+    "header1": "Conectado ao BTFS",
     "paragraph1": "A hospedar <0>{repoSize}em ficheiros</0>",
     "paragraph2": "{count, plural, one {Encontrado <0>1 par</0>} other {Encontrados <0>{peersCount}pares</0>}}"
   },
   "StatusNotConnected": {
     "header1": "Não foi possível conectar à API",
-    "paragraph1": "<0>Inicie o IPFS no terminal:</0>",
-    "paragraph2": "<0>Para mais informação sobre como iniciar a sua jornada com o IPFS, pode <1>ler o guia</1>.</0>"
+    "paragraph1": "<0>Inicie o BTFS no terminal:</0>",
+    "paragraph2": "<0>Para mais informação sobre como iniciar a sua jornada com o BTFS, pode <1>ler o guia</1>.</0>"
   },
   "AskToEnable": {
     "label": "Ajude a melhorar esta aplicação enviado dados de utilização anónimos.",
@@ -45,5 +45,5 @@
     "detailsLabel": "Mais informação"
   },
   "bandwidthStats": "Estatísticas de largura de banda",
-  "bandwidthStatsDisabled": "Tem as métricas de largura de banda desativadas. Pode ativá-las digitando o comando abaixo ou alterando a chave <1>Swarm.DisableBandwidthMetrics</1> para <3>false</3> em <5>Configurações</5>. Depois tem de reiniciar o seu nó IPFS para aplicar as alterações."
+  "bandwidthStatsDisabled": "Tem as métricas de largura de banda desativadas. Pode ativá-las digitando o comando abaixo ou alterando a chave <1>Swarm.DisableBandwidthMetrics</1> para <3>false</3> em <5>Configurações</5>. Depois tem de reiniciar o seu nó BTFS para aplicar as alterações."
 }

@@ -21,7 +21,7 @@
     "hashDigest": "Hash digest"
   },
   "ObjectInfo": {
-    "gatewayLink": "Zobrazit na IPFS bráně"
+    "gatewayLink": "Zobrazit na BTFS bráně"
   },
   "base": "základ",
   "version": "verze",

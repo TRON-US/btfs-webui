@@ -21,7 +21,7 @@
     "hashDigest": "Hash sum"
   },
   "ObjectInfo": {
-    "gatewayLink": "Vis med IPFS Gateway"
+    "gatewayLink": "Vis med BTFS Gateway"
   },
   "base": "base",
   "version": "version",

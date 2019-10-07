@@ -4,7 +4,7 @@
   "saving": "Gemmer...",
   "reset": "Nulstil",
   "language": "Sprog",
-  "config": "IPFS opsætning",
+  "config": "BTFS opsætning",
   "analytics": "Analyseværktøjer",
   "languageModal": {
     "title": "Ændre sprog",
@@ -15,16 +15,16 @@
     "close": "Luk"
   },
   "fetchingSettings": "Henter indstillinger...",
-  "configApiNotAvailable": "API'et til konfiguration af IPFS er utilgængelig. Venligst, fjern \"IPFS Kompagnon\" web-udvidelsen og prøv igen.",
-  "ipfsDaemonOffline": "The IPFS daemon is offline. Please turn it on and try again.",
-  "settingsUnavailable": "Indstillinger er ikke tilgængelige. Venligst, tjek at IPFS baggrunds-processen kører.",
+  "configApiNotAvailable": "API'et til konfiguration af BTFS er utilgængelig. Venligst, fjern \"BTFS Kompagnon\" web-udvidelsen og prøv igen.",
+  "ipfsDaemonOffline": "The BTFS daemon is offline. Please turn it on and try again.",
+  "settingsUnavailable": "Indstillinger er ikke tilgængelige. Venligst, tjek at BTFS baggrunds-processen kører.",
   "settingsHaveChanged": "Indstillingerne er opdateret, venligst klik på <1>Nulstil</1> for at opdatere editorens indhold.",
   "errorOccured": "En fejl opstået ved forsøg på at gemme dine ændringer.",
   "checkConsole": "Tjek din browser-konsol for yderligere info.",
   "changesSaved": "Dine ændringer er blevet gemt.",
-  "settingsWillBeUsedNextTime": "Dine nye indstillinger bliver taget i brug næste gang du genstarter IPFS baggrundsprocessen.",
-  "ipfsConfigDescription": "Konfigurationsfilen er et json dokument. Det læses en gang når IPFS baggrunds-processen startes. Gem dine ændringer og genstart herefter IPFS baggrundsprocessen for at ibrugtage disse.",
-  "ipfsDesktop": "IPFS Skrivebord",
+  "settingsWillBeUsedNextTime": "Dine nye indstillinger bliver taget i brug næste gang du genstarter BTFS baggrundsprocessen.",
+  "ipfsConfigDescription": "Konfigurationsfilen er et json dokument. Det læses en gang når BTFS baggrunds-processen startes. Gem dine ændringer og genstart herefter BTFS baggrundsprocessen for at ibrugtage disse.",
+  "ipfsDesktop": "BTFS Skrivebord",
   "launchOnStartup": "Kør ved opstart",
   "autoAddScreenshots": "Auto tilføj skærmbilleder",
   "autoAddScreenshotsDescription": "Benyt <0>{ctrlKey}</0> + <2>{altKey}</2> + <3>S</3> for at optage skærmbilleder og tilføje dem til fil-biblioteket.",
@@ -35,7 +35,7 @@
     "summary": "Opsæt hvad der opsamles",
     "paragraph1": "Ingen CID'er, filnavne, eller anden personlig information opsamles. Vi ønsker måltal som viser os hvilke funktioner der er brugbare for at hjælpe os med at prioritere det næste vi skal arbejde på og info om system konfigation for at guide vores test indsats.",
     "paragraph2": "Protocol Labs driver en <1>Countly</1> instans for at optage anonyme brugsdata for denne app.",
-    "basicInfo": "Følgende øvrig information bliver sendt til countly.ipfs.io",
+    "basicInfo": "Følgende øvrig information bliver sendt",
     "optionalInfo": "Du kan tilvælge at sende følgende information:",
     "sessions": {
       "label": "Sessionsforløb",
@@ -63,6 +63,6 @@
       "details": "Lagrer JavaScript fejlmeddelser og stack-traces som opstår når App'en benyttes, i tilfælde hvor det er muligt. Det er til stor gavn at vide når App'en ikke fungerer for dig, men <1>fejlmeddelser kan inkludere identificerbar information</1> som CID'er eller fil-stier, så slå det kun til, hvis du er komfortabel med at dele denne information med os."
     }
   },
-  "ipfsCmdTools": "IPFS kommandolinje værktøjer",
-  "ipfsCmdToolsDescription": "Add <0>ipfs</0> binary to your system <0>PATH</0> so you can use it in the command line."
+  "ipfsCmdTools": "BTFS kommandolinje værktøjer",
+  "ipfsCmdToolsDescription": "Add <0>btfs</0> binary to your system <0>PATH</0> so you can use it in the command line."
 }

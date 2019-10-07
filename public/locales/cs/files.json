@@ -14,7 +14,7 @@
   "cantBePreviewed": "Pardón, tento soubor nemůže být zobrazen",
   "addFile": "File",
   "addFolder": "Folder",
-  "addByPath": "From IPFS",
+  "addByPath": "From BTFS",
   "addToIPFS": "Přidat",
   "newFolder": "Nová složka",
   "generating": "Generating...",
@@ -53,8 +53,8 @@
     "descriptionFile": "{count, plural, one {Jste si jistý že chcete smazat tento soubor? Tato akce je nevratná!} few {Jste si jistý že chcete smazat {count} souborů? Tato akce je nevratná!} many {Jste si jistý že chcete smazat {count} souborů? Tato akce je nevratná!} other {Jste si jistý že chcete smazat {count} souborů? Tato akce je nevratná!}}"
   },
   "addByPathModal": {
-    "title": "Add from IPFS",
-    "description": "Insert an IPFS path (CID) to add.",
+    "title": "Add from BTFS",
+    "description": "Insert an BTFS path (CID) to add.",
     "examples": "Examples:"
   },
   "newFolderModal": {
@@ -62,17 +62,17 @@
     "description": "Vložte jméno složky, kterou chcete vytvořit."
   },
   "welcomeInfo": {
-    "header": "Vítejte v IPFS Web UI",
+    "header": "Vítejte v BTFS Web UI",
     "paragraph1": "<0><0>Zkontrolujte stav</0> vašeho uzlu, jeho Peer ID. stav připojení, síťový provoz a počet připojených uzlů.</0>",
-    "paragraph2": "<0>Jednoduše <1>spravujte soubory</1> ve vašem IPFS repozitáři. Můžete přidat nové soubory přetáhnutím a pustěním, soubory můžete také přesouvat a přejmenovávat, mazat, sdílet nebo stahovat.</0>",
-    "paragraph3": "<0>Můžete <1>prozkoumávat IPLD data</1> které tvoří základ toho jak IPFS funguje.</0>",
+    "paragraph2": "<0>Jednoduše <1>spravujte soubory</1> ve vašem BTFS repozitáři. Můžete přidat nové soubory přetáhnutím a pustěním, soubory můžete také přesouvat a přejmenovávat, mazat, sdílet nebo stahovat.</0>",
+    "paragraph3": "<0>Můžete <1>prozkoumávat IPLD data</1> které tvoří základ toho jak BTFS funguje.</0>",
     "paragraph4": "<0>Podívejte se na všechny <1>připojené uzly</1>,  lokalizované podle jejich IP adresy.</0>",
-    "paragraph5": "<0><0>Prozkoumejte nastavení</0> vašeho IPFS uzlu a upravte je aby lépe odpovídala vaším potřebám.</0>",
+    "paragraph5": "<0><0>Prozkoumejte nastavení</0> vašeho BTFS uzlu a upravte je aby lépe odpovídala vaším potřebám.</0>",
     "paragraph6": "<0>Pokud chcete pomoc posunout Web UI dále, <1>mkrněte na jeho kód</1> nebo <3>nahlašte problém</3>!</0>"
   },
   "filesList": {
     "noFiles": "<0>No files in this directory. Click the “Add” button to add some.</0>"
   },
-  "addFilesInfo": "<0>Přidejte soubory do vašeho IPFS uzlu kliknutím na <1>Přidat do IPFS</1> tlačítko.</0>",
-  "companionInfo": "<0>Jelikož používáte <1>IPFS Companion</1>, zobrazené soubory jsou omezeny pouze na ty které jste přidali během používání tohoto rozšíření.</0>"
+  "addFilesInfo": "<0>Přidejte soubory do vašeho BTFS uzlu kliknutím na <1>Přidat do BTFS</1> tlačítko.</0>",
+  "companionInfo": "<0>Jelikož používáte <1>BTFS Companion</1>, zobrazené soubory jsou omezeny pouze na ty které jste přidali během používání tohoto rozšíření.</0>"
 }

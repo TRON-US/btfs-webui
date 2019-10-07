@@ -35,7 +35,7 @@
     "summary": "Configure what is collected",
     "paragraph1": "No CIDs, filenames, or other personal information are collected. We want metrics to show us which features are useful to help us prioritise what to work on next, and system configuration information to guide our testing.",
     "paragraph2": "Protocol Labs hosts a <1>Countly</1> instance to record anonymous usage data for this app.",
-    "basicInfo": "The following additional information is sent to countly.ipfs.io",
+    "basicInfo": "The following additional information is sent",
     "optionalInfo": "You can opt-in to send the following information:",
     "sessions": {
       "label": "Sessions",
@@ -64,5 +64,5 @@
     }
   },
   "ipfsCmdTools": "BTFS command line tools",
-  "ipfsCmdToolsDescription": "Add <0>ipfs</0> binary to your system <0>PATH</0> so you can use it in the command line."
+  "ipfsCmdToolsDescription": "Add <0>btfs</0> binary to your system <0>PATH</0> so you can use it in the command line."
 }

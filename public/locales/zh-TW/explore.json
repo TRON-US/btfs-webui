@@ -21,7 +21,7 @@
     "hashDigest": "雜湊摘要"
   },
   "ObjectInfo": {
-    "gatewayLink": "瀏覽IPFS閘道器"
+    "gatewayLink": "瀏覽BTFS閘道器"
   },
   "base": "基礎",
   "version": "版本",
