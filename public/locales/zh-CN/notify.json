@@ -1,0 +1,11 @@
+{
+  "connectingToIpfs": "正在连接到BTFS 。。。",
+  "connectedToIpfs": "已连接到BTFS！",
+  "ipfsApiRequestFailed": "BTFS请求失败。请检查守护程序是否正在运行。",
+  "windowIpfsRequestFailed": "BTFS请求失败。请检查您的BTFS伴侣设置。",
+  "ipfsIsBack": "正常的BTFS服务已恢复。请享用！",
+  "filesEventFailed": "无法将文件添加到BTFS。请再试一次。",
+  "folderExists": "具有该名称的文件夹已存在。请选择另一个。",
+  "couldntConnectToPeer": "无法连接到提供的对等方。",
+  "connectedToPeer": "成功连接到提供的对等方。"
+}
