@@ -179,8 +179,8 @@ TODO: Do we allow contributions?
 After all changes have been made and tested, follow the steps below to release a new version of the BTFS WebUI:
 
 1. In the terminal, navigate to the `btfs-webui` directory. Then run `npm run build`. This builds the the WebUI files and places them in a newly created `build` folder.   
-2. Upload the build folder into the bootstrap nodes. 
-3. Update the hash at:
+2. SSH into a bootstrap node. Then upload the `build` folder by running `btfs add build/`, and obtain the hash value.  
+3. Update the hash value at:
    - go-btfs https://github.com/TRON-US/go-btfs/blob/master/core/corehttp/webui.go
 
 
