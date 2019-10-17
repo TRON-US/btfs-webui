@@ -1,5 +1,10 @@
 {
   "appName": "IPLD浏览器",
+  "tabName": "探索",
+  "homeLink": "Home",
+  "UpdateAvailable": {
+    "paragraph1": "有新版本的IPLD Explorer，<1>请重新加载</1>"
+  },
   "StartExploringPage": {
     "title": "浏览-IPLD",
     "header": "浏览Merkle Forest",
