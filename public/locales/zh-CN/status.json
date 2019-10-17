@@ -39,11 +39,11 @@
     "paragraph2": "<0>获取开始使用BTFS的更多信息你可以 <1>阅读此向导</1>.</0>"
   },
   "AskToEnable": {
-    "label": "Help improve this app by sending anonymous usage data.",
-    "yesLabel": "OK",
-    "noLabel": "不用谢",
-    "detailsLabel": "More info"
+    "label": "通过发送匿名使用情况数据来帮助改进此应用程序。",
+    "yesLabel": "好",
+    "noLabel": "不用",
+    "detailsLabel": "更多信息"
   },
-  "bandwidthStats": "Bandwidth Stats",
-  "bandwidthStatsDisabled": "You have the bandwidth metrics disabled. You can enable them by typing the command below or changing the key <1>Swarm.DisableBandwidthMetrics</1> to <3>false</3> on <5>Settings</5>. Then, you need to restart the BTFS daemon to apply the changes."
+  "bandwidthStats": "带宽统计",
+  "bandwidthStatsDisabled": "您已禁用带宽指标。您可以通过在下面键入以下命令或在<5> 设定值 </5>上将键<1> Swarm.DisableBandwidthMetrics </1>更改为<3> 假 </3>来启用它们。然后，您需要重新启动BTFS守护程序以应用更改。"
 }
