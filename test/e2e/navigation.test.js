@@ -12,41 +12,41 @@ it('Navigation test: node not running', async () => {
   // const page = await browser.newPage()
   const page = (await browser.pages())[0]
   await page.goto(appUrl)
-  await page.waitForFunction(`document.title === 'Welcome to IPFS'`, { timeout: 8000 })
+  await page.waitForFunction(`document.title === 'Welcome to BTFS'`, { timeout: 8000 })
 }, ms.minutes(1))
 
 it('Navigation test: node running', async () => {
   const page = await browser.newPage()
 
-  await addMockIpfs(page)
+  await addMockBtfs(page)
 
   const waitForTitle = title => page.waitForFunction(`document.title === '${title}'`, { timeout: 8000 })
 
   await page.goto(appUrl)
-  await waitForTitle('Status - IPFS')
+  await waitForTitle('Status - BTFS')
 
   await page.click('nav a[href="#/files/"]')
-  await waitForTitle('Files - IPFS')
+  await waitForTitle('Files - BTFS')
 
   await page.click('nav a[href="#/explore"]')
   await waitForTitle('Explore - IPLD')
 
   await page.click('nav a[href="#/peers"]')
-  await waitForTitle('Peers - IPFS')
+  await waitForTitle('Peers - BTFS')
 
   await page.click('nav a[href="#/settings"]')
-  await waitForTitle('Settings - IPFS')
+  await waitForTitle('Settings - BTFS')
 
   await page.click('nav a[href="#/"]')
-  await waitForTitle('Status - IPFS')
+  await waitForTitle('Status - BTFS')
 }, ms.minutes(1))
 
-// Pretend to be IPFS companion so we can mock out ipfs responses
+// Pretend to be BTFS companion so we can mock out btfs responses
 // NOTE: this can get fancier as we test more nuances.
 // returns a promise.
-function addMockIpfs (page) {
+function addMockBtfs (page) {
   return page.evaluateOnNewDocument(mock => {
-    const mockIpfs = {
+    const mockBtfs = {
       id: () => Promise.resolve({}),
       get: () => Promise.resolve({}),
       files: {
