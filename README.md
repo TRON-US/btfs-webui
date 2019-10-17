@@ -15,13 +15,48 @@ The app uses [`ipfs-http-client`](https://github.com/ipfs/js-ipfs-http-client) t
 
 The app is built with [`create-react-app`](https://github.com/facebook/create-react-app). Please read the [docs](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#table-of-contents).
 
-## Install
+## Build WebUI
 
-With `node` >= 8.12 and `npm` >= 6.4.1 installed, run
+Download the repo
 
-```sh
-> npm install
 ```
+git clone https://github.com/TRON-US/btfs-webui
+```
+CD into the btfs-webui repo. Then with `node` >= 8.12 and `npm` >= 6.4.1 installed, run
+
+```
+cd btfs-webui
+npm install
+```
+
+Open a separate terminal and start the BTFS daemon. This will allow you to see the updated WebUI in your localhost:
+
+```
+btfs daemon
+```
+
+In your previous terminal, run the dev server @ http://localhost:3000
+
+```
+npm start
+```
+
+The final output should be as such:
+
+```
+Compiled successfully!
+
+You can now view btfs-webui in the browser.
+
+  Local:            http://localhost:3000/
+  On Your Network:  http://10.10.0.77:3000/
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+```
+Paste the local host URL into your web browser to view the WebUI. 
+
 
 ## Usage
 
@@ -148,6 +183,9 @@ The translations are stored on [./public/locales](./public/locales) and the Engl
 <!---
 TODO: Do we allow contributions?
 --> 
+
+
+
 ## Releasing a new version of the WebUI.
 1. retrieve files from build folder
 1. Add to bootstrap nodes
