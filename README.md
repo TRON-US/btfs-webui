@@ -3,19 +3,9 @@
 
 > Check on your node stats, explore the IPLD powered merkle forest, see peers around the world and manage your files, without needing to touch the CLI.
 
-![Screenshot of the status page](docs/screenshots/ipfs-webui-status.png)
+## Test the WebUI
 
-| Files | Explore | Peers | Settings |
-|-------|---------|-------|----------|
-| ![Screenshot of the file browser page](docs/screenshots/ipfs-webui-files.png) | ![Screenshot of the IPLD explorer page](docs/screenshots/ipfs-webui-explore.png) | ![Screenshot of the swarm peers map](docs/screenshots/ipfs-webui-peers.png) | ![Screenshot of the settings page](docs/screenshots/ipfs-webui-settings.png) |
-
-
-
-The app uses [`ipfs-http-client`](https://github.com/ipfs/js-ipfs-http-client) to communicate with your local BTFS node.
-
-The app is built with [`create-react-app`](https://github.com/facebook/create-react-app). Please read the [docs](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#table-of-contents).
-
-## Build WebUI
+After making changes to the WebUI repository, the updated changes can be viewed in the browser using the following steps:
 
 Download the repo
 
@@ -35,7 +25,7 @@ Open a separate terminal and start the BTFS daemon. This will allow you to see t
 btfs daemon
 ```
 
-In your previous terminal, run the dev server @ http://localhost:3000
+In your previous terminal, run the dev server:
 
 ```
 npm start
@@ -55,10 +45,9 @@ Note that the development build is not optimized.
 To create a production build, use npm run build.
 
 ```
-Paste the local host URL into your web browser to view the WebUI. 
+Paste the local host URL into your web browser to view the updated WebUI. 
 
 
-## Usage
 
 **When working on the code**, run a btfs daemon, the local [dev server](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#npm-start), the [unit tests](https://facebook.github.io/jest/), and the [storybook](https://storybook.js.org/) component viewer and see the results of your changes as you save files. For **debugging** follow this [post](https://hackernoon.com/debugging-react-like-a-champ-with-vscode-66281760037)
 
@@ -185,15 +174,17 @@ TODO: Do we allow contributions?
 --> 
 
 
+## Release WebUI
 
-## Releasing a new version of the WebUI.
-1. retrieve files from build folder
-1. Add to bootstrap nodes
-1. Update the hash at:
+After all changes have been made and tested, follow the steps below to release a new version of the BTFS WebUI:
+
+1. In the terminal, navigate to the `btfs-webui` directory. Then run `npm run build`. This builds the the WebUI files and places them in a newly created `build` folder.   
+2. SSH into a bootstrap node. Then upload the `build` folder by running `btfs add build/`, and obtain the hash value.  
+3. Update the hash value at:
    - go-btfs https://github.com/TRON-US/go-btfs/blob/master/core/corehttp/webui.go
 
 
 
 ## License
 
-[MIT](LICENSE) © Protocol Labs
+[MIT](LICENSE) © TRON Foundation
