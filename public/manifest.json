@@ -1,6 +1,6 @@
 {
-  "short_name": "IPFS WebUI",
-  "name": "IPFS Web UI",
+  "short_name": "BTFS WebUI",
+  "name": "BTFS Web UI",
   "icons": [
     {
       "src": "favicon.ico",
