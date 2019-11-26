@@ -1,6 +1,6 @@
 {
   "name": "btfs-webui",
-  "version": "2.4.6",
+  "version": "2.4.7",
   "private": true,
   "scripts": {
     "start": "run-script-os",
@@ -32,6 +32,7 @@
     "cids": "^0.6.0",
     "countly-sdk-web": "^19.2.1",
     "d3": "^5.7.0",
+    "datatransfer-files-promise": "^1.2.3",
     "details-polyfill": "^1.1.0",
     "file-extension": "^4.0.5",
     "filesize": "^3.6.1",
