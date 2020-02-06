@@ -21,7 +21,7 @@ async function downloadSingle (file, gatewayUrl, apiUrl) {
   let url, filename
 
   if (file.type === 'directory') {
-    url = `${apiUrl}/api/v0/get?arg=${file.hash}&archive=true&compress=true`
+    url = `${apiUrl}/api/v1/get?arg=${file.hash}&archive=true&compress=true`
     filename = `${file.name}.tar.gz`
   } else {
     url = `${gatewayUrl}/btfs/${file.hash}`
@@ -54,7 +54,7 @@ async function downloadMultiple (files, apiUrl, ipfs) {
   const multihash = await makeHashFromFiles(files, ipfs)
 
   return {
-    url: `${apiUrl}/btfs/v0/get?arg=${multihash}&archive=true&compress=true`,
+    url: `${apiUrl}/btfs/v1/get?arg=${multihash}&archive=true&compress=true`,
     filename: `download_${multihash}.tar.gz`
   }
 }
