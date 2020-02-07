@@ -64,16 +64,16 @@
     }
   },
   "ipfsCmdTools": "Ferramentas de linha de comandos BTFS",
-  "ipfsCmdToolsDescription": "Adicione o binário <0>btfs</0> ao <0>PATH</0> do seu sistema para que o possa usar na sua linha de comandos."
+  "ipfsCmdToolsDescription": "Adicione o binário <0>btfs</0> ao <0>PATH</0> do seu sistema para que o possa usar na sua linha de comandos.",
   "Experiments": {
-    "description": "Aqui pode experimentar novas funcionalidades do IPFS ativando as opções abaixo. Estamos a testar estas ideias e estas ainda podem não estar perfeitas por isso gostaríamos de saber a sua opinião.",
+    "description": "Aqui pode experimentar novas funcionalidades do BTFS ativando as opções abaixo. Estamos a testar estas ideias e estas ainda podem não estar perfeitas por isso gostaríamos de saber a sua opinião.",
     "issueUrl": "Abrir um relatório de erros",
     "feedbackUrl": "💌Deixar um comentário",
     "readMoreUrl": "Ler mais",
     "npmOnIpfs": {
-      "title": "NPM em IPFS",
-      "label": "Ativar ipfs-npm",
-      "description": "Instale os módulos npm através do IPFS com a ferramenta da linha de comandos 'ipfs-npm'!"
+      "title": "NPM em BTFS",
+      "label": "Ativar BTfs-npm",
+      "description": "Instale os módulos npm através do BTFS com a ferramenta da linha de comandos 'btfs-npm'!"
     }
   }
 }

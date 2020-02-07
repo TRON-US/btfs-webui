@@ -63,22 +63,17 @@
       "details": "Lagrer JavaScript fejlmeddelser og stack-traces som opstår når App'en benyttes, i tilfælde hvor det er muligt. Det er til stor gavn at vide når App'en ikke fungerer for dig, men <1>fejlmeddelser kan inkludere identificerbar information</1> som CID'er eller fil-stier, så slå det kun til, hvis du er komfortabel med at dele denne information med os."
     }
   },
-<<<<<<< HEAD
-  "ipfsCmdTools": "BTFS kommandolinje værktøjer",
-  "ipfsCmdToolsDescription": "Add <0>btfs</0> binary to your system <0>PATH</0> so you can use it in the command line."
-=======
   "Experiments": {
-    "description": "Her kan du få et tidligt smugkig på nye IPFS funktioner ved at tilvælge mulighederne neden for. Vi afprøver disse idéer og de er muligvis ikke perfekte vi vil elske at høre din feedback.",
+    "description": "Her kan du få et tidligt smugkig på nye BTFS funktioner ved at tilvælge mulighederne neden for. Vi afprøver disse idéer og de er muligvis ikke perfekte vi vil elske at høre din feedback.",
     "issueUrl": "Åben en sag",
     "feedbackUrl": "💌Efterlad feedback",
     "readMoreUrl": "Læs mere",
     "npmOnIpfs": {
-      "title": "NPM på IPFS",
+      "title": "NPM på BTFS",
       "label": "Slå ipfs-npm til",
-      "description": "Installér npm moduler via IPFS med 'ipfs-npm' kommandolinje værktøjet!"
+      "description": "Installér npm moduler via BTFS med 'btfs-npm' kommandolinje værktøjet!"
     }
   },
-  "ipfsCmdTools": "IPFS kommandolinje værktøjer",
+  "ipfsCmdTools": "BTFS kommandolinje værktøjer",
   "ipfsCmdToolsDescription": "Tilføj <0>ipfs</0> binære fil til dit system's <0>PATH</0> så du kan benytte det via kommandolinjen."
->>>>>>> v2.4.7
 }
