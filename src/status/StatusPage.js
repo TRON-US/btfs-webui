@@ -16,7 +16,7 @@ const StatusPage = ({ t, nodeBandwidthEnabled, ipfsConnected, analyticsAskToEnab
   return (
     <div data-id='StatusPage' className='mw9 center'>
       <Helmet>
-        <title>{t('title')} - IPFS</title>
+        <title>{t('title')} - BTFS</title>
       </Helmet>
       <Box>
         <div className='flex'>
