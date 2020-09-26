@@ -76,5 +76,5 @@ export async function getShareableLink (files, ipfs) {
     hash = await makeHashFromFiles(files, ipfs)
   }
 
-  return `https://gateway.btfssoter.io/btfs/${hash}`
+  return `https://gateway.btfs.io/btfs/${hash}`
 }

@@ -22,7 +22,7 @@ index 2872093..c6c1436 100644
        }) ? React.createElement(
          'a',
 -        { className: 'link avenir ml2 pa2 fw5 f6 blue', href: 'https://ipfs.io/ipfs/' + cid, target: '_external' },
-+        { className: 'link avenir ml2 pa2 fw5 f6 blue', href: 'https://gateway.btfssoter.io/btfs/' + cid, target: '_external' },
++        { className: 'link avenir ml2 pa2 fw5 f6 blue', href: 'https://gateway.btfs.io/btfs/' + cid, target: '_external' },
          t('ObjectInfo.gatewayLink')
        ) : null
      ),
