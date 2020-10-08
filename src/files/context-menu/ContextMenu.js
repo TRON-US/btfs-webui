@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { translate } from 'react-i18next'
+import { withTranslation } from 'react-i18next'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { Dropdown, DropdownMenu, Option } from '../dropdown/Dropdown'
 import GlyphDots from '../../icons/GlyphDots'
@@ -10,39 +10,9 @@ import StrokePencil from '../../icons/StrokePencil'
 import StrokeIpld from '../../icons/StrokeIpld'
 import StrokeTrash from '../../icons/StrokeTrash'
 import StrokeDownload from '../../icons/StrokeDownload'
+import StrokePin from '../../icons/StrokePin'
 
 class ContextMenu extends React.Component {
-  static propTypes = {
-    isOpen: PropTypes.bool,
-    isUpperDir: PropTypes.bool,
-    handleClick: PropTypes.func,
-    translateX: PropTypes.number,
-    translateY: PropTypes.number,
-    left: PropTypes.number,
-    showDots: PropTypes.bool,
-    onDelete: PropTypes.func,
-    onRename: PropTypes.func,
-    onDownload: PropTypes.func,
-    onInspect: PropTypes.func,
-    onShare: PropTypes.func,
-    hash: PropTypes.string,
-    className: PropTypes.string,
-    t: PropTypes.func.isRequired,
-    tReady: PropTypes.bool.isRequired
-  }
-
-  static defaultProps = {
-    isOpen: false,
-    isUpperDir: false,
-    top: 0,
-    left: 0,
-    right: 'auto',
-    translateX: 0,
-    translateY: 0,
-    showDots: true,
-    className: ''
-  }
-
   state = {
     dropdown: false
   }
@@ -53,7 +23,11 @@ class ContextMenu extends React.Component {
   }
 
   render () {
-    const { t, onRename, onDelete, onDownload, onInspect, onShare, translateX, translateY, className, showDots, isUpperDir } = this.props
+    const {
+      t, onRename, onDelete, onDownload, onInspect, onShare,
+      translateX, translateY, className, showDots,
+      isUpperDir, isMfs, isUnknown, pinned
+    } = this.props
 
     return (
       <Dropdown className={className}>
@@ -66,19 +40,19 @@ class ContextMenu extends React.Component {
           translateY={-translateY}
           open={this.props.isOpen}
           onDismiss={this.props.handleClick}>
-          { !isUpperDir && onDelete &&
+          { !isUpperDir && !isUnknown && isMfs && onDelete &&
             <Option onClick={this.wrap('onDelete')}>
               <StrokeTrash className='w2 mr2 fill-aqua' />
               {t('actions.delete')}
             </Option>
           }
-          { !isUpperDir && onRename &&
+          { !isUpperDir && !isUnknown && isMfs && onRename &&
             <Option onClick={this.wrap('onRename')}>
               <StrokePencil className='w2 mr2 fill-aqua' />
               {t('actions.rename')}
             </Option>
           }
-          { !isUpperDir && onDownload &&
+          { !isUpperDir && !isUnknown && onDownload &&
             <Option onClick={this.wrap('onDownload')}>
               <StrokeDownload className='w2 mr2 fill-aqua' />
               {t('actions.download')}
@@ -90,6 +64,10 @@ class ContextMenu extends React.Component {
               {t('actions.inspect')}
             </Option>
           }
+          <Option onClick={this.wrap(pinned ? 'onUnpin' : 'onPin')}>
+            <StrokePin className='w2 mr2 fill-aqua' />
+            { pinned ? t('actions.unpin') : t('actions.pin') }
+          </Option>
           <CopyToClipboard text={this.props.hash} onCopy={this.props.handleClick}>
             <Option>
               <StrokeCopy className='w2 mr2 fill-aqua' />
@@ -108,4 +86,40 @@ class ContextMenu extends React.Component {
   }
 }
 
-export default translate('files')(ContextMenu)
+ContextMenu.propTypes = {
+  isMfs: PropTypes.bool.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  isUnknown: PropTypes.bool.isRequired,
+  hash: PropTypes.string,
+  isUpperDir: PropTypes.bool,
+  pinned: PropTypes.bool,
+  handleClick: PropTypes.func,
+  translateX: PropTypes.number.isRequired,
+  translateY: PropTypes.number.isRequired,
+  left: PropTypes.number.isRequired,
+  showDots: PropTypes.bool,
+  onDelete: PropTypes.func,
+  onRename: PropTypes.func,
+  onDownload: PropTypes.func,
+  onInspect: PropTypes.func,
+  onShare: PropTypes.func,
+  className: PropTypes.string,
+  t: PropTypes.func.isRequired,
+  tReady: PropTypes.bool.isRequired
+}
+
+ContextMenu.defaultProps = {
+  isMfs: false,
+  isOpen: false,
+  isUpperDir: false,
+  isUnknown: false,
+  top: 0,
+  left: 0,
+  right: 'auto',
+  translateX: 0,
+  translateY: 0,
+  showDots: true,
+  className: ''
+}
+
+export default withTranslation('files', { withRef: true })(ContextMenu)

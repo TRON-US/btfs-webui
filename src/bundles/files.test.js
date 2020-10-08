@@ -1,4 +1,4 @@
-/* global it, expect, beforeEach, afterEach, jest */
+/* global it, expect, jest */
 import { composeBundlesRaw } from 'redux-bundler'
 import createFilesBundle from './files'
 
@@ -46,7 +46,7 @@ it('write single file to root', async () => {
     size: 400
   }]
 
-  await store.doFilesWrite('/', input)
+  await store.doFilesWrite(input, '/')
 
   expect(ipfs.add.mock.calls.length).toBe(1)
   expect(ipfs.add.mock.calls[0][0][0]).toBe(input[0])
@@ -65,7 +65,7 @@ it('write single file to directory', async () => {
     size: 400
   }]
 
-  await store.doFilesWrite('/dir', input)
+  await store.doFilesWrite(input, '/dir')
 
   expect(ipfs.add.mock.calls.length).toBe(1)
   expect(ipfs.add.mock.calls[0][0][0]).toBe(input[0])
@@ -89,7 +89,7 @@ it('write multiple file', async () => {
     size: 400
   }]
 
-  await store.doFilesWrite('/', input)
+  await store.doFilesWrite(input, '/')
 
   expect(ipfs.add.mock.calls.length).toBe(1)
   expect(ipfs.add.mock.calls[0][0][0]).toBe(input[0])
@@ -121,7 +121,7 @@ it('write multiple file with ignored file', async () => {
     size: 400
   }]
 
-  await store.doFilesWrite('/', input)
+  await store.doFilesWrite(input, '/')
 
   expect(ipfs.add.mock.calls.length).toBe(1)
   expect(ipfs.add.mock.calls[0][0][0]).toBe(input[0])

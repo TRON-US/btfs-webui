@@ -1,0 +1,10 @@
+{
+  "tour": {
+    "back": "Back",
+    "close": "Close",
+    "last": "Last",
+    "next": "Next",
+    "skip": "Skip",
+    "tooltip": "Click this button any time for a guided tour on the current page."
+  }
+}

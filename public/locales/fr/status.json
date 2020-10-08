@@ -3,7 +3,7 @@
   "peer": "Pair",
   "peers": "Pairs",
   "addresses": "Adresses",
-  "nodeInfo": "Info du noeud",
+  "nodeInfo": "Information du pair",
   "peerId": "ID de pair",
   "gateway": "Passerelle",
   "api": "API",
@@ -18,10 +18,10 @@
   "bandwidthByPeer": "Bande passante par pair",
   "distributionOfPeers": "Répartition des pairs",
   "pieChartLabel": "{count, plural, one {{percent}% ({count} Pair)} other {{percent}% ({count} Pairs)}}",
-  "rateIn": "Taux d'entrée",
-  "rateOut": "Taux de sortie",
-  "totalIn": "Total d'entrée",
-  "totalOut": "Total de sortie",
+  "rateIn": "Ratio entrant",
+  "rateOut": "Ratio sortant",
+  "totalIn": "Total entrant",
+  "totalOut": "Total sortant",
   "more": "...et {count} de plus",
   "in": "Entrant",
   "out": "Sortant",
@@ -36,7 +36,7 @@
   "StatusNotConnected": {
     "header1": "Échec de connexion à l'API",
     "paragraph1": "<0>Démarrer un démon BTFS dans un terminal:</0>",
-    "paragraph2": "<0>Pour plus d'informations sur comment démarré avec BTFS vous pouvez <1> lire le manuel</1>.</0>"
+    "paragraph2": "<0>Pour plus d'informations sur comment démarrer avec BTFS vous pouvez <1> lire le manuel</1>.</0>"
   },
   "AskToEnable": {
     "label": "Aidez à améliorer cette application en envoyant des données d'utilisation anonymes.",
@@ -44,6 +44,37 @@
     "noLabel": "Non merci",
     "detailsLabel": "Plus d'infos"
   },
-  "bandwidthStats": "Statistique de la bande passante",
+  "tour": {
+    "back": "Retour",
+    "close": "Fermer",
+    "last": "Dernier",
+    "next": "Suivant",
+    "skip": "Passer",
+    "step1": {
+      "title": "Page des status",
+      "paragraph1": "C'est le point de départ de votre noeud IPFS et aussi où vous pouvez vérifié les informations basiques.",
+      "paragraph2": "Cliquez sur \"Suivant\" pour en savoir plus."
+    },
+    "step2": {
+      "title": "Statut de la connexion",
+      "paragraph1": "Cela mène à une page de test de connexion, dans le cas contraire vous donné des indications comment vous y connecter.",
+      "paragraph2": "Vous pouvez également configurer votre noeud avec une adresse personalisée pour l'API."
+    },
+    "step3": {
+      "title": "Information du pair",
+      "paragraph1": "Ici vous avez les information sur la taille de votre dépôt, à combien de noeuds vous êtes connecté, votre peer ID et votre choix de IPFS.",
+      "paragraph2": "<0>Cliquer sur <1>Avancée</1> pour voir plus informations sur la passerelle URL et adresse</0>"
+    },
+    "step4": {
+      "title": "Traffic réseau",
+      "paragraph1": "Ce graphe montre l'utilisaion du réseau au cours du temps.",
+      "paragraph2": "Le compteur de vitesse du trafic entrant et sortant."
+    },
+    "stepExplore": {
+      "title": "Explorez",
+      "paragraph": "Copier un CID et explorer les fichiers contenu à l'intérieur du CID ou regarder les donnée structuré et liée aux protocoles."
+    }
+  },
+  "bandwidthStats": "Statistiques réseau",
   "bandwidthStatsDisabled": "Vous avez débranché les statistique de la bande passante. Vous pouvez ré-activer cela en tapant la ligne de commande <1>Swarm.DisableBandwidthMetrics</1> de <3>false</3> dans <5>Settings</5>. Vous devez redémarrer pour cela soit pris en compte. "
 }

@@ -1,24 +1,24 @@
 {
-  "title": "欢迎使用BTFS",
+  "title": "欢迎使用 BTFS",
   "configureApiPort": {
-    "header": "你的API端口不是5001？",
-    "paragraph1": "<0>如果你的BTFS节配置了<1>自定义API地址</1>, 请设置在这里</0>"
+    "header": "你的 API 端口不是 5001 ？",
+    "paragraph1": "<0>如果你的 BTFS 节配置了<1>自定义 API 地址</1>, 请设置在这里</0>"
   },
   "apiAddressForm": {
     "apiLabel": "API ADDRESS",
     "submitButton": "提交"
   },
   "connected": {
-    "header": "连接到BTFS",
-    "paragraph1": "<0>现在，是时候了解你的节点。 前往 <1>文件页面</1> 管理和分享你的文件，或通过<5>IPLD探索</5>了解节点托管哈希链数据 <3>Merkle Forest</3>。‭</0>",
-    "paragraph2": "<0>你可以随时回到此地址来修改你连接的BTFS节点。</0>"
+    "header": "连接到 BTFS",
+    "paragraph1": "<0>现在，是时候了解你的节点。 前往 <1>文件页面</1> 管理和分享你的文件，或通过<5> IPLD 浏览器</5>了解节点托管哈希链数据 <3>Merkle Forest</3>。‭</0>",
+    "paragraph2": "<0>你可以随时回到此地址来修改你连接的 BTFS 节点。</0>"
   },
   "notConnected": {
-    "header": "您的BTFS守护程序是否正在运行？",
-    "paragraph1": "<0>无法连接API</0>",
-    "paragraoh2": "<0>确认你<1>配置了你的BTFS API</1>以允许跨域（CORS）请求，执行下面命令：</0>",
-    "paragraph3": "<0>在终端中启动BTFS守护进程:</0>",
-    "paragraph4": "<0>获取开始使用BTFS的更多信息你可以 <1>阅读此向导</1>.</0>"
+    "header": "您的 BTFS 守护程序是否正在运行？",
+    "paragraph1": "<0>无法连接 API</0>",
+    "paragraoh2": "<0>确认你<1>配置了你的 BTFS API </1>以允许跨域（CORS）请求，执行下面命令：</0>",
+    "paragraph3": "<0>在终端中启动 BTFS 守护进程:</0>",
+    "paragraph4": "<0>获取开始使用 BTFS 的更多信息你可以 <1>阅读此向导</1>.</0>"
   },
   "aboutIpfs": {
     "header": "BTFS是什么？",

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { connect } from 'redux-bundler-react'
-import { translate, Trans } from 'react-i18next'
+import { withTranslation, Trans } from 'react-i18next'
 import Box from '../components/box/Box'
 import Button from '../components/button/Button'
 import AboutIpfs from '../components/about-ipfs/AboutIpfs'
@@ -72,17 +72,25 @@ const ConnectionStatus = ({ t, connected, sameOrigin }) => {
           <Trans i18nKey='notConnected.paragraph2'>
             <p>Make sure you configure your BTFS API to allow cross-origin (CORS) requests, running the commands below:</p>
           </Trans>
-          <Shell>
-            <code className='db'>$ btfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '[{addOrigin && `"${origin}", `}"{defaultDomains.join('", "')}"]'</code>
-            <code className='db'>$ btfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "GET", "POST"]'</code>
+          <Shell title="Unix & MacOS">
+            <code className='db'><b className='no-select'>$ </b>ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '[{addOrigin && `"${origin}", `}"{defaultDomains.join('", "')}"]'</code>
+            <code className='db'><b className='no-select'>$ </b>ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "POST"]'</code>
+          </Shell>
+          <Shell title="Windows Powershell" className="mt4">
+            <code className='db'><b className='no-select'>$ </b>ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '[{addOrigin && `\\"${origin}\\", `}\"{defaultDomains.join('\\", \\"')}\"]'</code>
+            <code className='db'><b className='no-select'>$ </b>ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '[\"PUT\", \"POST\"]'</code>
+          </Shell>
+          <Shell title="Windows CMD" className="mt4">
+            <code className='db'><b className='no-select'>$ </b>ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin "[{addOrigin && `"""${origin}""", `}"""{defaultDomains.join('""", """')}"""]"</code>
+            <code className='db'><b className='no-select'>$ </b>ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods "["""PUT""", """POST"""]"</code>
           </Shell>
         </div>
       )}
       <Trans i18nKey='notConnected.paragraph3'>
-        <p>Start a BTFS daemon in a terminal:</p>
+        <p>Then, start/restart the IPFS daemon in a terminal:</p>
       </Trans>
       <Shell>
-        <code className='db'>$ btfs daemon</code>
+        <code className='db'><b className='no-select'>$ </b>ipfs daemon</code>
         <code className='db'>Initializing daemon...</code>
         <code className='db'>API server listening on /ip4/127.0.0.1/tcp/5001</code>
       </Shell>
@@ -100,7 +108,7 @@ class ApiAddressForm extends React.Component {
   }
 
   onChange = (event) => {
-    let val = event.target.value
+    const val = event.target.value
     this.setState({ value: val })
   }
 
@@ -141,5 +149,5 @@ export default connect(
   'selectIpfsReady',
   'selectIpfsApiAddress',
   'selectApiUrl',
-  translate('welcome')(WelcomePage)
+  withTranslation('welcome')(WelcomePage)
 )

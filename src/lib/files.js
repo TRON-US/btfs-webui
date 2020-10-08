@@ -4,7 +4,7 @@ import CID from 'cids'
 export async function filesToStreams (files) {
   const streams = []
 
-  for (let file of files) {
+  for (const file of files) {
     const stream = fileReader(file)
 
     streams.push({
@@ -69,12 +69,16 @@ export async function getDownloadLink (files, gatewayUrl, apiUrl, ipfs) {
 
 export async function getShareableLink (files, ipfs) {
   let hash
+  let filename
 
   if (files.length === 1) {
     hash = files[0].hash
+    if (files[0].type === 'file') {
+      filename = `?filename=${encodeURIComponent(files[0].name)}`
+    }
   } else {
     hash = await makeHashFromFiles(files, ipfs)
   }
 
-  return `https://gateway.btfssoter.io/btfs/${hash}`
+  return `https://gateway.btfssoter.io/btfs/${hash}${filename || ''}`
 }

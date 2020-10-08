@@ -1,6 +1,6 @@
 
 export default (srcUrl, filename, progressCallback) => {
-  let xhr = new window.XMLHttpRequest()
+  const xhr = new window.XMLHttpRequest()
   let total = 0
 
   const abort = () => {

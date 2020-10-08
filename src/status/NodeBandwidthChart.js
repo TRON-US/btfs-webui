@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Line } from 'react-chartjs-2'
-import { translate } from 'react-i18next'
+import { withTranslation } from 'react-i18next'
 import { connect } from 'redux-bundler-react'
 import PropTypes from 'prop-types'
 import filesize from 'filesize'
@@ -104,7 +104,7 @@ class NodeBandwidthChart extends React.Component {
 
   // generates tooltip data.
   data = () => {
-    let { t, nodeBandwidthChartData } = this.props
+    const { t, nodeBandwidthChartData } = this.props
 
     return function (canvas) {
       const ctx = canvas.getContext('2d')
@@ -152,7 +152,7 @@ class NodeBandwidthChart extends React.Component {
   }
 
   render () {
-    let { t, animatedPoints, nodeBandwidthChartData } = this.props
+    const { t, animatedPoints, nodeBandwidthChartData } = this.props
 
     if (nodeBandwidthChartData.in.length === 0) {
       return null
@@ -203,4 +203,4 @@ class NodeBandwidthChart extends React.Component {
   }
 }
 
-export default connect('selectNodeBandwidthChartData', translate('status')(NodeBandwidthChart))
+export default connect('selectNodeBandwidthChartData', withTranslation('status')(NodeBandwidthChart))

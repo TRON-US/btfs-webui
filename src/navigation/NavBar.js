@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'redux-bundler-react'
-import { translate } from 'react-i18next'
+import { withTranslation } from 'react-i18next'
 import classnames from 'classnames'
 import StrokeMarketing from '../icons/StrokeMarketing'
 import StrokeWeb from '../icons/StrokeWeb'
@@ -56,7 +56,7 @@ export const NavBar = ({ t, width, open, onToggle }) => {
   const gitRevision = process.env.REACT_APP_GIT_REV
   const revisionUrl = `${codeUrl}/commit/${gitRevision}`
   return (
-    <div className='h-100 fixed-l flex flex-column justify-between' style={{ width: 'inherit' }}>
+    <div className='h-100 fixed-l flex flex-column justify-between' style={{ overflowY: 'auto', width: 'inherit' }}>
       <div className='flex flex-column'>
         <div className='pointer navy pv3 pv4-l' onClick={onToggle}>
           <img className='center' style={{ height: 70, display: open ? 'block' : 'none' }} src={btfsLogoText} alt='BTFS' title='Toggle navbar' />
@@ -64,7 +64,7 @@ export const NavBar = ({ t, width, open, onToggle }) => {
         </div>
         <nav className='db overflow-x-scroll overflow-x-hidden-l nowrap tc' role='menubar'>
           <NavLink to='/' exact icon={StrokeMarketing} open={open}>{t('status:title')}</NavLink>
-          <NavLink to='/files/' icon={StrokeWeb} open={open}>{t('files:title')}</NavLink>
+          <NavLink to='/files' icon={StrokeWeb} open={open}>{t('files:title')}</NavLink>
           <NavLink to='/explore' icon={StrokeIpld} open={open}>{t('explore:tabName')}</NavLink>
           <NavLink to='/peers' icon={StrokeCube} open={open}>{t('peers:title')}</NavLink>
           <NavLink to='/settings' icon={StrokeSettings} open={open}>{t('settings:title')}</NavLink>
@@ -99,5 +99,5 @@ export default connect(
   'doToggleNavbar',
   'selectNavbarIsOpen',
   'selectNavbarWidth',
-  translate()(NavBarContainer)
+  withTranslation()(NavBarContainer)
 )

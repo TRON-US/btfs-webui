@@ -1,8 +1,12 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { connect } from 'redux-bundler-react'
-import { translate, Trans } from 'react-i18next'
-
+import { withTranslation, Trans } from 'react-i18next'
+import ReactJoyride from 'react-joyride'
+// Tour
+import { settingsTour } from '../lib/tours'
+import withTour from '../components/tour/withTour'
+import { getJoyrideLocales } from '../helpers/i8n'
 // Components
 import Tick from '../icons/GlyphSmallTick'
 import Box from '../components/box/Box'
@@ -10,7 +14,6 @@ import Button from '../components/button/Button'
 import LanguageSelector from '../components/language-selector/LanguageSelector'
 // import AnalyticsToggle from '../components/analytics-toggle/AnalyticsToggle'
 import JsonEditor from './editor/JsonEditor'
-import DesktopSettings from './DesktopSettings'
 import Experiments from '../components/experiments/ExperimentsPanel'
 import Title from './Title'
 
@@ -19,27 +22,30 @@ const PAUSE_AFTER_SAVE_MS = 3000
 export const SettingsPage = ({
   t, tReady, isIpfsConnected,
   isConfigBlocked, isLoading, isSaving,
-  hasSaveFailed, hasSaveSucceded, hasErrors, hasLocalChanges, hasExternalChanges, isIpfsDesktop,
-  config, onChange, onReset, onSave, editorKey
+  hasSaveFailed, hasSaveSucceded, hasErrors, hasLocalChanges, hasExternalChanges,
+  config, onChange, onReset, onSave, editorKey, analyticsEnabled, doToggleAnalytics,
+  toursEnabled, handleJoyrideCallback
 }) => (
   <div data-id='SettingsPage' className='mw9 center'>
     <Helmet>
       <title>{t('title')} - BTFS</title>
     </Helmet>
 
-    { isIpfsDesktop &&
-      <DesktopSettings />
-    }
-
     <Box className='mb3 pa4'>
-      <Title>{t('language')}</Title>
-      <LanguageSelector t={t} />
+      <div className='mb4 joyride-settings-language'>
+        <Title>{t('language')}</Title>
+        <LanguageSelector t={t} />
+      </div>
 
+      <div className='joyride-settings-analytics'>
+        <Title>{t('analytics')}</Title>
+        <AnalyticsToggle t={t} doToggleAnalytics={doToggleAnalytics} analyticsEnabled={analyticsEnabled} />
+      </div>
     </Box>
 
     <Experiments t={t} />
 
-    <Box>
+    <Box className='mb3 pa4 joyride-settings-config'>
       <Title>{t('config')}</Title>
       <div className='flex pb3'>
         <div className='flex-auto'>
@@ -79,19 +85,29 @@ export const SettingsPage = ({
           </div>
         ) : null }
       </div>
-      {config ? (
+      { config ? (
         <JsonEditor
           value={config}
           onChange={onChange}
           readOnly={isSaving}
           key={editorKey} />
-      ) : null}
+      ) : null }
     </Box>
+
+    <ReactJoyride
+      run={toursEnabled}
+      steps={settingsTour.getSteps({ t, Trans })}
+      styles={settingsTour.styles}
+      callback={handleJoyrideCallback}
+      continuous
+      scrollToFirstStep
+      locale={getJoyrideLocales(t)}
+      showProgress />
   </div>
 )
 
 const SaveButton = ({ t, hasErrors, hasSaveFailed, hasSaveSucceded, isSaving, hasLocalChanges, hasExternalChanges, onClick }) => {
-  const bg = hasSaveSucceded ? 'bg-green' : 'bg-aqua'
+  const bg = hasSaveSucceded ? 'bg-green' : 'bg-teal'
   return (
     <Button
       minWidth={100}
@@ -154,7 +170,7 @@ const SettingsInfo = ({ t, isIpfsConnected, isConfigBlocked, hasExternalChanges,
   }
   return (
     <p className='ma0 mr2 lh-copy charcoal f6'>
-      {t('ipfsConfigDescription')}
+      {t('ipfsConfigDescription')} <a href='https://github.com/ipfs/go-ipfs/blob/master/docs/config.md' rel='noopener noreferrer' target='_blank' className='link blue'>{t('ipfsConfigHelp')}</a>
     </p>
   )
 }
@@ -229,7 +245,7 @@ export class SettingsPageContainer extends React.Component {
   }
 
   render () {
-    const { t, tReady, isConfigBlocked, ipfsConnected, configIsLoading, configLastError, configIsSaving, configSaveLastSuccess, configSaveLastError, isIpfsDesktop } = this.props
+    const { t, tReady, isConfigBlocked, ipfsConnected, configIsLoading, configLastError, configIsSaving, configSaveLastSuccess, configSaveLastError, isIpfsDesktop, analyticsEnabled, doToggleAnalytics, toursEnabled, handleJoyrideCallback } = this.props
     const { hasErrors, hasLocalChanges, hasExternalChanges, editableConfig, editorKey } = this.state
     const hasSaveSucceded = this.isRecent(configSaveLastSuccess)
     const hasSaveFailed = this.isRecent(configSaveLastError)
@@ -252,12 +268,16 @@ export class SettingsPageContainer extends React.Component {
         onChange={this.onChange}
         onReset={this.onReset}
         onSave={this.onSave}
-        isIpfsDesktop={isIpfsDesktop} />
+        isIpfsDesktop={isIpfsDesktop}
+        analyticsEnabled={analyticsEnabled}
+        doToggleAnalytics={doToggleAnalytics}
+        toursEnabled={toursEnabled}
+        handleJoyrideCallback={handleJoyrideCallback} />
     )
   }
 }
 
-export const TranslatedSettingsPage = translate('settings')(SettingsPageContainer)
+export const TranslatedSettingsPage = withTranslation('settings')(SettingsPageContainer)
 
 export default connect(
   'selectConfig',
@@ -269,6 +289,9 @@ export default connect(
   'selectConfigSaveLastSuccess',
   'selectConfigSaveLastError',
   'selectIsIpfsDesktop',
+  'selectToursEnabled',
+  'selectAnalyticsEnabled',
+  'doToggleAnalytics',
   'doSaveConfig',
-  TranslatedSettingsPage
+  withTour(TranslatedSettingsPage)
 )

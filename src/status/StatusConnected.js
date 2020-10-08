@@ -1,10 +1,10 @@
 import React from 'react'
-import { translate, Trans } from 'react-i18next'
+import { withTranslation, Trans } from 'react-i18next'
 import { connect } from 'redux-bundler-react'
 import filesize from 'filesize'
 
 export const StatusConnected = ({ peersCount, repoSize }) => {
-  const humanRepoSize = filesize(repoSize || 0, { round: 0 })
+  const humanRepoSize = filesize(repoSize || 0, { round: 1 })
   return (
     <header>
       <h1 className='montserrat fw2 f3 charcoal ma0 pt0 pb2'>
@@ -33,7 +33,7 @@ export const StatusConnected = ({ peersCount, repoSize }) => {
   )
 }
 
-export const TranslatedStatusConnected = translate('status')(StatusConnected)
+export const TranslatedStatusConnected = withTranslation('status')(StatusConnected)
 
 export default connect(
   'selectPeersCount',

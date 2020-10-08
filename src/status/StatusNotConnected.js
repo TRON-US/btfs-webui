@@ -1,5 +1,5 @@
 import React from 'react'
-import { translate, Trans } from 'react-i18next'
+import { withTranslation, Trans } from 'react-i18next'
 import Shell from '../components/shell/Shell'
 
 const StatusNotConnected = () => {
@@ -13,16 +13,16 @@ const StatusNotConnected = () => {
       <Trans i18nKey='StatusNotConnected.paragraph1'>
         <p className='mv3 lh-copy sans-serif'>Start an BTFS daemon in a terminal:</p>
       </Trans>
-      <Shell>
-        <code className='db'>$ btfs daemon</code>
+      <Shell className='mw6'>
+        <code className='db'><b className='no-select'>$ </b>ipfs daemon</code>
         <code className='db'>Initializing daemon...</code>
         <code className='db'>API server listening on /ip4/127.0.0.1/tcp/5001</code>
       </Shell>
       <Trans i18nKey='StatusNotConnected.paragraph2'>
-        <p className='mt3 lh-copy sans-serif'>For more info on how to get started with BTFS you can <a className='link blue' href='https://docs.ipfs.io/introduction/usage/'>read the guide</a>.</p>
+        <p className='mt3 lh-copy sans-serif'>For more info on how to get started with BTFS you can <a className='link blue' href='https://docs.btfs.io'>read the guide</a>.</p>
       </Trans>
     </header>
   )
 }
 
-export default translate('status')(StatusNotConnected)
+export default withTranslation('status')(StatusNotConnected)

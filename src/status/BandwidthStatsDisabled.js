@@ -1,5 +1,5 @@
 import React from 'react'
-import { translate, Trans } from 'react-i18next'
+import { withTranslation, Trans } from 'react-i18next'
 import Shell from '../components/shell/Shell'
 import Box from '../components/box/Box'
 
@@ -17,11 +17,11 @@ const StatusNotConnected = ({ t }) => {
         </Trans>
       </p>
 
-      <Shell>
-        <code className='db'>$ ipfs config --json Swarm.DisableBandwidthMetrics false</code>
+      <Shell className='mw6'>
+        <code className='db'><b className='no-select'>$ </b>ipfs config --json Swarm.DisableBandwidthMetrics false</code>
       </Shell>
     </Box>
   )
 }
 
-export default translate('status')(StatusNotConnected)
+export default withTranslation('status')(StatusNotConnected)

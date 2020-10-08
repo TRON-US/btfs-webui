@@ -1,22 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'redux-bundler-react'
 import isBinary from 'is-binary'
-import { Trans, translate } from 'react-i18next'
+import { Trans, withTranslation } from 'react-i18next'
 import typeFromExt from '../type-from-ext'
 import ComponentLoader from '../../loader/ComponentLoader.js'
+import './FilePreview.css'
 
-class FilesPreview extends React.Component {
-  static propTypes = {
-    hash: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    size: PropTypes.number.isRequired,
-    gatewayUrl: PropTypes.string.isRequired,
-    read: PropTypes.func.isRequired,
-    content: PropTypes.object,
-    t: PropTypes.func.isRequired,
-    tReady: PropTypes.bool.isRequired
-  }
-
+class Preview extends React.Component {
   state = {
     content: null
   }
@@ -27,11 +18,11 @@ class FilesPreview extends React.Component {
   }
 
   render () {
-    const { t, name, size, hash, gatewayUrl } = this.props
+    const { t, name, hash, size, gatewayUrl } = this.props
 
     const type = typeFromExt(name)
     const src = `${gatewayUrl}/btfs/${hash}`
-    const className = 'mw-100 mt3 bg-snow-muted pa2 br2'
+    const className = 'mw-100 mt3 bg-snow-muted pa2 br2 border-box'
 
     switch (type) {
       case 'audio':
@@ -42,7 +33,7 @@ class FilesPreview extends React.Component {
         )
       case 'pdf':
         return (
-          <object width='100%' height='500px' data={src} type='application/pdf'>
+          <object className="FilePreviewPDF w-100" data={src} type='application/pdf'>
             {t('noPDFSupport')}
             <a href={src} download target='_blank' rel='noopener noreferrer' className='underline-hover navy-muted'>{t('downloadPDF')}</a>
           </object>
@@ -55,7 +46,7 @@ class FilesPreview extends React.Component {
         )
       case 'image':
         return <img className={className} alt={name} src={src} />
-      default:
+      default: {
         const cantPreview = (
           <div className='mt4'>
             <p className='b'>{t('cantBePreviewed')} <span role='img' aria-label='sad'>😢</span></p>
@@ -85,8 +76,23 @@ class FilesPreview extends React.Component {
             {this.state.content}
           </pre>
         )
+      }
     }
   }
 }
 
-export default translate('files')(FilesPreview)
+Preview.propTypes = {
+  name: PropTypes.string.isRequired,
+  hash: PropTypes.string.isRequired,
+  size: PropTypes.number.isRequired,
+  gatewayUrl: PropTypes.string.isRequired,
+  read: PropTypes.func.isRequired,
+  content: PropTypes.object,
+  t: PropTypes.func.isRequired,
+  tReady: PropTypes.bool.isRequired
+}
+
+export default connect(
+  'selectGatewayUrl',
+  withTranslation('files')(Preview)
+)

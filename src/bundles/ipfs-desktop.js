@@ -1,84 +1,29 @@
-import { ACTIONS } from './experiments'
-
 let bundle = {
   name: 'ipfsDesktop',
   reducer: (state = {}) => state,
-  selectIsIpfsDesktop: () => !!window.ipfsDesktop
+  selectIsIpfsDesktop: () => !!window.ipfsDesktop,
+  selectDesktopCountlyActions: () => ([])
 }
 
 if (window.ipfsDesktop) {
   bundle = {
     ...bundle,
-    reducer: (state = {}, action) => {
-      if (action.type === ACTIONS.EXP_TOGGLE_STARTED) {
-        window.ipfsDesktop.toggleSetting(`experiments.${action.payload.key}`)
-      }
-
-      if (!action.type.startsWith('DESKTOP_')) {
-        return state
-      }
-
-      if (action.type === 'DESKTOP_SETTINGS_CHANGED') {
-        return action.payload
-      }
-
-      return state
-    },
-
-    selectDesktopSettings: state => state.ipfsDesktop,
-
     selectDesktopVersion: () => window.ipfsDesktop.version,
 
-    doDesktopStartListening: () => async ({ dispatch, store }) => {
-      window.ipfsDesktop.onConfigChanged(({ config, changed, success }) => {
-        const prevConfig = store.selectDesktopSettings()
+    selectDesktopCountlyDeviceId: () => window.ipfsDesktop.countlyDeviceId,
 
-        if (Object.keys(prevConfig).length === 0) {
-          dispatch({
-            type: ACTIONS.EXP_UPDATE_STATE,
-            payload: Object.keys(config.experiments).reduce(
-              (all, key) => ({
-                ...all,
-                [key]: {
-                  enabled: config.experiments[key]
-                }
-              }),
-              {}
-            )
-          })
-        }
-
-        if (changed && changed.startsWith('experiments.')) {
-          const key = changed.replace('experiments.', '')
-
-          if (success) {
-            dispatch({ type: ACTIONS.EXP_TOGGLE_FINISHED, payload: { key } })
-          } else {
-            dispatch({ type: ACTIONS.EXP_TOGGLE_FAILED, payload: { key } })
-          }
-        }
-
-        dispatch({
-          type: 'DESKTOP_SETTINGS_CHANGED',
-          payload: config
-        })
-      })
-    },
-
-    doDesktopSettingsToggle: setting => () => {
-      window.ipfsDesktop.toggleSetting(setting)
-    },
-
-    doDesktopIpfsConfigChanged: () => () => {
-      window.ipfsDesktop.configHasChanged()
-    },
+    selectDesktopCountlyActions: () => window.ipfsDesktop.countlyActions,
 
     doDesktopSelectDirectory: () => () => {
       return window.ipfsDesktop.selectDirectory()
     },
 
-    init: store => {
-      store.doDesktopStartListening()
+    doDesktopAddConsent: consent => () => {
+      return window.ipfsDesktop.addConsent(consent)
+    },
+
+    doDesktopRemoveConsent: consent => () => {
+      return window.ipfsDesktop.removeConsent(consent)
     }
   }
 }

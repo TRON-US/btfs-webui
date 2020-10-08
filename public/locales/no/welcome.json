@@ -24,7 +24,8 @@
     "header": "Hva er BTFS?",
     "paragraph1": "<0><0>BTFS er en protokoll</0> som definerer et innholdsadressert filsystem, koordinerer innholdsleveranse og kombinerer ideer fra Kademlia, BitTorrent, Git og mer.",
     "paragraph2": "<0><0>BTFS er et filsystem.</0> Det har mapper, filer og monterbart filsystem via FUSE.</0>",
+    "paragraph3": "<0><0>BTFS er en web.</0> Filer er tilgjengelig via HTTP-gateways som <2>https://btfs.io</2>. Nettlesere <4>kan bli utvidet</4> til å bruke <6>btfs://</6>ordningen direkte, og hash-adresserbart innhold garanterer autensitet</0>",
     "paragraph4": "<0><0>BTFS er p2p.</0> Den støtter verdensomspennende peer-to-peer filoverføringer med en desentralisert arkitektur, og ingen sentrale punkt for svikt.</0>",
-    "paragraph5": "<0><0>BTFS er en CDN.</0> Legg til en fil i ditt lokal lager, og den er nå tilgjengelig for verden med en cache-vennlig innholds hash adressering, og bittorrent-lignende båndbredde distribusjon.</0>"
+    "paragraph5": "<0><0>BTFS is a CDN.</0> Add a file to your local repository, and it's now available to the world with cache-friendly content-hash addressing and BitTorrent-like bandwidth distribution.</0>"
   }
 }
