@@ -4,16 +4,23 @@ import ms from 'milliseconds'
 const bundle = createAsyncResourceBundle({
   name: 'peers',
   actionBaseType: 'PEERS',
-  getPromise: ({ getIpfs }) => getIpfs().swarm.peers()
-    .then((peers) => peers.sort((a, b) => {
-      const aAddr = a.addr.toString()
-      const bAddr = b.addr.toString()
-      return aAddr.localeCompare(bAddr, undefined, { numeric: true, sensitivity: 'base' })
-    })),
+  getPromise: ({ getIpfs }) => getIpfs().swarm.peers({ verbose: true }),
   staleAfter: ms.seconds(10),
   persist: false,
   checkIfOnline: false
 })
+
+const asyncResourceReducer = bundle.reducer
+
+bundle.reducer = (state, action) => {
+  const asyncResult = asyncResourceReducer(state, action)
+
+  if (action.type === 'SET_SELECTED_PEER') {
+    return { ...asyncResult, selectedPeers: action.payload }
+  }
+
+  return asyncResult
+}
 
 bundle.selectPeersCount = createSelector(
   'selectPeers',
@@ -36,7 +43,7 @@ bundle.doConnectSwarm = addr => async ({ dispatch, getIpfs }) => {
     })
   }
 
-  dispatch({ type: 'SWARM_CONNECT_FINISHED', payload: { addr } })
+  return dispatch({ type: 'SWARM_CONNECT_FINISHED', payload: { addr } })
 }
 
 // Update the peers if they are stale (appTime - lastSuccess > staleAfter)
@@ -63,5 +70,11 @@ bundle.reactPeersFetchWhenActive = createSelector(
     }
   }
 )
+
+bundle.selectSelectedPeers = (state) => state.peers.selectedPeers
+
+bundle.doSetSelectedPeers = (peer) => ({ dispatch }) => {
+  dispatch({ type: 'SET_SELECTED_PEER', payload: peer })
+}
 
 export default bundle

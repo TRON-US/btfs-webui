@@ -15,7 +15,7 @@
   "addFile": "Fil",
   "addFolder": "Mappe",
   "addByPath": "Fra BTFS",
-  "addToIPFS": "Legg til",
+  "addToBTFS": "Legg til",
   "newFolder": "Ny mappe",
   "generating": "Generating...",
   "actions": {

@@ -1,50 +1,104 @@
-import React from 'react'
+import React, { useEffect, useState, useRef, useMemo } from 'react'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import { translate } from 'react-i18next'
+import { basename, join } from 'path'
+import { connect } from 'redux-bundler-react'
+import { withTranslation } from 'react-i18next'
+import { useDrop } from 'react-dnd'
+import { NativeTypes } from 'react-dnd-html5-backend'
 
-function makeBread (root, t) {
-  if (root.endsWith('/')) {
-    root = root.substring(0, root.length - 1)
-  }
+import { normalizeFiles } from '../../lib/files'
 
-  let parts = root.split('/').map(part => {
-    return {
-      name: part,
-      path: part
-    }
+import './Breadcrumbs.css'
+
+const DropableBreadcrumb = ({ index, link, immutable, onAddFiles, onMove, onClick, onContextMenuHandle, getPathInfo, checkIfPinned }) => {
+  const [{ isOver }, drop] = useDrop({
+    accept: [NativeTypes.FILE, 'FILE'],
+    drop: async ({ files, filesPromise, path: filePath }) => {
+      if (files) {
+        (async () => {
+          const files = await filesPromise
+          onAddFiles(await normalizeFiles(files), link.path)
+        })()
+      } else {
+        const src = filePath
+        const dst = join(link.path, basename(filePath))
+
+        try { await onMove(src, dst) } catch (e) { console.error(e) }
+      }
+    },
+    collect: (monitor) => ({
+      isOver: monitor.isOver()
+    })
   })
 
-  for (let i = 1; i < parts.length; i++) {
-    parts[i] = {
-      name: parts[i].name,
-      path: parts[i - 1].path + '/' + parts[i].path
-    }
+  const buttonRef = useRef()
+
+  const handleOnContextMenuHandle = async (ev) => {
+    ev.preventDefault()
+
+    const { path } = link
+    const sanitizedPath = path.substring(path.indexOf('/', 1), path.length)
+    const { cid, type } = await getPathInfo(sanitizedPath)
+    const pinned = await checkIfPinned(cid)
+
+    onContextMenuHandle(undefined, buttonRef.current, {
+      ...link,
+      type,
+      cid,
+      pinned
+    })
   }
 
-  parts[0].name = t('home')
-  parts[0].path = '/'
-
-  return parts
+  return (
+    <span className='dib pv1 pr1' ref={drop}>
+      <button ref={buttonRef} title={link.realName}
+        className={classNames('BreadcrumbsButton relative',
+          index !== 0 && 'navy',
+          index === 0 && 'f7 pa1 br2 mr2',
+          index === 0 && (immutable ? 'bg-charcoal-muted white' : 'bg-navy white'),
+          immutable && (link.last || index === 0) && 'no-events',
+          link.last && 'b', isOver && 'dragging')}
+        onClick={() => onClick(link.path)} onContextMenu={(ev) => index !== 0 && handleOnContextMenuHandle(ev)}>
+        {link.name}
+      </button>
+    </span>
+  )
 }
 
-function Breadcrumbs ({ t, tReady, path, onClick, className = '', ...props }) {
-  const cls = `Breadcrumbs sans-serif ${className}`
-  const bread = makeBread(path, t)
+const Breadcrumbs = ({ t, tReady, path, onClick, className, onContextMenuHandle, onAddFiles, onMove, doGetPathInfo, doCheckIfPinned, ...props }) => {
+  const [overflows, setOverflows] = useState(false)
+  const [isImmutable, setImmutable] = useState(false)
+  const anchors = useRef()
 
-  const res = bread.map((link, index) => ([
-    <div key={`${index}link`} className='dib bb bw1 pv1' style={{ borderColor: '#244e66' }}>
-      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-      <a className='pointer dib link dark-gray o-50 glow' onClick={() => onClick(link.path)}>
-        {link.name}
-      </a>
-    </div>,
-    <div key={`${index}divider`} className='dib ph2 pv1 gray v-top'>/</div>
-  ]))
+  useEffect(() => {
+    const a = anchors.current
 
-  res[res.length - 1].pop()
+    const newOverflows = a ? (a.offsetHeight < a.scrollHeight || a.offsetWidth < a.scrollWidth) : false
+    if (newOverflows !== overflows) {
+      setOverflows(newOverflows)
+    }
+  }, [overflows])
+
+  const bread = useMemo(() =>
+    makeBread(path, t, isImmutable, setImmutable)
+  , [isImmutable, path, t])
 
   return (
-    <nav aria-label={t('breadcrumbs')} className={cls} {...props}>{res}</nav>
+    <nav aria-label={t('breadcrumbs')} className={classNames('Breadcrumbs flex items-center sans-serif overflow-hidden sticky top-0', className)} {...props}>
+      <div className='nowrap overflow-hidden relative flex flex-wrap' ref={ anchors }>
+        <div className={`absolute left-0 top-0 h-100 w1 ${overflows ? '' : 'dn'}`} style={{ background: 'linear-gradient(to right, #ffffff 0%, transparent 100%)' }} />
+
+        { bread.map((link, index) => (
+          <div key={`${index}link`}>
+            <DropableBreadcrumb index={index} link={link} immutable={isImmutable}
+              onAddFiles={onAddFiles} onMove={onMove} onClick={onClick} onContextMenuHandle={onContextMenuHandle} getPathInfo={doGetPathInfo} checkIfPinned={doCheckIfPinned} />
+            { index !== bread.length - 1 && <span className='dib pr1 pv1 mid-gray v-top'>/</span>}
+          </div>
+        ))}
+
+      </div>
+    </nav>
   )
 }
 
@@ -52,7 +106,47 @@ Breadcrumbs.propTypes = {
   path: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
   t: PropTypes.func.isRequired,
-  tReady: PropTypes.bool.isRequired
+  onContextMenuHandle: PropTypes.func
 }
 
-export default translate('files')(Breadcrumbs)
+function makeBread (root, t, isImmutable, setImmutable) {
+  if (root.endsWith('/')) {
+    root = root.substring(0, root.length - 1)
+  }
+
+  const parts = root.split('/').map(part => ({
+    name: part,
+    path: part
+  }))
+
+  for (let i = 1; i < parts.length; i++) {
+    const name = parts[i].name
+
+    parts[i] = {
+      name: name,
+      path: parts[i - 1].path + '/' + parts[i].path
+    }
+
+    if (name.length >= 30) {
+      parts[i].realName = name
+      parts[i].name = `${name.substring(0, 4)}...${name.substring(name.length - 4, name.length)}`
+    }
+  }
+
+  parts.shift()
+
+  if (parts[0].name === 'ipfs' || parts[0].name === 'ipns') {
+    !isImmutable && setImmutable(true)
+  }
+
+  parts[0].name = t(parts[0].name)
+
+  parts[parts.length - 1].last = true
+  return parts
+}
+
+export default connect(
+  'doGetPathInfo',
+  'doCheckIfPinned',
+  withTranslation('files')(Breadcrumbs)
+)

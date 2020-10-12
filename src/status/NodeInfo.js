@@ -1,5 +1,5 @@
 import React from 'react'
-import { translate } from 'react-i18next'
+import { withTranslation } from 'react-i18next'
 import { connect } from 'redux-bundler-react'
 import VersionLink from '../components/version-link/VersionLink'
 import { Definition, DefinitionList } from '../components/definition/Definition.js'
@@ -27,8 +27,9 @@ class NodeInfo extends React.Component {
 
     return (
       <DefinitionList>
-        <Definition term={t('peerId')} desc={this.getField(identity, 'id')} />
-        <Definition term={t('version')} desc={<VersionLink agentVersion={this.getField(identity, 'agentVersion')} />} />
+        <Definition term={t('terms.peerId')} desc={this.getField(identity, 'id')} />
+        <Definition term={t('terms.agent')} desc={<VersionLink agentVersion={this.getField(identity, 'agentVersion')} />} />
+        <Definition term={t('terms.ui')} desc={<a href={'https://github.com/ipfs-shipyard/ipfs-webui/releases/tag/v' + process.env.REACT_APP_VERSION} className='link blue' target='_blank' rel='noopener noreferrer'>v{process.env.REACT_APP_VERSION}</a>} />
       </DefinitionList>
     )
   }
@@ -36,5 +37,5 @@ class NodeInfo extends React.Component {
 
 export default connect(
   'selectIdentity',
-  translate('status')(NodeInfo)
+  withTranslation('app')(NodeInfo)
 )

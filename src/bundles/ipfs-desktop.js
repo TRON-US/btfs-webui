@@ -1,86 +1,88 @@
-import { ACTIONS } from './experiments'
+/**
+ * @typedef {Object} IPFSDesktop
+ * @property {string} version
+ * @property {string} countlyDeviceId
+ * @property {string[]} countlyActions
+ * @property {() => Promise<void|Array<{path:string, size:number, content:AsyncIterable<Uint8Array>}>>} selectDirectory
+ * @property {(consent:string[]) => void} removeConsent
+ * @property {(consent:string[]) => void} addConsent
+ */
+// @ts-ignore
+/** @type {{ ipfsDesktop: IPFSDesktop }} */
+const root = (window)
 
-let bundle = {
-  name: 'ipfsDesktop',
-  reducer: (state = {}) => state,
-  selectIsIpfsDesktop: () => !!window.ipfsDesktop
+/**
+ * @typedef {import('redux-bundler').Selectors<typeof baseSelectors>} BaseSelectors
+ */
+
+const baseSelectors = {
+  /**
+   * @returns {boolean}
+   */
+  selectIsIpfsDesktop: () => !!root.ipfsDesktop,
+  /**
+   * @returns {string[]}
+   */
+  selectDesktopCountlyActions: () => ([])
 }
 
-if (window.ipfsDesktop) {
-  bundle = {
-    ...bundle,
-    reducer: (state = {}, action) => {
-      if (action.type === ACTIONS.EXP_TOGGLE_STARTED) {
-        window.ipfsDesktop.toggleSetting(`experiments.${action.payload.key}`)
-      }
+const desktopSelectors = {
+  ...baseSelectors,
+  selectDesktopVersion: () => root.ipfsDesktop.version,
 
-      if (!action.type.startsWith('DESKTOP_')) {
-        return state
-      }
+  selectDesktopCountlyDeviceId: () => root.ipfsDesktop.countlyDeviceId,
 
-      if (action.type === 'DESKTOP_SETTINGS_CHANGED') {
-        return action.payload
-      }
+  selectDesktopCountlyActions: () => root.ipfsDesktop.countlyActions
+}
 
-      return state
-    },
+/**
+ * @typedef {import('redux-bundler').Selectors<typeof desktopSelectors>} Selectors
+ */
+const selectors = root.ipfsDesktop
+  ? desktopSelectors
+  : baseSelectors
 
-    selectDesktopSettings: state => state.ipfsDesktop,
+const desktopActions = {
+  /**
+   * @param {string[]} consent
+   * @returns {() => void}
+   */
+  doDesktopAddConsent: consent => () => {
+    return root.ipfsDesktop.addConsent(consent)
+  },
 
-    selectDesktopVersion: () => window.ipfsDesktop.version,
-
-    doDesktopStartListening: () => async ({ dispatch, store }) => {
-      window.ipfsDesktop.onConfigChanged(({ config, changed, success }) => {
-        const prevConfig = store.selectDesktopSettings()
-
-        if (Object.keys(prevConfig).length === 0) {
-          dispatch({
-            type: ACTIONS.EXP_UPDATE_STATE,
-            payload: Object.keys(config.experiments).reduce(
-              (all, key) => ({
-                ...all,
-                [key]: {
-                  enabled: config.experiments[key]
-                }
-              }),
-              {}
-            )
-          })
-        }
-
-        if (changed && changed.startsWith('experiments.')) {
-          const key = changed.replace('experiments.', '')
-
-          if (success) {
-            dispatch({ type: ACTIONS.EXP_TOGGLE_FINISHED, payload: { key } })
-          } else {
-            dispatch({ type: ACTIONS.EXP_TOGGLE_FAILED, payload: { key } })
-          }
-        }
-
-        dispatch({
-          type: 'DESKTOP_SETTINGS_CHANGED',
-          payload: config
-        })
-      })
-    },
-
-    doDesktopSettingsToggle: setting => () => {
-      window.ipfsDesktop.toggleSetting(setting)
-    },
-
-    doDesktopIpfsConfigChanged: () => () => {
-      window.ipfsDesktop.configHasChanged()
-    },
-
-    doDesktopSelectDirectory: () => () => {
-      return window.ipfsDesktop.selectDirectory()
-    },
-
-    init: store => {
-      store.doDesktopStartListening()
-    }
+  /**
+   * @param {string[]} consent
+   * @returns {() => void}
+   */
+  doDesktopRemoveConsent: consent => () => {
+    return root.ipfsDesktop.removeConsent(consent)
   }
+}
+
+/**
+ * @typedef {never} Message
+ * @typedef {Object} Model
+ * @typedef {Object} State
+ * @property {Model} ipfsDesktop
+ * @typedef {import('redux-bundler').Actions<typeof desktopActions>} Actions
+ * @typedef {Selectors & Actions} Ext
+ * @typedef {import('redux-bundler').Context<State, Message, Ext>} Context
+ */
+
+const actions = root.ipfsDesktop
+  ? desktopActions
+  : {}
+
+const bundle = {
+  name: 'ipfsDesktop',
+  /**
+   * @param {Model} [state]
+   * @returns {Model}
+   */
+  reducer: (state = {}) => state,
+  ...selectors,
+  ...actions
 }
 
 export default bundle

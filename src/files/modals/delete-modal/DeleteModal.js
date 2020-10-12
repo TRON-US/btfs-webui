@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { translate } from 'react-i18next'
+import { withTranslation } from 'react-i18next'
 import TrashIcon from '../../../icons/StrokeTrash'
 import Button from '../../../components/button/Button'
 import { Modal, ModalActions, ModalBody } from '../../../components/modal/Modal'
@@ -26,8 +26,8 @@ const DeleteModal = ({ t, tReady, onCancel, onDelete, folders, files, className,
       </ModalBody>
 
       <ModalActions>
-        <Button className='ma2' bg='bg-gray' onClick={onCancel}>{t('actions.cancel')}</Button>
-        <Button className='ma2' bg='bg-red' onClick={onDelete}>{t('actions.delete')}</Button>
+        <Button className='ma2 tc' bg='bg-gray' onClick={onCancel}>{t('app:actions.cancel')}</Button>
+        <Button className='ma2 tc' bg='bg-red' onClick={onDelete}>{t('app:actions.delete')}</Button>
       </ModalActions>
     </Modal>
   )
@@ -48,4 +48,4 @@ DeleteModal.defaultProps = {
   folders: 0
 }
 
-export default translate('files')(DeleteModal)
+export default withTranslation('files')(DeleteModal)

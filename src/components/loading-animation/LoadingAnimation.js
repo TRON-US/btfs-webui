@@ -1,5 +1,5 @@
 import React from 'react'
-import { translate } from 'react-i18next'
+import { withTranslation } from 'react-i18next'
 // Components
 import GlyphDots from '../../icons/GlyphDots'
 import Checkbox from '../../components/checkbox/Checkbox'
@@ -10,8 +10,8 @@ import './LoadingAnimation.css'
 const FakeHeader = ({ t }) => (
   <header className='gray pv2 flex items-center flex-none'>
     <div className='pa2 w2'><Checkbox disabled /></div>
-    <div className='ph2 f6 flex-auto'>{t('fileName')}</div>
-    <div className='pl2 pr4 tr f6 flex-none dn db-l'>{t('size')}</div>
+    <div className='ph2 f6 flex-auto'>{t('app:terms.name')}</div>
+    <div className='pl2 pr4 tr f6 flex-none dn db-l'>{t('app:terms.size')}</div>
     <div className='pa2' style={{ width: '2.5rem' }} />
   </header>
 )
@@ -55,4 +55,4 @@ const LoadingAnimation = ({ t }) => (
   </div>
 )
 
-export default translate('files')(LoadingAnimation)
+export default withTranslation('files')(LoadingAnimation)

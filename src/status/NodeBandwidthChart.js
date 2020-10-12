@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Line } from 'react-chartjs-2'
-import { translate } from 'react-i18next'
+import { withTranslation } from 'react-i18next'
 import { connect } from 'redux-bundler-react'
 import PropTypes from 'prop-types'
 import filesize from 'filesize'
@@ -63,12 +63,12 @@ const Tooltip = ({ t, bw, show, pos }) => {
       }} />
       <div className='dt'>
         <div className='dt-row'>
-          <span className='dtc f7 charcoal tr'>{t('in').toLowerCase()}:</span>
+          <span className='dtc f7 charcoal tr'>{t('app:terms.in').toLowerCase()}:</span>
           <span className='f4 ml1 charcoal-muted'>{bw.in[0]}</span>
           <span className='f7 charcoal-muted'>{bw.in[1]}/s</span>
         </div>
         <div className='dt-row'>
-          <span className='dtc f7 charcoal tr'>{t('out').toLowerCase()}:</span>
+          <span className='dtc f7 charcoal tr'>{t('app:terms.out').toLowerCase()}:</span>
           <span className='f4 ml1 charcoal-muted'>{bw.out[0]}</span>
           <span className='f7 charcoal-muted'>{bw.out[1]}/s</span>
         </div>
@@ -104,7 +104,7 @@ class NodeBandwidthChart extends React.Component {
 
   // generates tooltip data.
   data = () => {
-    let { t, nodeBandwidthChartData } = this.props
+    const { t, nodeBandwidthChartData } = this.props
 
     return function (canvas) {
       const ctx = canvas.getContext('2d')
@@ -120,7 +120,7 @@ class NodeBandwidthChart extends React.Component {
       return {
         datasets: [
           {
-            label: t('in'),
+            label: t('app:terms.in'),
             data: nodeBandwidthChartData.in,
             borderColor: gradientIn,
             backgroundColor: gradientIn,
@@ -128,7 +128,7 @@ class NodeBandwidthChart extends React.Component {
             cubicInterpolationMode: 'monotone'
           },
           {
-            label: t('out'),
+            label: t('app:terms.out'),
             data: nodeBandwidthChartData.out,
             borderColor: gradientOut,
             backgroundColor: gradientOut,
@@ -152,7 +152,7 @@ class NodeBandwidthChart extends React.Component {
   }
 
   render () {
-    let { t, animatedPoints, nodeBandwidthChartData } = this.props
+    const { t, animatedPoints, nodeBandwidthChartData } = this.props
 
     if (nodeBandwidthChartData.in.length === 0) {
       return null
@@ -203,4 +203,4 @@ class NodeBandwidthChart extends React.Component {
   }
 }
 
-export default connect('selectNodeBandwidthChartData', translate('status')(NodeBandwidthChart))
+export default connect('selectNodeBandwidthChartData', withTranslation('status')(NodeBandwidthChart))

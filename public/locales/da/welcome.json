@@ -2,7 +2,7 @@
   "title": "Velkommen til BTFS",
   "configureApiPort": {
     "header": "Er dit API sat til anden port end 5001?",
-    "paragraph1": "<0>Hvis din BTFS klient er opsat med en <1>valgfri API adresse</1>, så sæt den venligst her</0>"
+    "paragraph1": "<0>If your BTFS node is configured with a <1>custom API address</1>, please set it here.</0>"
   },
   "apiAddressForm": {
     "apiLabel": "API ADRESSE",
@@ -10,13 +10,13 @@
   },
   "connected": {
     "header": "Forbundet til BTFS",
-    "paragraph1": "<0>Nu er det tid til at udforske din klient. Besøg <1>Fil siden</1> for at håndtere og dele filer, eller udforsk <3>Merkle-skoven</3> af klient-delt hash-linket data via <5>IPLD udforskeren</5>.",
+    "paragraph1": "<0>Now, it’s time for you to explore your node. Head to <1>Files page</1> to manage and share your files, or explore the <3>Merkle Forest</3> of peer-hosted hash-linked data via <5>IPLD explorer</5>.</0>",
     "paragraph2": "<0>Du kan altid vende tilbage til denne adresse ved at ændre hvilken BTFS klient du er forbundet til.</0>"
   },
   "notConnected": {
     "header": "Kører din BTFS baggrunds-process?",
     "paragraph1": "<0>Mislykkedes med at forbinde til API'et.</0>",
-    "paragraoh2": "<0>Sørg for at du <1>konfigurerer dit BTFS API</1> til at tillade cross-origin (CORS) forespørgsler, som afvikler kommandoerne nedenfor:</0>",
+    "paragraph2": "<0>Sørg for at du <1>konfigurerer dit BTFS API</1> til at tillade cross-origin (CORS) forespørgsler, som afvikler kommandoerne nedenfor:</0>",
     "paragraph3": "<0>Kør en BTFS-baggrundsprocess fra en terminal:</0>",
     "paragraph4": "<0>For mere info om at komme i gang med BTFS, kan du <1>læse guiden</1>.</0>"
   },
@@ -24,7 +24,8 @@
     "header": "Hvad er BTFS?",
     "paragraph1": "<0><0>BTFS er en protokol</0> som definerer et indholds-adresseret filsystem, koordinerer indholdslevering og kombinerer idéerne fra Kademlia, Bitorrent, Git mm.</0>",
     "paragraph2": "<0><0>BTFS er et filsystem.</0> Det har biblioteker og filer og et monterbart filsystem ved hjælp af FUSE.</0>",
+    "paragraph3": "<0><0>BTFS is a web.</0> Files are accessible via HTTP gateways like <2>https://gateway.btfs.io</2>. Browsers <4>can be extended</4> to use the <6>ipfs://</6> scheme directly, and hash-addressed content guarantees authenticity.</0>",
     "paragraph4": "<0><0>BTFS er P2P.</0> Det understøtter verdensomspændende klient-til-klient overførsler med en decentral arkitektur og uden central single point of failure.</0>",
-    "paragraph5": "<0><0>BTFS er et CDN.</0> Tilføj en fil til dit lokale fil-bibliotek, og det er nu tilgængelig for verden med cache-hukommelsesvenlig indholdsbaseret hash-adressering og bittorrent-lignende båndbredde distribution.</0>"
+    "paragraph5": "<0><0>BTFS is a CDN.</0> Add a file to your local repository, and it's now available to the world with cache-friendly content-hash addressing and BitTorrent-like bandwidth distribution.</0>"
   }
 }

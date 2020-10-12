@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'redux-bundler-react'
-import { translate } from 'react-i18next'
+import { withTranslation } from 'react-i18next'
 import PropTypes from 'prop-types'
 import filesize from 'filesize'
 import CountryFlag from 'react-country-flag'
@@ -60,11 +60,11 @@ export class PeerBandwidthTable extends Component {
         <table className='collapse'>
           <tbody>
             <tr className='tl'>
-              <th className='f6 pv2 pr3 pl0' colSpan='2'><span className='v-mid'>{t('peer')}</span></th>
-              <SortableTableHeader field='rateIn' label={t('rateIn')} sort={sort} onClick={this.onFieldClick} />
-              <SortableTableHeader field='rateOut' label={t('rateOut')} sort={sort} onClick={this.onFieldClick} />
-              <SortableTableHeader field='totalIn' label={t('totalIn')} sort={sort} onClick={this.onFieldClick} />
-              <SortableTableHeader field='totalOut' label={t('totalOut')} sort={sort} onClick={this.onFieldClick} />
+              <th className='f6 pv2 pr3 pl0' colSpan='2'><span className='v-mid'>{t('app:terms.peer')}</span></th>
+              <SortableTableHeader field='rateIn' label={t('app:rateIn')} sort={sort} onClick={this.onFieldClick} />
+              <SortableTableHeader field='rateOut' label={t('app:rateOut')} sort={sort} onClick={this.onFieldClick} />
+              <SortableTableHeader field='totalIn' label={t('app:totalIn')} sort={sort} onClick={this.onFieldClick} />
+              <SortableTableHeader field='totalOut' label={t('app:totalOut')} sort={sort} onClick={this.onFieldClick} />
             </tr>
             {visiblePeers.map((p, i) => (
               <tr key={p.id} className={i % 2 ? 'bg-snow-muted' : ''}>
@@ -79,7 +79,7 @@ export class PeerBandwidthTable extends Component {
           </tbody>
         </table>
         {!showAll && hiddenPeers.length ? (
-          <p className='sans-serif f5 ma0 pv3 ph2 tc pointer underline-hover navy-muted' onClick={this.onShowAllClick}>{t('more', { count: hiddenPeers.length })}</p>
+          <button className='sans-serif f5 ma0 buttonv3 ph2 tc pointer underline-hover navy-muted' onClick={this.onShowAllClick}>{t('countMore', { count: hiddenPeers.length })}</button>
         ) : null}
       </Box>
     )
@@ -113,5 +113,5 @@ function LocationFlag ({ location }) {
 export default connect(
   'selectPeerBandwidthPeers',
   'selectPeerLocations',
-  translate('status')(PeerBandwidthTable)
+  withTranslation('status')(PeerBandwidthTable)
 )

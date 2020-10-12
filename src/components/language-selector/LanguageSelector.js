@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { getCurrentLanguage } from '../../lib/i18n'
 
 // Components
@@ -17,20 +17,20 @@ class LanguageSelector extends Component {
     const { t } = this.props
 
     return (
-      <div>
+      <Fragment>
         <div className='flex'>
-          <div className='ph4 flex items-center bg-white lh-copy charcoal f6 fw5' style={{ height: 40 }}>
+          <div className='pr4 flex items-center lh-copy charcoal f5 fw5' style={{ height: 40 }}>
             {getCurrentLanguage()}
           </div>
-          <Button minWidth={100} onClick={this.onLanguageEditOpen}>
-            {t('actions.edit')}
+          <Button className="tc" minWidth={100} onClick={this.onLanguageEditOpen}>
+            {t('app:actions.change')}
           </Button>
         </div>
 
         <Overlay show={this.state.isLanguageModalOpen} onLeave={this.onLanguageEditClose} >
           <LanguageModal className='outline-0' onLeave={this.onLanguageEditClose} t={t} />
         </Overlay>
-      </div>
+      </Fragment>
     )
   }
 }

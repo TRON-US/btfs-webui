@@ -1,37 +1,35 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'redux-bundler-react'
 import { join } from 'path'
-import { translate } from 'react-i18next'
+import { withTranslation } from 'react-i18next'
 import Overlay from '../../components/overlay/Overlay'
+// Modals
 import NewFolderModal from './new-folder-modal/NewFolderModal'
 import ShareModal from './share-modal/ShareModal'
 import RenameModal from './rename-modal/RenameModal'
 import DeleteModal from './delete-modal/DeleteModal'
-
+import AddByPathModal from './add-by-path-modal/AddByPathModal'
+import CliTutorMode from '../../components/cli-tutor-mode/CliTutorMode'
+import { cliCommandList, cliCmdKeys } from '../../bundles/files/consts'
+import { realMfsPath } from '../../bundles/files/actions'
+// Constants
 const NEW_FOLDER = 'new_folder'
 const SHARE = 'share'
 const RENAME = 'rename'
 const DELETE = 'delete'
+const ADD_BY_PATH = 'add_by_path'
+const CLI_TUTOR_MODE = 'cli_tutor_mode'
 
 export {
   NEW_FOLDER,
   SHARE,
   RENAME,
-  DELETE
+  DELETE,
+  ADD_BY_PATH,
+  CLI_TUTOR_MODE
 }
 
 class Modals extends React.Component {
-  static propTypes = {
-    t: PropTypes.func,
-    show: PropTypes.string,
-    files: PropTypes.array,
-    doFilesMove: PropTypes.func,
-    doFilesMakeDir: PropTypes.func,
-    doFilesShareLink: PropTypes.func,
-    doFilesDelete: PropTypes.func
-  }
-
   state = {
     readyToShow: false,
     rename: {
@@ -44,22 +42,26 @@ class Modals extends React.Component {
       folder: 0,
       paths: []
     },
-    link: ''
+    link: '',
+    command: 'ipfs --help'
+  }
+
+  onAddByPath = (path) => {
+    this.props.onAddByPath(path)
+    this.leave()
   }
 
   makeDir = (path) => {
-    const { doFilesMakeDir, root } = this.props
-
-    doFilesMakeDir(join(root, path))
+    this.props.onMakeDir(join(this.props.root, path))
     this.leave()
   }
 
   rename = (newName) => {
     const { filename, path } = this.state.rename
-    const { doFilesMove } = this.props
+    const { onMove } = this.props
 
     if (newName !== '' && newName !== filename) {
-      doFilesMove([path, path.replace(filename, newName)])
+      onMove(path, path.replace(filename, newName))
     }
 
     this.leave()
@@ -68,7 +70,7 @@ class Modals extends React.Component {
   delete = () => {
     const { paths } = this.state.delete
 
-    this.props.doFilesDelete(paths)
+    this.props.onDelete(paths)
     this.leave()
   }
 
@@ -78,53 +80,100 @@ class Modals extends React.Component {
   }
 
   componentDidUpdate (prev) {
-    const { show, files, t, doFilesShareLink } = this.props
+    const { show, files, t, onShareLink, cliOptions } = this.props
 
     if (show === prev.show) {
       return
     }
 
-    if (show === SHARE) {
-      this.setState({
-        link: t('generating'),
-        readyToShow: true
-      })
+    switch (show) {
+      case SHARE: {
+        this.setState({
+          link: t('generating'),
+          readyToShow: true
+        })
 
-      doFilesShareLink(files).then(link => this.setState({ link }))
-    } else if (show === RENAME) {
-      const file = files[0]
+        onShareLink(files).then(link => this.setState({ link }))
+        break
+      }
+      case RENAME: {
+        const file = files[0]
 
-      this.setState({
-        readyToShow: true,
-        rename: {
-          folder: file.type === 'directory',
-          path: file.path,
-          filename: file.path.split('/').pop()
-        }
-      })
-    } else if (show === DELETE) {
-      let filesCount = 0
-      let foldersCount = 0
+        this.setState({
+          readyToShow: true,
+          rename: {
+            folder: file.type === 'directory',
+            path: file.path,
+            filename: file.path.split('/').pop()
+          }
+        })
+        break
+      }
+      case DELETE: {
+        let filesCount = 0
+        let foldersCount = 0
 
-      files.forEach(file => file.type === 'file' ? filesCount++ : foldersCount++)
+        files.forEach(file => file.type === 'file' ? filesCount++ : foldersCount++)
 
-      this.setState({
-        readyToShow: true,
-        delete: {
-          files: filesCount,
-          folders: foldersCount,
-          paths: files.map(f => f.path)
-        }
-      })
-    } else {
-      this.setState({ readyToShow: true })
+        this.setState({
+          readyToShow: true,
+          delete: {
+            files: filesCount,
+            folders: foldersCount,
+            paths: files.map(f => f.path)
+          }
+        })
+        break
+      }
+      case NEW_FOLDER:
+      case ADD_BY_PATH:
+        this.setState({ readyToShow: true })
+        break
+      case CLI_TUTOR_MODE:
+        this.setState({ command: this.cliCommand(cliOptions, files) }, () => {
+          this.setState({ readyToShow: true })
+        })
+        break
+      default:
+        // do nothing
+    }
+  }
+
+  cliCommand = (action, files) => {
+    let activeCid = ''
+    let fileName = ''
+    let isPinned = ''
+    let path = ''
+    // @TODO: handle multi-select
+    if (files) {
+      activeCid = files[0].cid
+      fileName = files[0].name
+      isPinned = files[0].pinned
+      path = realMfsPath(files[0].path)
+    }
+
+    // @TODO: ensure path is set for all actions
+    switch (action) {
+      case cliCmdKeys.ADD_FILE:
+      case cliCmdKeys.ADD_DIRECTORY:
+      case cliCmdKeys.CREATE_NEW_DIRECTORY:
+      case cliCmdKeys.FROM_IPFS:
+      case cliCmdKeys.DELETE_FILE_FROM_IPFS:
+        return cliCommandList[action](path)
+      case cliCmdKeys.DOWNLOAD_OBJECT_COMMAND:
+        return cliCommandList[action](activeCid)
+      case cliCmdKeys.RENAME_IPFS_OBJECT:
+        return cliCommandList[action](path, fileName)
+      case cliCmdKeys.PIN_OBJECT:
+        return cliCommandList[action](activeCid, isPinned ? 'rm' : 'add')
+      default:
+        return cliCommandList[action]()
     }
   }
 
   render () {
-    const { show } = this.props
-    const { readyToShow, link, rename } = this.state
-
+    const { show, t } = this.props
+    const { readyToShow, link, rename, command } = this.state
     return (
       <div>
         <Overlay show={show === NEW_FOLDER && readyToShow} onLeave={this.leave}>
@@ -156,15 +205,31 @@ class Modals extends React.Component {
             onCancel={this.leave}
             onDelete={this.delete} />
         </Overlay>
+
+        <Overlay show={show === ADD_BY_PATH && readyToShow} onLeave={this.leave}>
+          <AddByPathModal
+            className='outline-0'
+            onSubmit={this.onAddByPath}
+            onCancel={this.leave} />
+        </Overlay>
+
+        <Overlay show={show === CLI_TUTOR_MODE && readyToShow} onLeave={this.leave}>
+          <CliTutorMode onLeave={this.leave} filesPage={true} command={command} t={t}/>
+        </Overlay>
       </div>
     )
   }
 }
 
-export default connect(
-  'doFilesMove',
-  'doFilesMakeDir',
-  'doFilesShareLink',
-  'doFilesDelete',
-  translate('files')(Modals)
-)
+Modals.propTypes = {
+  t: PropTypes.func.isRequired,
+  show: PropTypes.string,
+  files: PropTypes.array,
+  onAddByPath: PropTypes.func.isRequired,
+  onMove: PropTypes.func.isRequired,
+  onMakeDir: PropTypes.func.isRequired,
+  onShareLink: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired
+}
+
+export default withTranslation('files')(Modals)

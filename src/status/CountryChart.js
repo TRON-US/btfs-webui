@@ -1,5 +1,5 @@
 import React from 'react'
-import { translate } from 'react-i18next'
+import { withTranslation } from 'react-i18next'
 import { Title } from './Commons'
 import { Pie } from 'react-chartjs-2'
 import { connect } from 'redux-bundler-react'
@@ -50,7 +50,7 @@ const CountryChart = ({ t, peerLocations, className }) => {
       callbacks: {
         title: (tooltipItem, data) => data.labels[tooltipItem[0].index],
         label: (tooltipItem, data) => {
-          const percent = data['datasets'][0]['data'][tooltipItem['index']]
+          const percent = data.datasets[0].data[tooltipItem.index]
           const count = Math.round((percent * totalCountries) / 100)
 
           return t('pieChartLabel', { percent: percent, count: count })
@@ -84,5 +84,5 @@ const CountryChart = ({ t, peerLocations, className }) => {
 
 export default connect(
   'selectPeerLocations',
-  translate('status')(CountryChart)
+  withTranslation('status')(CountryChart)
 )
