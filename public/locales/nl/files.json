@@ -15,7 +15,7 @@
   "addFile": "File",
   "addFolder": "Folder",
   "addByPath": "From BTFS",
-  "addToIPFS": "Toevoegen",
+  "addToBTFS": "Toevoegen",
   "newFolder": "Nieuwe map",
   "generating": "Generating...",
   "actions": {

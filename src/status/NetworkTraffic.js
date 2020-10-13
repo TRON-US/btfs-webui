@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'redux-bundler-react'
-import { translate } from 'react-i18next'
+import { withTranslation } from 'react-i18next'
 import Speedometer from './Speedometer'
 import { Title } from './Commons'
 
@@ -46,13 +46,13 @@ class NetworkTraffic extends React.Component {
         <div className='flex flex-column justify-between' style={{ maxWidth: 400 }}>
           <div className='mh2 mv3 mt0-l'>
             <Speedometer
-              title={t('upSpeed')}
+              title={t('app:terms.upSpeed')}
               color='#f39021'
               {...upSpeed} />
           </div>
           <div className='mh2 mt3 mt0-l'>
             <Speedometer
-              title={t('downSpeed')}
+              title={t('app:terms.downSpeed')}
               color='#69c4cd'
               {...downSpeed} />
           </div>
@@ -64,5 +64,5 @@ class NetworkTraffic extends React.Component {
 
 export default connect(
   'selectNodeBandwidth',
-  translate('status')(NetworkTraffic)
+  withTranslation('status')(NetworkTraffic)
 )

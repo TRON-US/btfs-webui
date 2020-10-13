@@ -15,7 +15,7 @@
   "addFile": "Ficheiro",
   "addFolder": "Pasta",
   "addByPath": "Do BTFS",
-  "addToIPFS": "Adicionar",
+  "addToBTFS": "Adicionar",
   "newFolder": "Nova pasta",
   "generating": "A gerar...",
   "actions": {

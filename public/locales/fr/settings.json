@@ -1,79 +1,93 @@
 {
   "title": "Paramètres",
-  "save": "Sauvegarder",
-  "saving": "Sauvegarde en cours...",
-  "reset": "Réinitialiser",
   "language": "Langue",
-  "config": "Config BTFS",
   "analytics": "Analyses",
+  "cliTutorMode": "Mode tutoriel pour l'invite de commande (CLI)",
+  "config": "Config BTFS",
   "languageModal": {
-    "title": "Changer de Langue",
-    "description": "Choisissez votre langue préférée"
+    "title": "Changer la langue",
+    "description": "Choisir votre langue préférée",
+    "translationProjectIntro": "Ajoutez ou corrigez des traductions pour rendre BTFS meilleur pour tout le monde!",
+    "translationProjectLink": "Participez projet de traduction BTFS"
   },
-  "actions": {
-    "edit": "Changer",
-    "close": "Fermer"
-  },
+  "apiDescription": "<0>Si votre nœud est configuré avec une <1>adresse d'API personnalisée</1>, y compris un port autre que le 5001 par défaut, entrez-la ici.</0>",
+  "cliDescription": "<0>Activez cette option pour faire apparaître une icône \"Voir code\" <1></1> près des principales commandes BTFS. En cliquant dessus, vous ouvrez un pop-up avec le code pour cette commande, pour pouvoir le coller dans votre invite de lignes de commandes (CLI).</0>",
   "fetchingSettings": "Récupération des paramètres...",
-  "configApiNotAvailable": "L'API de la configuration BTFS n'est pas disponible. Merci de désactiver l'extension BTFS-Companion et de réessayer.",
-  "ipfsDaemonOffline": "Le démon BTFS est hors-ligne. S'il vous plait relancez-le.",
-  "settingsUnavailable": "Paramètres non disponibles. Merci de vérifier que votre nœud BTFS est en cours d'exécution.",
-  "settingsHaveChanged": "Les paramètres ont changé, merci de cliquer sur<1>Reinitialisation</1>pour mettre à jour les changements",
+  "configApiNotAvailable": "L'API de configuration BTFS n'est pas disponible. Merci de désactiver l'extension BTFS Companion et de réessayer.",
+  "ipfsDaemonOffline": "Le daemon BTFS est hors-ligne. Merci de le relancer.",
+  "settingsUnavailable": "Paramètres non disponibles. Merci de vérifier que votre daemon BTFS est en cours d'exécution.",
+  "settingsHaveChanged": "Les paramètres ont changé. Cliquez sur <1>Réinitialiser</1> pour mettre à jour l'éditeur de contenu.",
   "errorOccured": "Une erreur s'est produite pendant l'enregistrement de vos modifications",
-  "checkConsole": "Vérifier la console du navigateur pour plus d'information.",
+  "checkConsole": "Vérifier la console du navigateur pour plus d'informations.",
   "changesSaved": "Vos modifications ont été enregistrées.",
-  "settingsWillBeUsedNextTime": "Les nouveaux paramètres seront utilisés après le prochain démarrage du nœud BTFS.",
-  "ipfsConfigDescription": "Le fichier de configuration d'BTFS est un document JSON. Il est lu une seule fois au démarrage du nœud BTFS. Enregistrez vos modifications puis redémarrez le nœud BTFS pour qu'elles soient prises en compte.",
-  "ipfsDesktop": "Bureau BTFS",
-  "launchOnStartup": "Exécuter au démarrage ",
-  "autoAddScreenshots": "Ajout auto des captures d'écran",
-  "autoAddScreenshotsDescription": "Utilisez la combinaison <0>{ctrlKey}</0> + <2>{altKey}</2> + <3>S</3> pour réaliser des captures d'écran et les ajouter au dépôt.",
-  "downloadCopiedHash": "Télécharger le hash copié",
-  "downloadCopiedHashDescription": "Utilisez la combinaison <0>{ctrlKey}</0> + <2>{altKey}</2> + <3>D</3> pour télécharger le dernier hash copié.",
+  "settingsWillBeUsedNextTime": "Les nouveaux paramètres seront utilisés après le prochain démarrage du daemon BTFS.",
+  "ipfsConfigDescription": "Le fichier de configuration de BTFS est un document JSON. Il est lu lorsque le daemon BTFS est lancé. Enregistrez vos modifications, puis relancez le daemon BTFS pour les appliquer.",
+  "ipfsConfigHelp": "Vérifier la documentation pour plus d'informations.",
   "AnalyticsToggle": {
     "label": "Aidez à améliorer cette application en envoyant des données d'utilisation anonymes",
     "summary": "Configurer ce qui est collecté",
-    "paragraph1": "Aucun CID, nom de fichier ou autre information personnelle n'est collecté. Nous voulons que les métriques nous indiquent les fonctionnalités utiles pour nous aider à définir les priorités sur lesquelles travailler, et les informations de configuration du système pour guider nos tests.",
-    "paragraph2": "Protocol Labs héberge <1>généreusement</1> une instance pour enregistrer les données anonymisées d'usage de cette application.",
-    "basicInfo": "Les informations supplémentaires suivantes sont envoyées",
+    "paragraph1": "Aucun CID, nom de fichier ou autre information personnelle n'est collecté. Nous voulons des mesures pour nous indiquer les fonctionnalités utiles et nous aider à définir les priorités sur lesquelles travailler, ainsi que les informations sur la configuration du système pour guider nos tests.",
+    "paragraph2": "Protocol Labs héberge une instance <1>Countly</1>  pour enregistrer les données d'usage anonymisées de cette application.",
+    "basicInfo": "Les informations supplémentaires suivantes sont envoyées à countly.ipfs.io",
     "optionalInfo": "Vous pouvez choisir d'envoyer les informations suivantes :",
     "sessions": {
       "label": "Sessions",
-      "summary": "quand et combien de temps vous utilisez l'application, ainsi que les statistiques du navigateur",
-      "details": "<0>Les statistiques de navigation suivantes sont envoyées :</0><1><0>Un ID d'appareil généré aléatoirement</0><1>Heure de début de la session</1><2>Délais périodiques pour le suivi de la durée</2><3>Version de l'application par ex. 2.4.4.4</3><4>Langue par ex. fr-FR</4><5>User Agent par exemple Mozilla/5.0 (Macintosh ; Intel Mac OS X 10_14_2)...</5><6>Résolution de l'écran par ex. 800x600</6><7>Densité des pixels de l'écran par ex. 1</7></1>"
+      "summary": "Où et quand vous utilisez l'application, et les métriques du navigateur",
+      "details": "<0>Les métriques de navigateur suivantes sont envoyées:</0><1><0>Un device ID généré aléatoirement</0><1>Un timestamp du démarage de la session</1><2>Des timestamps réguliers pour mesurer sa durée</2><3>La version de l'application; par exemple 2.4.4</3><4>La localisation: par exemple; fr-FR</4><5>Le user agent; par exemple Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) …</5><6>La résolution d'écran; par exemple 800x600</6><7>La densité de l'écran en pixels; par exemple 1</7></1>"
     },
     "events": {
       "label": "Événements",
-      "summary": "des actions telles que l'ajout ou la suppression de fichiers, et combien de temps cela a pris",
-      "details": "Actions spécifiques à l'application. Nous notons seulement que l'action a eu lieu, combien de temps il a fallu du début à la fin, et un décompte si l'événement comportait plusieurs éléments."
+      "summary": "Des actions telles que l'ajout ou la suppression de fichiers, et combien de temps cela a pris",
+      "details": "Des actions spécifiques à l'application. Nous enregistrons seulement les actions qui se passent, combien de temps s'est déroulé entre son début et sa fin, et un décompte si l'évènement concerne plusieurs éléments."
     },
     "views": {
       "label": "Pages consultées",
-      "summary": "les sections de l'application que vous visitez",
-      "details": "Enregistre quelles sections des applications sont visitées. Les chemins enregistrés n'incluent que le modèle utilisé pour correspondre à un chemin plutôt que l'url complète. "
+      "summary": "Quelles sections de l'application vous visitez",
+      "details": "Enregistre quelles sections de l'application sont visitées. Les chemins enregistrés n'incluent que le motif utilisé pour le trouver et non l'URL complète."
     },
     "location": {
       "label": "Emplacement",
-      "summary": "Indicatif de pays à partir de l'adresse IP. L'adresse IP est effacée.",
-      "details": "Votre adresse IP est utilisée pour calculer un code de pays pour votre localisation, comme \"FR\" pour la France. Lorsque le consentement n'est pas donné pour suivre l'emplacement, une propriété d'emplacement vide est envoyée avec toutes les demandes pour signaler au serveur de désactiver la recherche de l'emplacement. Ces informations nous aident à orienter nos efforts de traduction et à déterminer où nous devrions organiser des événements."
+      "summary": "Le code Pays de l'adresse IP (l'adresse elle-même n'est pas enregistrée)",
+      "details": "Votre adresse IP est utilisée pour calculer son code Pays, comme \"FR\" pour la France. Quand nous n'avons pas de consentement pour enregistrer la localisation, une propriété de localisation vide est envoyé au serveur pour désactiver cette recherche de localisation. Cette information nous aide à orienter nos efforts de traduction et à déterminer où organiser des évènements."
     },
     "crashes": {
       "label": "Erreurs de l'application",
-      "summary": "Messages d'erreur JavaScript et traces d'appels",
-      "details": "Enregistre les messages d'erreur JavaScript et les traces de pile qui se produisent pendant l'utilisation de l'application, si possible. Il est très utile de savoir quand l'application ne fonctionne pas pour vous, mais<1>les messages d'erreur peuvent contenir des informations identifiables</1>comme les CID ou les chemins d'accès aux fichiers, donc n'activez cette option que si vous êtes à l'aise de partager ces informations avec nous."
+      "summary": "Messages d'erreur JavaScript et traces de piles d'appels de fonctions",
+      "details": "Enregistre les messages d'erreur JavaScript et les traces de pile d'appels de fonctions qui se produisent pendant l'utilisation de l'application, si possible. Il est très utile de savoir quand l'application ne fonctionne pas pour vous, mais <1>les messages d'erreur peuvent contenir des informations identifiantes</1> comme les CID ou les chemins d'accès aux fichiers, donc n'activez cette option que si vous êtes à l'aise pour partager ces informations avec nous."
     }
   },
-  "ipfsCmdTools": "BTFS outils en ligne de commandes",
-  "ipfsCmdToolsDescription": "Ajouter<0>btfs</0>éxécutable sur votre système <0>PATH</0>vous pouvez utilisé cela en ligne de commande. ",
+  "cliToggle": {
+    "label": "Activer le terminal de lignes de commandes (CLI) en mode tutoriel"
+  },
+  "tour": {
+    "step1": {
+      "title": "Page des paramètres",
+      "paragraph1": "Ici vous pouvez changer les paramètres de votre interface web ou de votre nœud BTFS.",
+      "paragraph2": "Si vous utilisez BTFS Desktop vous pourrez également régler quelques paramètres qui lui sont spécifiques."
+    },
+    "step2": {
+      "title": "Sélection de la langue",
+      "paragraph1": "<0>Vous pouvez changer la lange de l'interface web. Si votre langue préférée n'est pas disponible, jetez un œil sur notre <1>page sur Transifex</1> pour nous aider à traduire !</0>"
+    },
+    "step3": {
+      "title": "Statistiques anonymes d'utilisation",
+      "paragraph1": "En cochant ceci, vous pouvez nous aider à améliorer l'interface web en envoyant anonymement des statistiques d'utilisation.",
+      "paragraph2": "Vous pourrez choisier les données que vous enverrez et elles ne permettront pas de vous identifier, nous attachons une grande importance a votre vie privée."
+    },
+    "step4": {
+      "title": "Adresse d'API personnalisée",
+      "paragraph1": "Si vous avez configuré votre nœud BTFS avec une adresse d'API personnalisée, vous pouvez mettre à jour votre fichier de configuration ici au lieu de modifier le fichier JSON à la main."
+    },
+    "step5": {
+      "title": "Configuration BTFS",
+      "paragraph1": "Vous pouvez changer la configuration de votre nœud BTFS depuis l'interface web !",
+      "paragraph2": "N'oubliez pas de redémarrer le daemon pour que les changements soient pris en compte."
+    }
+  },
   "Experiments": {
-    "description": "Ici vous pouvez avoir un aperçu des nouvelles fonctionnalités de BTFS en activant les options ci-dessous. Nous testons de nouvelles idées, et elles peuvent ne pas encore être parfaites donc on serait heureux d'avoir votre avis.",
+    "description": "Ici vous pouvez avoir un aperçu des nouvelles fonctionnalités de BTFS en activant les options ci-dessous. Nous testons de nouvelles idées, et comme elles peuvent ne pas être encore parfaites nous serions heureux d'avoir votre avis.",
     "issueUrl": "Ouvrir une issue Github",
     "feedbackUrl": "💌Laisser un commentaire",
-    "readMoreUrl": "En savoir plus",
-    "npmOnIpfs": {
-      "title": "NPM sur BTFS",
-      "label": "Activer btfs-npm",
-      "description": "Installer les modules npm via BTFS avec l'outil en lignes de commande \"ipfs-npm\"!"
-    }
+    "readMoreUrl": "En savoir plus"
   }
 }

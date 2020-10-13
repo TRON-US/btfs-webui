@@ -1,5 +1,5 @@
 import { getFilesFromDataTransferItems } from 'datatransfer-files-promise'
-import HTML5Backend from 'react-dnd-html5-backend'
+import { HTML5Backend } from 'react-dnd-html5-backend'
 
 // If you drop a dir "foo" which contains "cat.jpg" & "dog.png" we receive a
 // single item in the `event.dataTransfer.items` for the directory.
@@ -31,7 +31,10 @@ export default (manager) => {
   const handler = backend.handleTopDropCapture
   backend.handleTopDropCapture = (event) => {
     handler.call(backend, event)
-    if (backend.currentNativeSource) {
+    if (backend.currentNativeSource && event.dataTransfer.items) {
+      // Prevent handling drag & drop of text inside webui
+      if ([...event.dataTransfer.items].every(({ kind }) => kind === 'string')) return
+
       const filesPromise = getFilesFromDataTransferItems(event.dataTransfer.items)
       backend.currentNativeSource.item.filesPromise = filesPromise
     }

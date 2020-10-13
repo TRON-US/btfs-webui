@@ -1,35 +1,35 @@
 import React from 'react'
 import { connect } from 'redux-bundler-react'
-import { translate } from 'react-i18next'
+import { withTranslation } from 'react-i18next'
 import classnames from 'classnames'
+import ipfsLogoTextVert from './btfs-logo.png'
+import ipfsLogoTextHoriz from './btfs-logo-text.png'
 import StrokeMarketing from '../icons/StrokeMarketing'
 import StrokeWeb from '../icons/StrokeWeb'
 import StrokeCube from '../icons/StrokeCube'
 import StrokeSettings from '../icons/StrokeSettings'
 import StrokeIpld from '../icons/StrokeIpld'
-import btfsLogo from './btfs-logo.png'
-import btfsLogoText from './btfs-logo-text.png'
+
 // Styles
 import './NavBar.css'
 
 const NavLink = ({
   to,
   icon,
-  open,
-  exact,
+  alternative,
   disabled,
-  children,
-  className,
-  activeClassName
+  children
 }) => {
   const Svg = icon
   const { hash } = window.location
   const href = `#${to}`
-  const active = exact ? hash === href : hash && hash.startsWith(href)
+  const active = alternative
+    ? hash === href || hash.startsWith(`${href}${alternative}`)
+    : hash && hash.startsWith(href)
   const anchorClass = classnames({
-    'bg-white-10': active,
+    'bg-white-10 navbar-item-active': active,
     'o-50 no-pointer-events': disabled
-  }, ['dib db-l pv3 white no-underline f5 hover-bg-white-10 tc'])
+  }, ['navbar-item dib db-l pt2 pb3 pv1-l white no-underline f5 hover-bg-white-10 tc bb bw2 bw0-l b--navy'])
   const svgClass = classnames({
     'o-100': active,
     'o-50': !active
@@ -37,67 +37,61 @@ const NavLink = ({
 
   return (
     // eslint-disable-next-line jsx-a11y/anchor-is-valid
-    <a href={disabled ? null : href} className={anchorClass} style={{ borderLeft: active ? '5px solid rgba(201, 210, 215, .4)' : '' }} role='menuitem' title={children}>
-      <span className={`dib ${open ? 'dt-l' : ''}`}>
-        <span className={`dib dtc-l v-mid ${open ? 'pl3 pl5-l' : 'ph3'}`} style={{ width: 50 }}>
-          <Svg width='50' className={svgClass} />
-        </span>
-        <span className={`${open ? 'dib dtc-l' : 'dn'} pl2 pl3-l pr3 tl-l v-mid `}>
+    <a href={disabled ? null : href} className={anchorClass} role='menuitem' title={children}>
+      <div className='db ph2 pv1'>
+        <div className='db'>
+          <Svg width='46' role='presentation' className={svgClass} />
+        </div>
+        <div className={`${active ? 'o-100' : 'o-50'} db f6 tc montserrat ttu fw1 `} style={{ whiteSpace: 'pre-wrap' }}>
           {children}
-        </span>
-      </span>
+        </div>
+      </div>
     </a>
   )
 }
 
-export const NavBar = ({ t, width, open, onToggle }) => {
-  const codeUrl = 'https://github.com/TRON-US/btfs-webui'
+export const NavBar = ({ t }) => {
+  const codeUrl = 'https://github.com/ipfs-shipyard/ipfs-webui'
   const bugsUrl = `${codeUrl}/issues`
   const gitRevision = process.env.REACT_APP_GIT_REV
   const revisionUrl = `${codeUrl}/commit/${gitRevision}`
+  const webUiVersion = process.env.REACT_APP_VERSION
+  const webUiVersionUrl = `${codeUrl}/releases/tag/v${webUiVersion}`
   return (
-    <div className='h-100 fixed-l flex flex-column justify-between' style={{ width: 'inherit' }}>
+    <div className='h-100 fixed-l flex flex-column justify-between' style={{ overflowY: 'auto', width: 'inherit' }}>
       <div className='flex flex-column'>
-        <div className='pointer navy pv3 pv4-l' onClick={onToggle}>
-          <img className='center' style={{ height: 70, display: open ? 'block' : 'none' }} src={btfsLogoText} alt='BTFS' title='Toggle navbar' />
-          <img className='center' style={{ height: 70, display: open ? 'none' : 'block' }} src={btfsLogo} alt='BTFS' title='Toggle navbar' />
-        </div>
-        <nav className='db overflow-x-scroll overflow-x-hidden-l nowrap tc' role='menubar'>
-          <NavLink to='/' exact icon={StrokeMarketing} open={open}>{t('status:title')}</NavLink>
-          <NavLink to='/files/' icon={StrokeWeb} open={open}>{t('files:title')}</NavLink>
-          <NavLink to='/explore' icon={StrokeIpld} open={open}>{t('explore:tabName')}</NavLink>
-          <NavLink to='/peers' icon={StrokeCube} open={open}>{t('peers:title')}</NavLink>
-          <NavLink to='/settings' icon={StrokeSettings} open={open}>{t('settings:title')}</NavLink>
-        </nav>
-      </div>
-      { open &&
-        <div className='dn db-l navbar-footer mb3 center'>
-          { gitRevision && <div className='tc mb1'>
-            <a className='link white f7 o-80 glow' href={revisionUrl} target='_blank' rel='noopener noreferrer'>{t('status:revision')} {gitRevision}</a>
-          </div> }
-          <div className='flex flex-colum'>
-            <a className='link white f7 o-50 glow' href={codeUrl} target='_blank' rel='noopener noreferrer'>{t('status:codeLink')}</a>
-            <span className='mh2 white f7 o-50'>|</span>
-            <a className='link white f7 o-50 glow' href={bugsUrl} target='_blank' rel='noopener noreferrer'>{t('status:bugsLink')}</a>
+        <a href="#/welcome" role='menuitem' title={t('welcome:description')}>
+          <div className='pt3 pb1 pb2-l'>
+            <img className='navbar-logo-vert center db-l dn pt3 pb1' style={{ height: 94 }} src={ipfsLogoTextVert} alt='' />
+            <img className='navbar-logo-horiz center db dn-l' style={{ height: 70 }} src={ipfsLogoTextHoriz} alt='' />
           </div>
+        </a>
+        <div className='db overflow-x-scroll overflow-x-hidden-l nowrap tc' role='menubar'>
+          <NavLink to='/' alternative="status" icon={StrokeMarketing}>{t('status:title')}</NavLink>
+          <NavLink to='/files' icon={StrokeWeb}>{t('files:title')}</NavLink>
+          <NavLink to='/explore' icon={StrokeIpld}>{t('explore:tabName')}</NavLink>
+          <NavLink to='/peers' icon={StrokeCube}>{t('peers:title')}</NavLink>
+          <NavLink to='/settings' icon={StrokeSettings}>{t('settings:title')}</NavLink>
+        </div>
+      </div>
+      <div className='dn db-l navbar-footer mb2 tc center f7 o-80 glow'>
+        { webUiVersion && <div className='mb1'>
+          <a className='link white' href={webUiVersionUrl} target='_blank' rel='noopener noreferrer'>{t('app:terms.ui')} v{webUiVersion}</a>
         </div> }
+        { gitRevision && <div className='mb1'>
+          <a className='link white' href={revisionUrl} target='_blank' rel='noopener noreferrer'>{t('app:nav.revision')} {gitRevision}</a>
+        </div> }
+        <div className='mb1'>
+          <a className='link white' href={codeUrl} target='_blank' rel='noopener noreferrer'>{t('app:nav.codeLink')}</a>
+        </div>
+        <div>
+          <a className='link white' href={bugsUrl} target='_blank' rel='noopener noreferrer'>{t('app:nav.bugsLink')}</a>
+        </div>
+      </div>
     </div>
   )
 }
 
-export const NavBarContainer = ({ doToggleNavbar, navbarIsOpen, navbarWidth, ...props }) => {
-  return (
-    <NavBar
-      open={navbarIsOpen}
-      width={navbarWidth}
-      onToggle={doToggleNavbar}
-      {...props} />
-  )
-}
-
 export default connect(
-  'doToggleNavbar',
-  'selectNavbarIsOpen',
-  'selectNavbarWidth',
-  translate()(NavBarContainer)
+  withTranslation()(NavBar)
 )

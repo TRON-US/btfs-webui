@@ -15,7 +15,7 @@
   "addFile": "File",
   "addFolder": "Folder",
   "addByPath": "From BTFS",
-  "addToIPFS": "Pridať",
+  "addToBTFS": "Pridať",
   "newFolder": "Nová zložka",
   "generating": "Generating...",
   "actions": {

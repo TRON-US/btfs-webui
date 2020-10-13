@@ -1,11 +1,24 @@
 {
-  "connectingToIpfs": "正在连接到BTFS 。。。",
-  "connectedToIpfs": "已连接到BTFS！",
-  "ipfsApiRequestFailed": "BTFS请求失败。请检查守护程序是否正在运行。",
-  "windowIpfsRequestFailed": "BTFS请求失败。请检查您的BTFS伴侣设置。",
-  "ipfsIsBack": "正常的BTFS服务已恢复。请享用！",
-  "filesEventFailed": "无法将文件添加到BTFS。请再试一次。",
-  "folderExists": "具有该名称的文件夹已存在。请选择另一个。",
-  "couldntConnectToPeer": "无法连接到提供的对等方。",
-  "connectedToPeer": "成功连接到提供的对等方。"
+  "ipfsApiRequestFailed": "无法连接，请检查您的BTFS 守护程序是否正在运行。",
+  "windowIpfsRequestFailed": "BTFS 请求失败，请检查您的BTFS 伴侣设置。",
+  "ipfsIsBack": "已恢复BTFS服务。请安心！",
+  "folderExists": "已经有文件拥有相同的名称了，请换一个别的。",
+  "filesFetchFailed": "获取这些文件失败，请检查路径并再重新尝试一次。",
+  "filesRenameFailed": "无法重命名文件，请重试。",
+  "filesMakeDirFailed": "无法创建目录，请重试。",
+  "filesCopyFailed": "无法复制文件，请重试。",
+  "filesDeleteFailed": "无法删除文件，请重试。",
+  "filesAddFailed": "无法导入文件到BTFS，请重试。",
+  "filesEventFailed": "无法执行您的请求，请重试。",
+  "couldntConnectToPeer": "无法连接到提供的节点。",
+  "connectedToPeer": "成功连接到提供的节点。",
+  "experimentsErrors": {
+    "npmOnIpfs": "我们无法将更改应用到您的系统，请手动安装或重新安装“ipfs-npm”包。"
+  },
+  "desktopToggleErrors": {
+    "autoLaunch": "无法在启动选项内切换启动。",
+    "ipfsOnPath": "无法切换BTFS命令行工具。",
+    "downloadHashShortcut": "无法切换下载哈希快捷键",
+    "screenshotShortcut": "无法切换截屏快捷键"
+  }
 }
