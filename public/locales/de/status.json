@@ -9,7 +9,7 @@
   "pieChartLabel": "{count, plural, one {{percent}% ({count} Peer)} other {{percent}% ({count} Peers)}}",
   "countMore": "...und {count} weitere",
   "StatusConnected": {
-    "paragraph1": "<0>{repoSize} an Dateien</0> gehostet",
+    "paragraph1": "<0>{repoSize} GB an Dateien</0> gehostet",
     "paragraph2": "{count, plural, one {Discovered <0>1 peer</0>} other {<0>{peersCount} Peers</0> entdeckt}}"
   },
   "customApiConfig": "Benutzerdefinierte JSON-Konfiguration",

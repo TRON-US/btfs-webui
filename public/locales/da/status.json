@@ -30,7 +30,7 @@
   "revision": "Udgave",
   "StatusConnected": {
     "header1": "Forbundet til BTFS",
-    "paragraph1": "Hoster<0>{repoSize} af filer</0>",
+    "paragraph1": "Hoster<0>{repoSize} GB af filer</0>",
     "paragraph2": "{count, plural, one {Fandt<0>1 klient</0>} other {Fandt<0>{peersCount} klienter</0>}}"
   },
   "StatusNotConnected": {

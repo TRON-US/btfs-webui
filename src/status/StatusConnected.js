@@ -1,10 +1,9 @@
 import React from 'react'
 import { withTranslation, Trans } from 'react-i18next'
 import { connect } from 'redux-bundler-react'
-import filesize from 'filesize'
 
 export const StatusConnected = ({ t, peersCount, repoSize }) => {
-  const humanRepoSize = filesize(repoSize || 0, { round: 1 })
+  const humanRepoSize = Math.floor(repoSize/Math.pow(1e3,3)) || 0
   return (
     <header>
       <h1 className='montserrat fw2 f3 charcoal ma0 pt0 pb2'>
@@ -14,7 +13,7 @@ export const StatusConnected = ({ t, peersCount, repoSize }) => {
         <span className='db dib-ns'>
           <Trans
             i18nKey='StatusConnected.paragraph1' t={t}
-            defaults='Hosting <0>{repoSize} of files</0>'
+            defaults='Hosting <0>{repoSize} GB of files</0>'
             values={{ repoSize: humanRepoSize }}
             components={[<a className='link blue' href='#/files'>?</a>]}
           />

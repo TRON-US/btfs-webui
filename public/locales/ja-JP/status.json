@@ -9,7 +9,7 @@
   "pieChartLabel": "{count, plural, other {{percent}%({count} ピア)}}",
   "countMore": "ほか{count}項目",
   "StatusConnected": {
-    "paragraph1": "<0>{repoSize}個のファイル</0>をホスティング中",
+    "paragraph1": "<0>{repoSize} GB個のファイル</0>をホスティング中",
     "paragraph2": "{count, plural, other {<0>{peersCount}個のピア</0>と通信中}}"
   },
   "customApiConfig": "Custom JSON configuration",

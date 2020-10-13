@@ -9,7 +9,7 @@
   "pieChartLabel": "{count, plural, one {{percent}% ({count} Pair)} other {{percent}% ({count} Pairs)}}",
   "countMore": "...et {count} de plus",
   "StatusConnected": {
-    "paragraph1": "<0>{repoSize} de fichiers</0> hébergés",
+    "paragraph1": "<0>{repoSize} GB de fichiers</0> hébergés",
     "paragraph2": "{count, plural, one {<0>1 pair</0> découvert} other {<0>{peersCount} pairs</0> découverts}}"
   },
   "customApiConfig": "JSON de configuration personnalisée",
