@@ -1,0 +1,56 @@
+diff --git a/node_modules/ipld-explorer-components/dist/components/ExplorePage.js b/node_modules/ipld-explorer-components/dist/components/ExplorePage.js
+index 450c619..632715d 100644
+--- a/node_modules/ipld-explorer-components/dist/components/ExplorePage.js
++++ b/node_modules/ipld-explorer-components/dist/components/ExplorePage.js
+@@ -56,7 +56,7 @@ export var ExplorePage = /*#__PURE__*/function (_React$Component) {
+           runTour = _this$props$runTour === void 0 ? false : _this$props$runTour,
+           joyrideCallback = _this$props.joyrideCallback,
+           _this$props$gatewayUr = _this$props.gatewayUrl,
+-          gatewayUrl = _this$props$gatewayUr === void 0 ? 'https://ipfs.io' : _this$props$gatewayUr;
++          gatewayUrl = _this$props$gatewayUr === void 0 ? 'https://gateway.btfs.io' : _this$props$gatewayUr;
+ 
+       if (!explorePathFromHash) {
+         // No IPLD path to explore so show the intro page
+diff --git a/node_modules/ipld-explorer-components/dist/components/ExplorePage.stories.js b/node_modules/ipld-explorer-components/dist/components/ExplorePage.stories.js
+index 50403fc..018dd9b 100644
+--- a/node_modules/ipld-explorer-components/dist/components/ExplorePage.stories.js
++++ b/node_modules/ipld-explorer-components/dist/components/ExplorePage.stories.js
+@@ -46,6 +46,6 @@ storiesOf('Explore page', module).addDecorator(i18n).addDecorator(bundleDecorato
+   return /*#__PURE__*/React.createElement("div", {
+     className: "pt4"
+   }, /*#__PURE__*/React.createElement(ExplorePage, {
+-    gatewayUrl: "https://ipfs.io"
++    gatewayUrl: "https://gateway.btfs.io"
+   }));
+ });
+diff --git a/node_modules/ipld-explorer-components/dist/components/object-info/ObjectInfo.stories.js b/node_modules/ipld-explorer-components/dist/components/object-info/ObjectInfo.stories.js
+index bc7680f..3d4cb39 100644
+--- a/node_modules/ipld-explorer-components/dist/components/object-info/ObjectInfo.stories.js
++++ b/node_modules/ipld-explorer-components/dist/components/object-info/ObjectInfo.stories.js
+@@ -17,7 +17,7 @@ storiesOf('IPLD Node Info', module).addDecorator(checkA11y).addDecorator(i18n).a
+     links: dagNodeA.links,
+     data: dagNodeA.data,
+     type: "dag-pb",
+-    gatewayUrl: "https://ipfs.io",
++    gatewayUrl: "https://gateway.btfs.io",
+     onLinkClick: action('link clicked')
+   });
+ }).add('cid v0 dag-pb 36 links...', function () {
+@@ -28,7 +28,7 @@ storiesOf('IPLD Node Info', module).addDecorator(checkA11y).addDecorator(i18n).a
+     links: dagNodeB.links,
+     data: dagNodeB.data,
+     type: "dag-pb",
+-    gatewayUrl: "https://ipfs.io",
++    gatewayUrl: "https://gateway.btfs.io",
+     onLinkClick: action('link clicked')
+   });
+ }).add('cid v0 dag-pb 1240 links...', function () {
+@@ -39,7 +39,7 @@ storiesOf('IPLD Node Info', module).addDecorator(checkA11y).addDecorator(i18n).a
+     links: dagNodeC.links,
+     data: dagNodeC.data,
+     type: "dag-pb",
+-    gatewayUrl: "https://ipfs.io",
++    gatewayUrl: "https://gateway.btfs.io",
+     onLinkClick: action('link clicked')
+   });
+ });
