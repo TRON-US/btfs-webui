@@ -3,6 +3,7 @@
   "language": "語言",
   "analytics": "分析",
   "cliTutorMode": "CLI Tutor Mode",
+<<<<<<< HEAD
   "config": "BTFS 設置",
   "languageModal": {
     "title": "修改語言",
@@ -16,19 +17,39 @@
   "configApiNotAvailable": "BTFS 設置API 不可用。請勿用\"BTFS 伴侶\" 瀏覽器插件並重試。",
   "ipfsDaemonOffline": "BTFS Daemon處於離線狀態。請使其在線並重試。",
   "settingsUnavailable": "設置不可用。請檢查你的BTFS Daemon是否還在運行。",
+=======
+  "config": "BTFS 設置",
+  "languageModal": {
+    "title": "修改語言",
+    "description": "選擇首選語言。",
+    "translationProjectIntro": "Add or improve translations and make BTFS better for everyone!",
+    "translationProjectLink": "Join the BTFS Translation Project"
+  },
+  "apiDescription": "<0>If your node is configured with a <1>custom API address</1>, including a port other than the default 5001, enter it here.</0>",
+  "cliDescription": "<0>Enable this option to display a \"view code\" <1></1> icon next to common BTFS commands. Clicking it opens a modal with that command's CLI code, so you can paste it into the BTFS command-line interface in your terminal.</0>",
+  "fetchingSettings": "讀取設置中...",
+  "configApiNotAvailable": "BTFS 設置API 不可用。請勿用\"BTFS 伴侶\" 瀏覽器插件並重試。",
+  "ipfsDaemonOffline": "BTFS Daemon處於離線狀態。請使其在線並重試。",
+  "settingsUnavailable": "設置不可用。請檢查你的BTFS Daemon是否還在運行。",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "settingsHaveChanged": "設置已經改變，請單擊<1>重置</1> 按鈕刷新編輯器中的內容。",
   "errorOccured": "在保存修改的設置文件過程中出錯",
   "checkConsole": "請查看瀏覽器控制台了解更多的信息。",
   "changesSaved": "你修改的設置已經保存。",
+<<<<<<< HEAD
   "settingsWillBeUsedNextTime": "新的設置信息會在你下次重新啟動BTFS Daemon後生效。",
   "ipfsConfigDescription": "BTFS 設置文件是一個JSON 文件。 BTFS Daemon會在啟動過程中讀取一次。保存修改的設置，重啟BTFS Daemon後使用你修改後的設置。",
+=======
+  "settingsWillBeUsedNextTime": "新的設置信息會在你下次重新啟動BTFS Daemon後生效。",
+  "ipfsConfigDescription": "BTFS 設置文件是一個JSON 文件。 BTFS Daemon會在啟動過程中讀取一次。保存修改的設置，重啟BTFS Daemon後使用你修改後的設置。",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "ipfsConfigHelp": "檢查文檔查看更多信息",
   "AnalyticsToggle": {
     "label": "向我們提供匿名數據來幫助我們改進",
     "summary": "設置收集哪些數據",
     "paragraph1": "不會收集任何CID 、文件名或個人信息。我們收集度量數據來幫助我們優化後續工作的優先級，並且收集系統設置信息引導我們進行測試。",
     "paragraph2": "Protocol Labs 運行了<1>Countly</1> 實例幫助我們收集這個應用產生的匿名數據。",
-    "basicInfo": "下列數據會發送到countly.ipfs.io",
+    "basicInfo": "下列數據會發送到countly.btfs.io",
     "optionalInfo": "你可以選擇發送下列數據：",
     "sessions": {
       "label": "會話",
@@ -62,8 +83,13 @@
   "tour": {
     "step1": {
       "title": "設置頁面",
+<<<<<<< HEAD
       "paragraph1": "您可以在此處更改Web UI 和BTFS 節點的設置。",
       "paragraph2": "如果你正在運行BTFS Desktop ，會有一些特定的設置。"
+=======
+      "paragraph1": "您可以在此處更改Web UI 和BTFS 節點的設置。",
+      "paragraph2": "如果你正在運行BTFS Desktop ，會有一些特定的設置。"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     },
     "step2": {
       "title": "語言選擇器",
@@ -76,16 +102,28 @@
     },
     "step4": {
       "title": "Custom API address",
+<<<<<<< HEAD
       "paragraph1": "If you've configured your BTFS node with a custom API address, you can update your config file right here instead of editing the JSON by hand."
     },
     "step5": {
       "title": "BTFS 設置",
       "paragraph1": "您可以直接從Web UI 更改BTFS 節點的設置！",
+=======
+      "paragraph1": "If you've configured your BTFS node with a custom API address, you can update your config file right here instead of editing the JSON by hand."
+    },
+    "step5": {
+      "title": "BTFS 設置",
+      "paragraph1": "您可以直接從Web UI 更改BTFS 節點的設置！",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "不要忘記重新啟動守護程式以應用更改。"
     }
   },
   "Experiments": {
+<<<<<<< HEAD
     "description": "在這裡，您可以通過下面的觸發選項獲得使用早期預覽版BTFS 功能的身份。 我們正在測試這些想法，但它們可能還不完美，所以我們很樂意聽取您的反饋意見。",
+=======
+    "description": "在這裡，您可以通過下面的觸發選項獲得使用早期預覽版BTFS 功能的身份。 我們正在測試這些想法，但它們可能還不完美，所以我們很樂意聽取您的反饋意見。",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "issueUrl": "提交bug",
     "feedbackUrl": "💌提供反饋",
     "readMoreUrl": "查看更多"

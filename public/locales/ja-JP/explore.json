@@ -26,7 +26,11 @@
     "hashDigest": "ハッシュダイジェスト"
   },
   "ObjectInfo": {
+<<<<<<< HEAD
     "gatewayLink": "BTFSゲートウェイで表示"
+=======
+    "gatewayLink": "BTFSゲートウェイで表示"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   },
   "base": "ベース",
   "version": "バージョン",
@@ -49,7 +53,11 @@
       },
       "step3": {
         "title": "ノード情報",
+<<<<<<< HEAD
         "paragraph1": "ここにノードに関する詳細情報があり、BTFSゲートウェイで開くことができます。",
+=======
+        "paragraph1": "ここにノードに関する詳細情報があり、BTFSゲートウェイで開くことができます。",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
         "paragraph2": "If the node is a directory you can see its children and navigate to them."
       },
       "step4": {

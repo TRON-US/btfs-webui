@@ -3,6 +3,7 @@
   "language": "Lingua",
   "analytics": "Analitica",
   "cliTutorMode": "Modalità mentore CLI",
+<<<<<<< HEAD
   "config": "Configurazione BTFS",
   "languageModal": {
     "title": "Cambia lingua",
@@ -16,19 +17,39 @@
   "configApiNotAvailable": "L'BTFS config API non è disponibile. Per favore, disabilita l'estensione web \"BTFS Companion\" e riprova.",
   "ipfsDaemonOffline": "Il demone BTFS è offline. Per favore, avvialo e riprova.",
   "settingsUnavailable": "Impostazioni non disponibili. Per favore, controlla che il tuo demone BTFS sia attivo.",
+=======
+  "config": "Configurazione BTFS",
+  "languageModal": {
+    "title": "Cambia lingua",
+    "description": "Seleziona la tua lingua preferita.",
+    "translationProjectIntro": "Aggiungi o perfeziona le traduzioni e rendi BTFS migliore per tutti!",
+    "translationProjectLink": "Unisciti al Progetto di Traduzione BTFS"
+  },
+  "apiDescription": "<0>Se il tuo nodo è configurato con un <1>indirizzo API personalizzato</1> che include una porta diversa alla predefinita 5001, inseriscila qui.</0>",
+  "cliDescription": "<0>Abilita quest'opzione per mostrare un'icona \"view code\" <1></1> accanto ai comuni comandi BTFS. Cliccandoci, si aprirà una finestra modale col codice di quel comando CLI dimodoché tu possa incollarlo nell'interfaccia a riga di comando nel tuo terminale.",
+  "fetchingSettings": "Recupero delle impostazioni...",
+  "configApiNotAvailable": "L'BTFS config API non è disponibile. Per favore, disabilita l'estensione web \"BTFS Companion\" e riprova.",
+  "ipfsDaemonOffline": "Il demone BTFS è offline. Per favore, avvialo e riprova.",
+  "settingsUnavailable": "Impostazioni non disponibili. Per favore, controlla che il tuo demone BTFS sia attivo.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "settingsHaveChanged": "Le impostazioni sono cambiate; per favore, clicca <1>Ripristina</1> per aggiornare il contenuto dell'editor.",
   "errorOccured": "Si è verificato un errore durante il salvataggio delle tue modifiche",
   "checkConsole": "Controlla la console del browser per ulteriori informazioni.",
   "changesSaved": "Le tue modifiche sono state salvate.",
+<<<<<<< HEAD
   "settingsWillBeUsedNextTime": "Le nuove impostazioni saranno utilizzate quando riavvierai il tuo demone BTFS.",
   "ipfsConfigDescription": "Il file della configurazione BTFS è un documento JSON. Viene letto una volta che il demone BTFS è avviato. Salva le tue modifiche e poi riavvia il demone BTFS per applicarle.",
+=======
+  "settingsWillBeUsedNextTime": "Le nuove impostazioni saranno utilizzate quando riavvierai il tuo demone BTFS.",
+  "ipfsConfigDescription": "Il file della configurazione BTFS è un documento JSON. Viene letto una volta che il demone BTFS è avviato. Salva le tue modifiche e poi riavvia il demone BTFS per applicarle.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "ipfsConfigHelp": "Controlla la documentazione per ulteriori informazioni.",
   "AnalyticsToggle": {
     "label": "Aiuta a migliorare quest'applicazione inviando dati d'utilizzo anonimi",
     "summary": "Configura quali dati sono collezionati",
     "paragraph1": "Nessun CID, nome file od altre informazioni personali sono collezionate. Vorremo delle metriche che ci mostrino quali funzionalità sono utili. Ciò aiuta a determinare le priorità e guidarci nei nostri test tramite la configurazione del sistema.",
     "paragraph2": "Protocol Labs ospita un'istanza <1>Countly</1> per registrare dati d'utilizzo anonimi per questa applicazione.",
-    "basicInfo": "La seguente informazione addizionale è inviata a countly.ipfs.io",
+    "basicInfo": "La seguente informazione addizionale è inviata a countly.btfs.io",
     "optionalInfo": "Puoi scegliere se mandare anche queste informazioni addizionali:",
     "sessions": {
       "label": "Sessioni",
@@ -62,8 +83,13 @@
   "tour": {
     "step1": {
       "title": "Pagina delle impostazioni",
+<<<<<<< HEAD
       "paragraph1": "Qui puoi modificare le impostazioni del tuo Web UI e del tuo nodo BTFS.",
       "paragraph2": "Se hai BTFS Desktop avviato, avrai anche alcune impostazioni specifiche per quel programma."
+=======
+      "paragraph1": "Qui puoi modificare le impostazioni del tuo Web UI e del tuo nodo BTFS.",
+      "paragraph2": "Se hai BTFS Desktop avviato, avrai anche alcune impostazioni specifiche per quel programma."
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     },
     "step2": {
       "title": "Selettore di lingue",
@@ -76,16 +102,28 @@
     },
     "step4": {
       "title": "Indirizzo API Personalizzato",
+<<<<<<< HEAD
       "paragraph1": "Se hai configurato il tuo nodo BTFS con un indirizzo API personalizzato, puoi aggiornare il tuo file di configurazione qui invece di modificare il JSON a mano."
     },
     "step5": {
       "title": "Configurazione BTFS",
       "paragraph1": "Puoi modificare la configurazione del tuo nodo BTFS direttamente dal tuo Web UI!",
+=======
+      "paragraph1": "Se hai configurato il tuo nodo BTFS con un indirizzo API personalizzato, puoi aggiornare il tuo file di configurazione qui invece di modificare il JSON a mano."
+    },
+    "step5": {
+      "title": "Configurazione BTFS",
+      "paragraph1": "Puoi modificare la configurazione del tuo nodo BTFS direttamente dal tuo Web UI!",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "Non dimenticarti di riavviare il demone per applicare le modifiche."
     }
   },
   "Experiments": {
+<<<<<<< HEAD
     "description": "Qui puoi avere un'anteprima delle nuove funzionalità di BTFS abilitando l'opzione sottostante. Stiamo testando queste idee ed esse potrebbero non essere ancora perfette, quindi vorremmo sentire la tua opinione.",
+=======
+    "description": "Qui puoi avere un'anteprima delle nuove funzionalità di BTFS abilitando l'opzione sottostante. Stiamo testando queste idee ed esse potrebbero non essere ancora perfette, quindi vorremmo sentire la tua opinione.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "issueUrl": "Pubblica un problema",
     "feedbackUrl": "💌Condividi la tua opinione",
     "readMoreUrl": "Leggi di più"

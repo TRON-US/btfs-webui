@@ -49,7 +49,11 @@
       },
       "step3": {
         "title": "Información del nodo",
+<<<<<<< HEAD
         "paragraph1": "Aquí tiene información detallada sobre el nodo y puede abrirlo en el portal BTFS.",
+=======
+        "paragraph1": "Aquí tiene información detallada sobre el nodo y puede abrirlo en el portal BTFS.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
         "paragraph2": "Si el nodo es un directorio, puede ver sus elementos secundarios y navegar hasta ellos."
       },
       "step4": {

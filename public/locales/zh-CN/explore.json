@@ -26,7 +26,11 @@
     "hashDigest": "哈希摘要"
   },
   "ObjectInfo": {
+<<<<<<< HEAD
     "gatewayLink": "在 BTFS 网关上查看"
+=======
+    "gatewayLink": "在 BTFS 网关上查看"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   },
   "base": "基点",
   "version": "版本",
@@ -49,7 +53,11 @@
       },
       "step3": {
         "title": "节点信息",
+<<<<<<< HEAD
         "paragraph1": "您可以在此处获得有关节点的详细信息，并在 BTFS 网关中打开它。",
+=======
+        "paragraph1": "您可以在此处获得有关节点的详细信息，并在 BTFS 网关中打开它。",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
         "paragraph2": "如果该节点是一个目录，则可以查看其子节点并跳转。"
       },
       "step4": {

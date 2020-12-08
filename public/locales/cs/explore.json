@@ -49,7 +49,11 @@
       },
       "step3": {
         "title": "Informace o uzlu",
+<<<<<<< HEAD
         "paragraph1": "Zde máte podrobné informace o uzlu a můžete je otevřít v bráně BTFS.",
+=======
+        "paragraph1": "Zde máte podrobné informace o uzlu a můžete je otevřít v bráně BTFS.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
         "paragraph2": "Pokud je uzel adresářem, můžete vidět jeho děti a přejít na ně."
       },
       "step4": {

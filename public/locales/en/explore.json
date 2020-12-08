@@ -49,7 +49,11 @@
       },
       "step3": {
         "title": "Node info",
+<<<<<<< HEAD
         "paragraph1": "Here you have detailed info about the node and you can open it in the BTFS gateway.",
+=======
+        "paragraph1": "Here you have detailed info about the node and you can open it in the BTFS gateway.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
         "paragraph2": "If the node is a directory you can see its children and navigate to them."
       },
       "step4": {

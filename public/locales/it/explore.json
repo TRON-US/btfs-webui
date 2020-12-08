@@ -26,7 +26,11 @@
     "hashDigest": "Hash digest"
   },
   "ObjectInfo": {
+<<<<<<< HEAD
     "gatewayLink": "Mostra sul Gateway BTFS"
+=======
+    "gatewayLink": "Mostra sul Gateway BTFS"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   },
   "base": "base",
   "version": "versione",
@@ -49,7 +53,11 @@
       },
       "step3": {
         "title": "Informazioni nodo",
+<<<<<<< HEAD
         "paragraph1": "Qui hai tutte le informazioni dettagliate riguardo al nodo e puoi aprirlo nel gateway BTFS.",
+=======
+        "paragraph1": "Qui hai tutte le informazioni dettagliate riguardo al nodo e puoi aprirlo nel gateway BTFS.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
         "paragraph2": "Se il nodo è una directory, puoi vedere i suoi figli e navigarci in essi."
       },
       "step4": {

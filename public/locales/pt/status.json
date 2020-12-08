@@ -45,5 +45,9 @@
     "detailsLabel": "Mais informação"
   },
   "bandwidthStats": "Bandwidth stats",
+<<<<<<< HEAD
   "bandwidthStatsDisabled": "Tem as métricas de largura de banda desativadas. Pode ativá-las digitando o comando abaixo ou alterando a chave <1>Swarm.DisableBandwidthMetrics</1> para <3>false</3> em <5>Configurações</5>. Depois tem de reiniciar o seu nó BTFS para aplicar as alterações."
+=======
+  "bandwidthStatsDisabled": "Tem as métricas de largura de banda desativadas. Pode ativá-las digitando o comando abaixo ou alterando a chave <1>Swarm.DisableBandwidthMetrics</1> para <3>false</3> em <5>Configurações</5>. Depois tem de reiniciar o seu nó BTFS para aplicar as alterações."
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
 }

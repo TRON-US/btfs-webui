@@ -86,7 +86,7 @@ class FilesPage extends React.Component {
   }
 
   onInspect = (cid) => {
-    this.props.doUpdateHash(`/explore/ipfs/${cid}`)
+    this.props.doUpdateHash(`/explore/btfs/${cid}`)
   }
 
   showModal = (modal, files = null) => {
@@ -201,7 +201,7 @@ class FilesPage extends React.Component {
       parts.push(t('app:terms.pins'))
     }
 
-    parts.push('IPFS')
+    parts.push('BTFS')
     return parts.join(' | ')
   }
 

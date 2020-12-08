@@ -3,6 +3,7 @@
   "language": "语言",
   "analytics": "分析",
   "cliTutorMode": "CLI 引导模式",
+<<<<<<< HEAD
   "config": "BTFS 配置",
   "languageModal": {
     "title": "修改语言",
@@ -16,19 +17,43 @@
   "configApiNotAvailable": "BTFS 配置 API 不可用。请禁用 \"BTFS 伴侣\" 浏览器插件并重试。",
   "ipfsDaemonOffline": "BTFS 守护进程处于离线状态，请使其在线并重试。",
   "settingsUnavailable": "配置不可用，请检查你的 BTFS 守护进程是否还在运行。",
+=======
+  "config": "BTFS 配置",
+  "languageModal": {
+    "title": "修改语言",
+    "description": "选择首选语言。",
+    "translationProjectIntro": "添加或改进翻译，使BTFS更适合每个人！",
+    "translationProjectLink": "加入BTFS翻译项目"
+  },
+  "apiDescription": "<0>如果您的节点配置了一个<1>自定义的API地址</1>，或者包含了其他非默认的5001端口的情况下，在这里修改。</0>",
+  "cliDescription": "<0>启用这个选来会在下方BTFS命令旁显示一个“查看代码”<1></1>图标。单击它将打开一个带有命令的CLI代码的引导模式，因此您可以将其粘贴到BTFS 节点的命令行终端中执行。</0>",
+  "fetchingSettings": "拉取配置中 ...",
+  "configApiNotAvailable": "BTFS 配置 API 不可用。请禁用 \"BTFS 伴侣\" 浏览器插件并重试。",
+  "ipfsDaemonOffline": "BTFS 守护进程处于离线状态，请使其在线并重试。",
+  "settingsUnavailable": "配置不可用，请检查你的 BTFS 守护进程是否还在运行。",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "settingsHaveChanged": "配置已经改变，请单击 <1>重置</1> 按钮刷新编辑器中的内容。",
   "errorOccured": "在保存修改的配置文件过程中出错。",
   "checkConsole": "请查看浏览器控制台了解更多的信息。",
   "changesSaved": "你修改的配置已经保存。",
+<<<<<<< HEAD
   "settingsWillBeUsedNextTime": "新的配置信息会在下次重新启动 BTFS 守护进程后生效。",
   "ipfsConfigDescription": "BTFS 配置文件是一个 JSON 文件， BTFS 守护进程会在启动过程中读取一次。保存修改的配置，重启 BTFS 守护进程以使用你修改后的配置。",
+=======
+  "settingsWillBeUsedNextTime": "新的配置信息会在下次重新启动 BTFS 守护进程后生效。",
+  "ipfsConfigDescription": "BTFS 配置文件是一个 JSON 文件， BTFS 守护进程会在启动过程中读取一次。保存修改的配置，重启 BTFS 守护进程以使用你修改后的配置。",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "ipfsConfigHelp": "查看文档获取更多信息",
   "AnalyticsToggle": {
     "label": "向我们提供匿名数据来帮助我们改进",
     "summary": "配置收集哪些数据",
     "paragraph1": "不会收集任何 CID 、文件名或个人信息。我们仅收集度量数据来帮助我们优化后续工作的优先级，同时收集系统配置信息引导我们进行测试。",
     "paragraph2": "Protocol Labs 运行了 <1>Countly</1> 实例帮助我们收集这个应用产生的匿名数据。",
+<<<<<<< HEAD
     "basicInfo": "下列数据会发送到 countly.btfs.io",
+=======
+    "basicInfo": "下列数据会发送到 countly.btfs.io",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "optionalInfo": "你可以选择发送以下数据：",
     "sessions": {
       "label": "会话",
@@ -62,8 +87,13 @@
   "tour": {
     "step1": {
       "title": "配置页面",
+<<<<<<< HEAD
       "paragraph1": "您可以在此处更改 Web UI 和 BTFS 节点的设置。",
       "paragraph2": "如果你正在运行 BTFS Desktop ，会有一些特定的设置。"
+=======
+      "paragraph1": "您可以在此处更改 Web UI 和 BTFS 节点的设置。",
+      "paragraph2": "如果你正在运行 BTFS Desktop ，会有一些特定的设置。"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     },
     "step2": {
       "title": "语言选择",
@@ -76,16 +106,28 @@
     },
     "step4": {
       "title": "自定义API地址",
+<<<<<<< HEAD
       "paragraph1": "如果您为BTFS 节点配置了自定义的API地址，你可以直接在这里更新配置而不需要手动修改JSON配置文件。"
     },
     "step5": {
       "title": "BTFS 配置",
       "paragraph1": "您可以直接 从Web UI 更改 BTFS 节点的配置。",
+=======
+      "paragraph1": "如果您为BTFS 节点配置了自定义的API地址，你可以直接在这里更新配置而不需要手动修改JSON配置文件。"
+    },
+    "step5": {
+      "title": "BTFS 配置",
+      "paragraph1": "您可以直接 从Web UI 更改 BTFS 节点的配置。",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "不要忘记重新启动守护程序以应用更改！"
     }
   },
   "Experiments": {
+<<<<<<< HEAD
     "description": "在这里，您可以通过激活下方选项获得使用早期预览版 BTFS 功能的身份。 我们正在测试这些功能，但它们可能还不完美，所以我们很乐意听取您的反馈意见。",
+=======
+    "description": "在这里，您可以通过激活下方选项获得使用早期预览版 BTFS 功能的身份。 我们正在测试这些功能，但它们可能还不完美，所以我们很乐意听取您的反馈意见。",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "issueUrl": "提交 bug",
     "feedbackUrl": "💌提供反馈",
     "readMoreUrl": "查看更多"

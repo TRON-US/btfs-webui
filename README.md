@@ -1,61 +1,41 @@
-# BTFS Web UI
+# IPFS Web UI
 
-
+> A web interface to [IPFS](https://ipfs.io).
+>
 > Check on your node stats, explore the IPLD powered merkle forest, see peers around the world and manage your files, without needing to touch the CLI.
 
-## Test the WebUI
+![Screenshot of the status page](docs/screenshots/ipfs-webui-status.png)
 
-After making changes to the WebUI repository, the updated changes can be viewed in the browser using the following steps:
+| Files | Explore | Peers | Settings |
+|-------|---------|-------|----------|
+| ![Screenshot of the file browser page](docs/screenshots/ipfs-webui-files.png) | ![Screenshot of the IPLD explorer page](docs/screenshots/ipfs-webui-explore.png) | ![Screenshot of the swarm peers map](docs/screenshots/ipfs-webui-peers.png) | ![Screenshot of the settings page](docs/screenshots/ipfs-webui-settings.png) |
 
-Download the repo
 
-```
-git clone https://github.com/TRON-US/btfs-webui
-```
-CD into the btfs-webui repo. Then with `node` >= 8.12 and `npm` >= 6.4.1 installed, run
+[![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg)](https://protocol.ai/) [![](https://img.shields.io/badge/freenode-%23ipfs-blue.svg)](http://webchat.freenode.net/?channels=%23ipfs) [![dependencies Status](https://david-dm.org/ipfs-shipyard/ipfs-webui/revamp/status.svg)](https://david-dm.org/ipfs-shipyard/ipfs-webui/revamp) [![CircleCI](https://img.shields.io/circleci/project/github/ipfs-shipyard/ipfs-webui/master.svg)](https://circleci.com/gh/ipfs-shipyard/ipfs-webui)
 
-```
-cd btfs-webui
-npm install
-```
+The IPFS WebUI is a **work-in-progress**. Help us make it better! We use the issues on this repo to track the work and it's part of the wider [IPFS GUI project](https://github.com/ipfs/ipfs-gui).
 
-Open a separate terminal and start the BTFS daemon. This will allow you to see the updated WebUI in your localhost:
+The app uses [`ipfs-http-client`](https://github.com/ipfs/js-ipfs-http-client) to communicate with your local IPFS node.
 
-```
-btfs daemon
-```
+The app is built with [`create-react-app`](https://github.com/facebook/create-react-app). Please read the [docs](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#table-of-contents).
 
-In your previous terminal, run the dev server:
+## Install
 
-```
-npm start
+With `node` >= 10 and `npm` >= 6.4.1 installed, run
+
+```sh
+> npm install
 ```
 
-The final output should be as such:
+## Usage
 
-```
-Compiled successfully!
-
-You can now view btfs-webui in the browser.
-
-  Local:            http://localhost:3000/
-  On Your Network:  http://10.10.0.77:3000/
-
-Note that the development build is not optimized.
-To create a production build, use npm run build.
-
-```
-Paste the local host URL into your web browser to view the updated WebUI. 
-
-
-
-**When working on the code**, run a btfs daemon, the local [dev server](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#npm-start), the [unit tests](https://facebook.github.io/jest/), and the [storybook](https://storybook.js.org/) component viewer and see the results of your changes as you save files. For **debugging** follow this [post](https://hackernoon.com/debugging-react-like-a-champ-with-vscode-66281760037)
+**When working on the code**, run an ipfs daemon, the local [dev server](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#npm-start), the [unit tests](https://facebook.github.io/jest/), and the [storybook](https://storybook.js.org/) component viewer and see the results of your changes as you save files.
 
 In separate shells run the following:
 
 ```sh
-# Run BTFS
-> btfs daemon
+# Run IPFS
+> ipfs daemon
 ```
 
 ```sh
@@ -64,8 +44,8 @@ In separate shells run the following:
 ```
 
 ```sh
-# Run the unit tests
-> npm test
+# Run the unit tests in watch mode
+> npm run test:unit:watch
 ```
 
 ```sh
@@ -73,34 +53,49 @@ In separate shells run the following:
 > npm run storybook
 ```
 
-### Configure BTFS API CORS headers
+### Configure IPFS API CORS headers
 
-You must configure your BTFS API at http://0.0.0.0:5001  to allow [cross-origin (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests from your dev server at http://localhost:3000
+You must configure your IPFS API at http://127.0.0.1:5001  to allow [cross-origin (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests from your dev server at http://localhost:3000
+
+Similarly if you want to try out pre-release versions at https://dev.webui.ipfs.io you need to add that as an allowed domain too.
 
 #### Easy mode
 
 Run the **[cors-config.sh](./cors-config.sh)** script with:
 
-```console
+```sh
 > ./cors-config.sh
 ```
 
 #### The manual way
 
-```console
-> btfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["http://localhost:3000"]'
-> btfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "GET", "POST"]'
+```sh
+> ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["http://localhost:3000", "https://webui.ipfs.io", "http://127.0.0.1:5001"]'
+> ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["POST"]'
 ```
 
 #### Reverting
 
 To reset your config back to the default configuration, run the following command.
 
-```console
-> btfs config --json API.HTTPHeaders {}
+```sh
+> ipfs config --json API.HTTPHeaders {}
 ```
 
-You might also like to copy the `~/.btfs/config` file somewhere with a useful name so you can use `btfs config replace <file>` to switch your node between default and dev mode easily.
+You might also like to copy the `~/.ipfs/config` file somewhere with a useful name so you can use `ipfs config replace <file>` to switch your node between default and dev mode easily.
+
+## Running with Docker
+
+If you need to run IPFS in a Docker container, you can still have Web UI available by exposing both the Gateway and Web UI ports.
+
+Using the default ports:
+
+```sh
+docker pull ipfs/go-ipfs
+docker run -p 8080:8080 -p 5001:5001 -it ipfs/go-ipfs
+```
+
+See the [go-ipfs page](https://hub.docker.com/r/ipfs/go-ipfs) on Docker Hub to get started using IPFS with Docker.
 
 ## Build
 
@@ -113,32 +108,121 @@ To create an optimized static build of the app, output to the `build` directory:
 
 ## Test
 
-The following command will run the app tests, watch source files and re-run the tests when changes are made:
+The following command will run all tests: unit one for React and E2E against real HTTP API:
 
 ```sh
 > npm test
 ```
 
+## Unit tests
+
+To watch source files and re-run the tests when changes are made:
+
+```sh
+> npm run test:unit
+```
+
 The WebUI uses Jest to run the isolated unit tests. Unit test files are located next to the component they test and have the same file name, but with the extension `.test.js`
 
-## End-to-end tests
+## E2E tests
 
-The end-to-end tests (e2e) test the full app in a headless Chromium browser. They require an http server to be running to serve the app.
+The end-to-end tests (E2E) test the full app in a headless Chromium browser. They spawn real IPFS node for HTTP API and a static HTTP server to serve the app.
+The purpose of those tests is not being comprehensible, but act as a quick regression and integration suite.
+Test files are located in `test/e2e/`.
 
-In dev, run `npm start` in another shell before starting the tests
+Make sure `npm run build` is run before starting E2E tests:
 
+```sh
+> npm run build
+> npm run test:e2e # end-to-end smoke tests (fast, headless, use go-ipfs)
 ```
-# Run the end-to-end tests
+
+### Customizing E2E Tests
+
+Default behavior can be tweaked via env variables below.
+
+#### `E2E_IPFSD_TYPE`
+
+Variable named `E2E_IPFSD_TYPE` defines which IPFS backend should be used for end-to-end tests.
+
+CI setup of ipfs-webui repo runs tests against both JS and GO implementations:
+
+```sh
+> E2E_IPFSD_TYPE=go npm run test:e2e # 'go' is the default if missing
+> E2E_IPFSD_TYPE=js npm run test:e2e
+```
+
+##### Overriding versions
+
+It is possible to test against arbitrary versions by tweaking `ipfs` (js-ipfs)
+ and `go-ipfs` in `devDependencies` section of `package.json` and applying the change via `npm i`
+ 
+One can also override the binary used in e2e tests by providing a path to an alternative one via `IPFS_GO_EXEC` (or `IPFS_JS_EXEC`):
+
+```sh
+> IPFS_GO_EXEC=$GOPATH/bin/ipfs  npm run test:e2e
+> E2E_IPFSD_TYPE=js IPFS_JS_EXEC=/path/to/jsipfs  npm run test:e2e
+```
+
+#### `E2E_API_URL`
+
+Instead of spawning a disposable node and repo for tests, one can point the E2E test suite at arbitrary HTTP API running on localhost:
+
+```sh
+> E2E_API_URL=http://127.0.0.1:5001 npm run test:e2e
+```
+
+**Caveat 1:** HTTP API used in tests needs to run on the local machine for Peers screen to pass (they test manual swarm connect to ephemeral `/ip4/120.0.0.1/..` multiaddr)
+
+**Caveat 2:** CORS requests from `http://localhost:3001` (static server hosting dev version of webui) need to be added to `Access-Control-Allow-Origin` whitelist array in node's config:
+
+```json
+"API": {
+  "HTTPHeaders": {
+    "Access-Control-Allow-Methods": ["POST"],
+    "Access-Control-Allow-Origin": [
+      "http://localhost:5001",
+      "http://localhost:3001"
+    ]
+  }
+}
+```
+
+Can be done ad-hoc via command line:
+
+```sh
+> ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["http://localhost:3001", "http://127.0.0.1:5001"]'
+> ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["POST"]'
+```
+
+### Debugging E2E tests
+
+#### Show the browser
+
+By default, the test run headless, so you won't see the browser. To debug test errors, it can be helpful to see the robot clicking around the site.
+To disable headless mode and see the browser, set the environment variable `DEBUG=true`:
+
+```sh
+> DEBUG=true npm run test:e2e # e2e in slowed down mode in a browser window
+```
+
+#### Breakpoints
+
+It is possible to set a "breakpoint" via `await jestPuppeteer.debug()` to stop tests at a specific line:
+
+```js
+jest.setTimeout(600000) // increase test suite timeout
+await jestPuppeteer.debug() // puppeteer will pause here
+```
+
+In a **continuous integration** environment we lint the code, run the unit tests, build the app, start an http server and run the unit e2e tests:
+
+```sh
+> npm run lint
+> npm test
+> npm run build
 > npm run test:e2e
 ```
-
-By default the test run headless, so you won't see the the browser. To debug test errors, it can be helpful to see the robot clicking around the site. To disable headless mode and see the browser, set the environment variable `DEBUG=true`
-
-```
-# See the end-to-end tests in a browser
-> DEBUG=true npm run test:e2e
-```
-
 
 ## Coverage
 
@@ -167,24 +251,42 @@ To inspect the built bundle for bundled modules and their size, first `build` th
 
 ## Translations
 
+One can permanently switch to a different locale via _Settings_ or temporarily via `?lng=<lang-code>` URL parameter.
+
 The translations are stored on [./public/locales](./public/locales) and the English version is the source of truth. We use Transifex to help us translate WebUI to another languages.
 
-<!---
-TODO: Do we allow contributions?
---> 
+**If you're interested in contributing a translation**, go to [our page on Transifex](https://www.transifex.com/ipfs/ipfs-webui/translate/), create an account, pick a language and start translating. Be sure to change your notification settings to be notified when translation sources change.
 
+You can read more on how we use Transifex and i18next in this app at [`docs/LOCALIZATION.md`](docs/LOCALIZATION.md)
 
-## Release WebUI
+## Releasing
 
-After all changes have been made and tested, follow the steps below to release a new version of the BTFS WebUI:
+1. Run `tx pull -a` to pull the latest translations from Transifex ([i18n#transifex-101)](https://github.com/ipfs-shipyard/i18n#transifex-101))
+1. Bump the version in `package.json`
+1. Commit changes
+1. Tag it: `git tag vN.N.N`
+1. Push `master` and the `vN.N.N` tag to GitHub: `git push && git push origin vN.N.N`
+1. Wait for master to [build on CI](https://circleci.com/gh/ipfs-shipyard/ipfs-webui), and grab the CID produced from the tagged commit
+1. Add release notes to https://github.com/ipfs-shipyard/ipfs-webui/releases, use the tag and CID you created 
+1. Update the CID at projects that use ipfs-webui by submitting PR against below lines:
+   - js-ipfs: https://github.com/ipfs/js-ipfs/blob/master/packages/ipfs-http-server/src/api/routes/webui.js#L8
+   - go-ipfs: https://github.com/ipfs/go-ipfs/blob/master/core/corehttp/webui.go#L4
+   - ipfs-desktop: https://github.com/ipfs-shipyard/ipfs-desktop/blob/master/package.json#L18
 
-1. In the terminal, navigate to the `btfs-webui` directory. Then run `npm run build`. This builds the the WebUI files and places them in a newly created `build` folder.   
-2. SSH into a bootstrap node. Then upload the `build` folder by running `btfs add build/`, and obtain the hash value.  
-3. Update the hash value at:
-   - go-btfs https://github.com/TRON-US/go-btfs/blob/master/core/corehttp/webui.go
+## Contribute
 
+Feel free to dive in! [Open an issue](https://github.com/ipfs-shipyard/ipfs-webui/issues/new) or submit PRs.
 
+To contribute to IPFS in general, see the [contributing guide](https://github.com/ipfs/community/blob/master/CONTRIBUTING.md).
+
+[![](https://cdn.rawgit.com/jbenet/contribute-ipfs-gif/master/img/contribute.gif)](https://github.com/ipfs/community/blob/master/CONTRIBUTING.md)
+
+## Browser and device testing
+
+[<img src="https://ipfs.io/ipfs/QmbKK6f1cuRfb63dTULVgCvnpGj6Q6T16XyqeC3AXDUH2F/browserstack-logo-600x315.png" width="300px" />](https://www.browserstack.com/)
+
+We would like to thank [BrowserStack](https://www.browserstack.com/) for supporting Open Source and making it possible to test the IPFS Web UI on a wide array of operating systems and devices, improving compatibility for everyone.
 
 ## License
 
-[MIT](LICENSE) © TRON Foundation
+[MIT](LICENSE) © Protocol Labs

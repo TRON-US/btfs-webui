@@ -12,7 +12,11 @@
   "downloadPDF": "Télécharger un PDF",
   "downloadInstead": "Essayer de <1>le télécharger</1> à la place.",
   "cantBePreviewed": "Désolé, ce fichier ne peut pas être prévisualisé",
+<<<<<<< HEAD
   "addByPath": "Depuis BTFS",
+=======
+  "addByPath": "Depuis BTFS",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "newFolder": "Nouveau répertoire",
   "generating": "Génération...",
   "actions": {
@@ -38,8 +42,13 @@
     "descriptionFile": "{count, plural, one {Etes-vous sûr(e) de vouloir supprimer ce fichier? Cette action est définitive et ne peut être annulée.} other {Êtes-vous sûr(e) de vouloir supprimer ces {count} fichiers? Cette action est définitive et ne peut être annulée.}}"
   },
   "addByPathModal": {
+<<<<<<< HEAD
     "title": "Importer depuis BTFS",
     "description": "Entrez un chemin BTFS (CID) pour l'importer.",
+=======
+    "title": "Importer depuis BTFS",
+    "description": "Entrez un chemin BTFS (CID) pour l'importer.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "examples": "Exemples :"
   },
   "newFolderModal": {
@@ -57,8 +66,13 @@
     "closeDropdown": "Fermer la liste",
     "count": "{count} sur {count}"
   },
+<<<<<<< HEAD
   "addFilesInfo": "<0>Aucun fichier ici pour l'instant ! Ajoutez-en à votre nœud BTFS local en cliquant sur le bouton <1>Importer</1> ci-dessus.</0>",
   "companionInfo": "<0>Comme vous utilisez <1>BTFS Companion</1>, la liste des fichiers est limitée aux fichiers ajoutés lors de l'utilisation de l'extension.</0>",
+=======
+  "addFilesInfo": "<0>Aucun fichier ici pour l'instant ! Ajoutez-en à votre nœud BTFS local en cliquant sur le bouton <1>Importer</1> ci-dessus.</0>",
+  "companionInfo": "<0>Comme vous utilisez <1>BTFS Companion</1>, la liste des fichiers est limitée aux fichiers ajoutés lors de l'utilisation de l'extension.</0>",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "tour": {
     "step1": {
       "title": "Page des fichiers",
@@ -76,7 +90,11 @@
       "title": "Ajouter des fichiers",
       "paragraph1": "Ici vous pouvez voir comment les blocs et les fichiers sont épinglés.",
       "paragraph2": "Vous pouvez ajouter des fichiers ou des dossiers dans votre dépot en utilisant le menu déroulant sur la droite.",
+<<<<<<< HEAD
       "paragraph3": "<0>Si vous voulez ajouter quelque chose déjà présent sur BTFS, vous pouvez l'importer dans votre MFS en entrant son <1>Identifiant de contenu (CID)</1>.</0>"
+=======
+      "paragraph3": "<0>Si vous voulez ajouter quelque chose déjà présent sur BTFS, vous pouvez l'importer dans votre MFS en entrant son <1>Identifiant de contenu (CID)</1>.</0>"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     },
     "step5": {
       "title": "Liste des fichiers",

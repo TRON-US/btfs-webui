@@ -43,7 +43,7 @@ class Modals extends React.Component {
       paths: []
     },
     link: '',
-    command: 'ipfs --help'
+    command: 'btfs --help'
   }
 
   onAddByPath = (path) => {

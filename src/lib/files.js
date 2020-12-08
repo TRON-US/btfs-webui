@@ -48,11 +48,11 @@ async function downloadSingle (file, gatewayUrl, apiUrl) {
   let url, filename, method
 
   if (file.type === 'directory') {
-    url = `${apiUrl}/api/v1/get?arg=${file.cid}&archive=true&compress=true`
+    url = `${apiUrl}/api/v0/get?arg=${file.cid}&archive=true&compress=true`
     filename = `${file.name}.tar.gz`
     method = 'POST' // API is POST-only
   } else {
-    url = `${gatewayUrl}/btfs/${file.cid}`
+    url = `${gatewayUrl}/ipfs/${file.cid}`
     filename = file.name
     method = 'GET'
   }
@@ -96,7 +96,7 @@ async function downloadMultiple (files, apiUrl, ipfs) {
   const cid = await makeCIDFromFiles(files, ipfs)
 
   return {
-    url: `${apiUrl}/api/v1/get?arg=${cid}&archive=true&compress=true`,
+    url: `${apiUrl}/api/v0/get?arg=${cid}&archive=true&compress=true`,
     filename: `download_${cid}.tar.gz`,
     method: 'POST' // API is POST-only
   }
@@ -136,5 +136,5 @@ export async function getShareableLink (files, ipfs) {
     cid = await makeCIDFromFiles(files, ipfs)
   }
 
-  return `https://gateway.btfssoter.io/btfs/${cid}${filename || ''}`
+  return `https://ipfs.io/ipfs/${cid}${filename || ''}`
 }

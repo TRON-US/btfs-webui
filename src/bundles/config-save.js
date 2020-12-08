@@ -66,7 +66,7 @@ const actions = {
       const obj = JSON.parse(configStr)
       const ipfs = context.getIpfs()
       if (ipfs == null) {
-        throw Error('IPFS node is not found')
+        throw Error(' node is not found')
       }
 
       await ipfs.config.replace(obj)

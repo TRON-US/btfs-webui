@@ -167,7 +167,7 @@ const asMultiaddress = (value) => {
  * @property {string} [host]
  * @property {string} [port] - (e.g. '443', or '80')
  * @property {string} [protocol] - (e.g 'https', 'http')
- * @property {string} [apiPath] - ('/api/v1' by default)
+ * @property {string} [apiPath] - ('/api/v0' by default)
  * @property {Object<string, string>} [headers]
  */
 
@@ -198,7 +198,7 @@ const parseHTTPClientOptions = (input) => {
         host: uri.hostname,
         port: uri.port || (uri.protocol === 'https:' ? '443' : '80'),
         protocol: uri.protocol.slice(0, -1), // trim out ':' at the end
-        apiPath: (uri.pathname !== '/' ? uri.pathname : 'api/v1'),
+        apiPath: (uri.pathname !== '/' ? uri.pathname : 'api/v0'),
         headers: {
           authorization: `Basic ${btoa(username + ':' + password)}`
         }

@@ -2,20 +2,31 @@
   "title": "Bem-vindo ao BTFS",
   "configureApiPort": {
     "header": "Está a correr a API numa porta que não a 5001?",
+<<<<<<< HEAD
     "paragraph1": "<0>If your BTFS node is configured with a <1>custom API address</1>, please set it here.</0>"
+=======
+    "paragraph1": "<0>If your BTFS node is configured with a <1>custom API address</1>, please set it here.</0>"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   },
   "apiAddressForm": {
     "apiLabel": "ENDEREÇO DA API",
     "submitButton": "Submeter"
   },
   "connected": {
+<<<<<<< HEAD
     "header": "Conectado ao BTFS",
     "paragraph1": "<0>Now, it’s time for you to explore your node. Head to <1>Files page</1> to manage and share your files, or explore the <3>Merkle Forest</3> of peer-hosted hash-linked data via <5>IPLD explorer</5>.</0>",
     "paragraph2": "<0>Pode sempre regressar a este endereço para alterar o nó BTFS ao qual está conectado.</0>"
+=======
+    "header": "Conectado ao BTFS",
+    "paragraph1": "<0>Now, it’s time for you to explore your node. Head to <1>Files page</1> to manage and share your files, or explore the <3>Merkle Forest</3> of peer-hosted hash-linked data via <5>IPLD explorer</5>.</0>",
+    "paragraph2": "<0>Pode sempre regressar a este endereço para alterar o nó BTFS ao qual está conectado.</0>"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   },
   "notConnected": {
     "header": "O seu BTFS daemon está correr?",
     "paragraph1": "<0>Falha ao conectar à API.</0>",
+<<<<<<< HEAD
     "paragraph2": "<0>Certifique-se que <1>configurou a sua API BTFS</1> para permitir pedidos de origem cruzada (CORS), executando os comandos abaixo:</0>",
     "paragraph3": "<0>Inicie o BTFS no terminal:</0>",
     "paragraph4": "<0>Para mais informação sobre como iniciar a sua jornada com o BTFS, pode <1>ler o guia</1>.</0>"
@@ -27,5 +38,18 @@
     "paragraph3": "<0><0>BTFS is a web.</0> Files are accessible via HTTP gateways like <2>https://gateway.btfs.io</2>. Browsers <4>can be extended</4> to use the <6>ipfs://</6> scheme directly, and hash-addressed content guarantees authenticity.</0>",
     "paragraph4": "<0>O <0>BTFS é p2p.</0> Suporta transferências de ficheiros mundias de pare-para-par com uma arquitetura completamente descentralizada e sem um ponto de falha central.</0>",
     "paragraph5": "<0><0>BTFS is a CDN.</0> Add a file to your local repository, and it's now available to the world with cache-friendly content-hash addressing and BitTorrent-like bandwidth distribution.</0>"
+=======
+    "paragraph2": "<0>Certifique-se que <1>configurou a sua API BTFS</1> para permitir pedidos de origem cruzada (CORS), executando os comandos abaixo:</0>",
+    "paragraph3": "<0>Inicie o BTFS no terminal:</0>",
+    "paragraph4": "<0>Para mais informação sobre como iniciar a sua jornada com o BTFS, pode <1>ler o guia</1>.</0>"
+  },
+  "aboutIpfs": {
+    "header": "O que é o BTFS?",
+    "paragraph1": "<0>O <0>BTFS é um protocolo</0> que define um sistema de ficheiros endereçado por conteúdo, coordena a entrega de conteúdo e combina ideias do Kademlia, BitTorrent, Git entre outros.</0>",
+    "paragraph2": "<0>O <0>BTFS é um sistema de ficheiros.</0> Tem pastas e ficheiros e um sistema de ficheiros montável através do FUSE.</0>",
+    "paragraph3": "<0><0>BTFS is a web.</0> Files are accessible via HTTP gateways like <2>https://ipfs.io</2>. Browsers <4>can be extended</4> to use the <6>ipfs://</6> scheme directly, and hash-addressed content guarantees authenticity.</0>",
+    "paragraph4": "<0>O <0>BTFS é p2p.</0> Suporta transferências de ficheiros mundias de pare-para-par com uma arquitetura completamente descentralizada e sem um ponto de falha central.</0>",
+    "paragraph5": "<0><0>BTFS is a CDN.</0> Add a file to your local repository, and it's now available to the world with cache-friendly content-hash addressing and BitTorrent-like bandwidth distribution.</0>"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   }
 }

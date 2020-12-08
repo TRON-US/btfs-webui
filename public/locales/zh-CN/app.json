@@ -28,7 +28,11 @@
     "unselectAll": "全部取消选择"
   },
   "cliModal": {
+<<<<<<< HEAD
     "description": "将以下内容粘贴到您的BTFS终端使用命令行来完成任务。请谨记您需要使用您自己的参数来替换掉占位符",
+=======
+    "description": "将以下内容粘贴到您的BTFS终端使用命令行来完成任务。请谨记您需要使用您自己的参数来替换掉占位符",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "extraNotes": "如果您希望保存已在该页的代码编辑器中修改过的配置，点击复制图标旁边的下载图标可以将配置文件以JSON文件的形式下载到本地"
   },
   "nav": {
@@ -37,9 +41,15 @@
     "revision": "修订"
   },
   "status": {
+<<<<<<< HEAD
     "connectedToIpfs": "已连接到 BTFS",
     "connectingToIpfs": "正在连接 BTFS",
     "couldNotConnect": "无法连接到BTFS API"
+=======
+    "connectedToIpfs": "已连接到 BTFS",
+    "connectingToIpfs": "正在连接 BTFS",
+    "couldNotConnect": "无法连接到BTFS API"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   },
   "terms": {
     "address": "地址",

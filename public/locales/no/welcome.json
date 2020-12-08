@@ -16,6 +16,7 @@
   "notConnected": {
     "header": "Kjører din BTFS daemon?",
     "paragraph1": "<0>Kunne ikke koble til API.</0>",
+<<<<<<< HEAD
     "paragraph2": "<0>Vær sikker på at du <1>konfigurerer ditt BTFS API</1> til å tillate cross-origin (CORS) forespørsler, ved å kjøre kommandoene nedenfor:</0>",
     "paragraph3": "<0>Start en BTFS daemon i terminal:</0>",
     "paragraph4": "<0>For mer informasjon om hvordan du kommer i gang med BTFS kan du <1>lese guiden</1>.</0>"
@@ -27,5 +28,18 @@
     "paragraph3": "<0><0>BTFS er en web.</0> Filer er tilgjengelig via HTTP-gateways som <2>https://gateway.btfs.io</2>. Nettlesere <4>kan bli utvidet</4> til å bruke <6>ipfs://</6>ordningen direkte, og hash-adresserbart innhold garanterer autensitet</0>",
     "paragraph4": "<0><0>BTFS er p2p.</0> Den støtter verdensomspennende peer-to-peer filoverføringer med en desentralisert arkitektur, og ingen sentrale punkt for svikt.</0>",
     "paragraph5": "<0><0>BTFS is a CDN.</0> Add a file to your local repository, and it's now available to the world with cache-friendly content-hash addressing and BitTorrent-like bandwidth distribution.</0>"
+=======
+    "paragraph2": "<0>Vær sikker på at du <1>konfigurerer ditt BTFS API</1> til å tillate cross-origin (CORS) forespørsler, ved å kjøre kommandoene nedenfor:</0>",
+    "paragraph3": "<0>Start en BTFS daemon i terminal:</0>",
+    "paragraph4": "<0>For mer informasjon om hvordan du kommer i gang med BTFS kan du <1>lese guiden</1>.</0>"
+  },
+  "aboutIpfs": {
+    "header": "Hva er BTFS?",
+    "paragraph1": "<0><0>BTFS er en protokoll</0> som definerer et innholdsadressert filsystem, koordinerer innholdsleveranse og kombinerer ideer fra Kademlia, BitTorrent, Git og mer.",
+    "paragraph2": "<0><0>BTFS er et filsystem.</0> Det har mapper, filer og monterbart filsystem via FUSE.</0>",
+    "paragraph3": "<0><0>BTFS er en web.</0> Filer er tilgjengelig via HTTP-gateways som <2>https://ipfs.io</2>. Nettlesere <4>kan bli utvidet</4> til å bruke <6>ipfs://</6>ordningen direkte, og hash-adresserbart innhold garanterer autensitet</0>",
+    "paragraph4": "<0><0>BTFS er p2p.</0> Den støtter verdensomspennende peer-to-peer filoverføringer med en desentralisert arkitektur, og ingen sentrale punkt for svikt.</0>",
+    "paragraph5": "<0><0>BTFS is a CDN.</0> Add a file to your local repository, and it's now available to the world with cache-friendly content-hash addressing and BitTorrent-like bandwidth distribution.</0>"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   }
 }

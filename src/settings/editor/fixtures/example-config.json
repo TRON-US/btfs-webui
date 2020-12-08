@@ -105,7 +105,7 @@
   },
   "Mounts": {
     "FuseAllowOther": false,
-    "BTFS": "/ipfs",
+    "BTFS": "/btfs",
     "IPNS": "/ipns"
   },
   "Reprovider": {

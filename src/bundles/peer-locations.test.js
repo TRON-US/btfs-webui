@@ -177,7 +177,7 @@ describe('selectPeerLocationsForSwarm', () => {
       ]
     }
 
-    const result = selectPeerLocationsForSwarm([peer1], locations, ['/ipfs/1'], identity)
+    const result = selectPeerLocationsForSwarm([peer1], locations, ['/btfs/1'], identity)
     expect(result).toEqual([
       {
         address: '1.test',
@@ -215,7 +215,7 @@ describe('selectPeerLocationsForSwarm', () => {
       ]
     }
 
-    const result = selectPeerLocationsForSwarm([peer1], null, ['/ipfs/1'], identity)
+    const result = selectPeerLocationsForSwarm([peer1], null, ['/btfs/1'], identity)
     expect(result).toEqual([
       {
         address: '1.test',

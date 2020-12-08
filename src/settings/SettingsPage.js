@@ -12,7 +12,7 @@ import Tick from '../icons/GlyphSmallTick'
 import Box from '../components/box/Box'
 import Button from '../components/button/Button'
 import LanguageSelector from '../components/language-selector/LanguageSelector'
-// import AnalyticsToggle from '../components/analytics-toggle/AnalyticsToggle'
+import AnalyticsToggle from '../components/analytics-toggle/AnalyticsToggle'
 import ApiAddressForm from '../components/api-address-form/ApiAddressForm'
 import JsonEditor from './editor/JsonEditor'
 import Experiments from '../components/experiments/ExperimentsPanel'
@@ -25,12 +25,12 @@ import { cliCmdKeys, cliCommandList } from '../bundles/files/consts'
 const PAUSE_AFTER_SAVE_MS = 3000
 
 export const SettingsPage = ({
-                               t, tReady, isIpfsConnected,
-                               isConfigBlocked, isLoading, isSaving,
-                               hasSaveFailed, hasSaveSucceded, hasErrors, hasLocalChanges, hasExternalChanges,
-                               config, onChange, onReset, onSave, editorKey, analyticsEnabled, doToggleAnalytics,
-                               toursEnabled, handleJoyrideCallback, isCliTutorModeEnabled, doToggleCliTutorMode, command
-                             }) => (
+  t, tReady, isIpfsConnected,
+  isConfigBlocked, isLoading, isSaving,
+  hasSaveFailed, hasSaveSucceded, hasErrors, hasLocalChanges, hasExternalChanges,
+  config, onChange, onReset, onSave, editorKey, analyticsEnabled, doToggleAnalytics,
+  toursEnabled, handleJoyrideCallback, isCliTutorModeEnabled, doToggleCliTutorMode, command
+}) => (
   <div data-id='SettingsPage' className='mw9 center'>
     <Helmet>
       <title>{t('title')} | BTFS</title>
@@ -54,7 +54,7 @@ export const SettingsPage = ({
 
       <div className='joyride-settings-analytics'>
         <Title>{t('analytics')}</Title>
-        {/*<AnalyticsToggle t={t} doToggleAnalytics={doToggleAnalytics} analyticsEnabled={analyticsEnabled} />*/}
+        <AnalyticsToggle t={t} doToggleAnalytics={doToggleAnalytics} analyticsEnabled={analyticsEnabled} />
       </div>
     </Box>
 
@@ -64,7 +64,7 @@ export const SettingsPage = ({
       <div className='charcoal'>
         <Title>{t('cliTutorMode')}</Title>
         <Checkbox className='dib' onChange={doToggleCliTutorMode} checked={isCliTutorModeEnabled}
-                  label={<span className='f5 lh-copy'>{t('cliToggle.label')}</span>}/>
+          label={<span className='f5 lh-copy'>{t('cliToggle.label')}</span>}/>
         <Trans i18nKey='cliDescription' t={t}>
           <p className='f6 mv2'>Enable this option to display a "view code" <StrokeCode className='dib v-mid icon mh1 fill-charcoal' viewBox='14 20 70 66' style={{ height: 24 }} /> icon next to common IPFS commands. Clicking it opens a modal with that command's CLI code, so you can paste it into the IPFS command-line interface in your terminal.</p>
         </Trans>
@@ -73,55 +73,55 @@ export const SettingsPage = ({
 
     { isIpfsConnected &&
     (<Box className='mb3 pa4 joyride-settings-config'>
-        <Title>{t('config')}</Title>
-        <div className='flex pb3'>
-          <div className='flex-auto'>
-            <div className='mw7'>
-              <SettingsInfo
-                t={t}
-                tReady={tReady}
-                config={config}
-                isIpfsConnected={isIpfsConnected}
-                isConfigBlocked={isConfigBlocked}
-                isLoading={isLoading}
-                hasExternalChanges={hasExternalChanges}
-                hasSaveFailed={hasSaveFailed}
-                hasSaveSucceded={hasSaveSucceded} />
-            </div>
+      <Title>{t('config')}</Title>
+      <div className='flex pb3'>
+        <div className='flex-auto'>
+          <div className='mw7'>
+            <SettingsInfo
+              t={t}
+              tReady={tReady}
+              config={config}
+              isIpfsConnected={isIpfsConnected}
+              isConfigBlocked={isConfigBlocked}
+              isLoading={isLoading}
+              hasExternalChanges={hasExternalChanges}
+              hasSaveFailed={hasSaveFailed}
+              hasSaveSucceded={hasSaveSucceded} />
           </div>
-          { config ? (
-            <div className='flex flex-column justify-center flex-row-l items-center-l'>
-              <CliTutorMode showIcon={true} config={config} t={t} command={command}/>
-              <Button
-                minWidth={100}
-                height={40}
-                bg='bg-charcoal'
-                className='tc'
-                disabled={isSaving || (!hasLocalChanges && !hasExternalChanges)}
-                onClick={onReset}>
-                {t('app:actions.reset')}
-              </Button>
-              <SaveButton
-                t={t}
-                tReady={tReady}
-                hasErrors={hasErrors}
-                hasSaveFailed={hasSaveFailed}
-                hasSaveSucceded={hasSaveSucceded}
-                hasLocalChanges={hasLocalChanges}
-                hasExternalChanges={hasExternalChanges}
-                isSaving={isSaving}
-                onClick={onSave} />
-            </div>
-          ) : null }
         </div>
         { config ? (
-          <JsonEditor
-            value={config}
-            onChange={onChange}
-            readOnly={isSaving}
-            key={editorKey} />
+          <div className='flex flex-column justify-center flex-row-l items-center-l'>
+            <CliTutorMode showIcon={true} config={config} t={t} command={command}/>
+            <Button
+              minWidth={100}
+              height={40}
+              bg='bg-charcoal'
+              className='tc'
+              disabled={isSaving || (!hasLocalChanges && !hasExternalChanges)}
+              onClick={onReset}>
+              {t('app:actions.reset')}
+            </Button>
+            <SaveButton
+              t={t}
+              tReady={tReady}
+              hasErrors={hasErrors}
+              hasSaveFailed={hasSaveFailed}
+              hasSaveSucceded={hasSaveSucceded}
+              hasLocalChanges={hasLocalChanges}
+              hasExternalChanges={hasExternalChanges}
+              isSaving={isSaving}
+              onClick={onSave} />
+          </div>
         ) : null }
-      </Box>
+      </div>
+      { config ? (
+        <JsonEditor
+          value={config}
+          onChange={onChange}
+          readOnly={isSaving}
+          key={editorKey} />
+      ) : null }
+    </Box>
     )}
 
     <ReactJoyride

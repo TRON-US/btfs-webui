@@ -12,7 +12,11 @@
   "downloadPDF": "PDF herunterladen.",
   "downloadInstead": "Versuche stattdessen, es <1>herunterzuladen</1>.",
   "cantBePreviewed": "Für diese Datei ist keine Vorschau verfügbar",
+<<<<<<< HEAD
   "addByPath": "Aus BTFS",
+=======
+  "addByPath": "Aus BTFS",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "newFolder": "Neuer Ordner",
   "generating": "Erstelle…",
   "actions": {
@@ -38,8 +42,13 @@
     "descriptionFile": "{count, plural, one {Bist Du sicher, dass Du diese Datei löschen willst? Diese Aktion kann nicht rückgängig gemacht werden.} other {Bist Du sicher, dass Du diese {count} Dateien löschen willst? Diese Aktion kann nicht rückgängig gemacht werden.}}"
   },
   "addByPathModal": {
+<<<<<<< HEAD
     "title": "Aus BTFS importieren",
     "description": "Tragen Sie einen BTFS Pfad (CID) zum Importieren ein.",
+=======
+    "title": "Aus BTFS importieren",
+    "description": "Tragen Sie einen BTFS Pfad (CID) zum Importieren ein.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "examples": "Beispiele:"
   },
   "newFolderModal": {
@@ -57,8 +66,13 @@
     "closeDropdown": "Dropdown schließen",
     "count": "{count} von {count}"
   },
+<<<<<<< HEAD
   "addFilesInfo": "<0>Noch keine Dateien vorhanden! Füge Dateien zu deinem BTFS-Node hinzu, indem du oben auf die Schaltfläche <1>\"Importieren\"</1> klickst.</0>",
   "companionInfo": "<0>Da du den <1>BTFS Companion</1> nutzt, ist die Dateiansicht auf Dateien begrenzt, die während der Nutzung der Erweiterung hinzugefügt wurden.</0>",
+=======
+  "addFilesInfo": "<0>Noch keine Dateien vorhanden! Füge Dateien zu deinem BTFS-Node hinzu, indem du oben auf die Schaltfläche <1>\"Importieren\"</1> klickst.</0>",
+  "companionInfo": "<0>Da du den <1>BTFS Companion</1> nutzt, ist die Dateiansicht auf Dateien begrenzt, die während der Nutzung der Erweiterung hinzugefügt wurden.</0>",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "tour": {
     "step1": {
       "title": "Datei Seite",
@@ -76,7 +90,11 @@
       "title": "Dateien hinzufügen",
       "paragraph1": "Hier kannst du sehen, wie viele Blöcke und Dateien du angepinnt hast.",
       "paragraph2": "Du kannst Dateien oder Ordner mit dem Dropdown auf der rechten Seite zu deiner Ablage hinzufügen.",
+<<<<<<< HEAD
       "paragraph3": "<0>Wenn du etwas, was schon in BTFS ist, hinzufügen möchtest, kannst du es in dein MFS importieren, indem du dessen <1>Inhalts-Bezeichner (CID)</1> einträgst.</0>"
+=======
+      "paragraph3": "<0>Wenn du etwas, was schon in BTFS ist, hinzufügen möchtest, kannst du es in dein MFS importieren, indem du dessen <1>Inhalts-Bezeichner (CID)</1> einträgst.</0>"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     },
     "step5": {
       "title": "Datei Liste",

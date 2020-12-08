@@ -19,17 +19,29 @@
   "tour": {
     "step1": {
       "title": "Pagina dello stato",
+<<<<<<< HEAD
       "paragraph1": "Questo è il punto d'inizio del tuo nodo BTFS, dove puoi vedere le sue informazioni di base.",
+=======
+      "paragraph1": "Questo è il punto d'inizio del tuo nodo BTFS, dove puoi vedere le sue informazioni di base.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "Clicca \"Avanti\" per saperne di più."
     },
     "step2": {
       "title": "Stato della connessione",
+<<<<<<< HEAD
       "paragraph1": "Clicca su quest'icona da qualunque punto dell'app per ritornare alla pagina dello Status. Se perdi la tua connessione all'API BTFS, l'icona diventerà rossa.",
+=======
+      "paragraph1": "Clicca su quest'icona da qualunque punto dell'app per ritornare alla pagina dello Status. Se perdi la tua connessione all'API BTFS, l'icona diventerà rossa.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "If you need to configure a custom API address for your node, just click the \"Edit\" link next to where the API address is listed on this page."
     },
     "step3": {
       "title": "Informazioni nodo",
+<<<<<<< HEAD
       "paragraph1": "Qui hai le informazioni riguardanti la grandezza della tua repository, quanti peer sono connessi, il tuo peer ID e la versione di BTFS attualmente in uso.",
+=======
+      "paragraph1": "Qui hai le informazioni riguardanti la grandezza della tua repository, quanti peer sono connessi, il tuo peer ID e la versione di BTFS attualmente in uso.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "<0>Expand the <1>Advanced</1> link to see more info, such as the gateway URL and addresses. There's also a link inside the Advanced section to change your API address.</0>"
     },
     "step4": {
@@ -43,5 +55,9 @@
     }
   },
   "bandwidthStats": "Statistiche di banda",
+<<<<<<< HEAD
   "bandwidthStatsDisabled": "Hai le metriche di banda disabilitate. Puoi abilitarle digitando il comando sottostante od impostando la proprietà <1>Swarm.DisableBandwidthMetrics</1> a <3>false</3> in <5>Impostazioni</5>. Dopodiché devi riavviare il demone BTFS per applicare le modifiche."
+=======
+  "bandwidthStatsDisabled": "Hai le metriche di banda disabilitate. Puoi abilitarle digitando il comando sottostante od impostando la proprietà <1>Swarm.DisableBandwidthMetrics</1> a <3>false</3> in <5>Impostazioni</5>. Dopodiché devi riavviare il demone BTFS per applicare le modifiche."
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
 }

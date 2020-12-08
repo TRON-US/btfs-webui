@@ -3,6 +3,7 @@
   "language": "Jazyk",
   "analytics": "Sběr informací",
   "cliTutorMode": "CLI Tutor Mode",
+<<<<<<< HEAD
   "config": "BTFS Config",
   "languageModal": {
     "title": "Změnit jazyk",
@@ -16,19 +17,39 @@
   "configApiNotAvailable": "BTFS API nastavení není dostupný. Prosím vypněte rozšíření \"IFPS Companion\" a zkuste to znovu.",
   "ipfsDaemonOffline": "Démon BTFS je offline. Zapněte jej a zkuste to znovu.",
   "settingsUnavailable": "Nastavení není dostupný. Prosím zkontrolujte zdali běží BTFS služba.",
+=======
+  "config": "BTFS Config",
+  "languageModal": {
+    "title": "Změnit jazyk",
+    "description": "Vyberte si preferovaný jazyk.",
+    "translationProjectIntro": "Add or improve translations and make BTFS better for everyone!",
+    "translationProjectLink": "Join the BTFS Translation Project"
+  },
+  "apiDescription": "<0>If your node is configured with a <1>custom API address</1>, including a port other than the default 5001, enter it here.</0>",
+  "cliDescription": "<0>Enable this option to display a \"view code\" <1></1> icon next to common BTFS commands. Clicking it opens a modal with that command's CLI code, so you can paste it into the BTFS command-line interface in your terminal.</0>",
+  "fetchingSettings": "Získávání nastavení...",
+  "configApiNotAvailable": "BTFS API nastavení není dostupný. Prosím vypněte rozšíření \"IFPS Companion\" a zkuste to znovu.",
+  "ipfsDaemonOffline": "Démon BTFS je offline. Zapněte jej a zkuste to znovu.",
+  "settingsUnavailable": "Nastavení není dostupný. Prosím zkontrolujte zdali běží BTFS služba.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "settingsHaveChanged": "Nastavení se změnilo; kliknutím na <1>Obnovit</1> aktualizujte obsah editoru.",
   "errorOccured": "V průběhu ukládání vašeho nastavení se vyskytla chyba",
   "checkConsole": "Zkontrolujte konzoli prohlížeče pro více informací.",
   "changesSaved": "Vaše změny byly uloženy.",
+<<<<<<< HEAD
   "settingsWillBeUsedNextTime": "Nové nastavení se použije při příštím restartu BTFS služby.",
   "ipfsConfigDescription": "Konfigurační soubor BTFS je dokument JSON. Při spuštění démona BTFS se načte jednou. Uložte změny a restartujte démona BTFS, abyste je použili.",
+=======
+  "settingsWillBeUsedNextTime": "Nové nastavení se použije při příštím restartu BTFS služby.",
+  "ipfsConfigDescription": "Konfigurační soubor BTFS je dokument JSON. Při spuštění démona BTFS se načte jednou. Uložte změny a restartujte démona BTFS, abyste je použili.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "ipfsConfigHelp": "Další informace naleznete v dokumentaci.",
   "AnalyticsToggle": {
     "label": "Pomozte vylepšit tuto aplikaci odesláním anonymních dat o využití",
     "summary": "Nakonfigurujte, co se shromažďuje",
     "paragraph1": "Neshromažďují se žádné CID, názvy souborů ani jiné osobní informace. Chceme, aby nám metriky ukázaly, které funkce jsou užitečné, aby nám pomohly upřednostnit, na čem budeme dále pracovat, a informace o konfiguraci systému, které povedou naše testování.",
     "paragraph2": "Protocol Labs je hostitelem aplikace <1>Countly</1> pro zaznamenávání anonymních dat o použití pro tuto aplikaci.",
-    "basicInfo": "Následující další informace jsou odeslány na countly.ipfs.io",
+    "basicInfo": "Následující další informace jsou odeslány na countly.btfs.io",
     "optionalInfo": "Můžete se přihlásit a odeslat následující informace:",
     "sessions": {
       "label": "Sessions",
@@ -62,8 +83,13 @@
   "tour": {
     "step1": {
       "title": "Stránka nastavení",
+<<<<<<< HEAD
       "paragraph1": "Zde můžete změnit nastavení vašeho uzlu Web UI a BTFS.",
       "paragraph2": "Pokud používáte BTFS Desktop, budete mít také určitá konkrétní nastavení."
+=======
+      "paragraph1": "Zde můžete změnit nastavení vašeho uzlu Web UI a BTFS.",
+      "paragraph2": "Pokud používáte BTFS Desktop, budete mít také určitá konkrétní nastavení."
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     },
     "step2": {
       "title": "Volič jazyka",
@@ -76,16 +102,28 @@
     },
     "step4": {
       "title": "Custom API address",
+<<<<<<< HEAD
       "paragraph1": "If you've configured your BTFS node with a custom API address, you can update your config file right here instead of editing the JSON by hand."
     },
     "step5": {
       "title": "BTFS Config",
       "paragraph1": "Můžete změnit konfiguraci vašeho uzlu BTFS přímo z webového uživatelského rozhraní!",
+=======
+      "paragraph1": "If you've configured your BTFS node with a custom API address, you can update your config file right here instead of editing the JSON by hand."
+    },
+    "step5": {
+      "title": "BTFS Config",
+      "paragraph1": "Můžete změnit konfiguraci vašeho uzlu BTFS přímo z webového uživatelského rozhraní!",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "Nezapomeňte restartovat démona a aplikovat změny."
     }
   },
   "Experiments": {
+<<<<<<< HEAD
     "description": "Zde získáte rychlý náhled na nové funkce BTFS povolením níže uvedených možností. Testujeme tyto nápady a nemusí být dokonalé, takže bychom rádi slyšeli vaši zpětnou vazbu.",
+=======
+    "description": "Zde získáte rychlý náhled na nové funkce BTFS povolením níže uvedených možností. Testujeme tyto nápady a nemusí být dokonalé, takže bychom rádi slyšeli vaši zpětnou vazbu.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "issueUrl": "Otevřete problém",
     "feedbackUrl": "💌Zanechte zpětnou vazbu",
     "readMoreUrl": "Přečtěte si více"

@@ -3,6 +3,7 @@
   "language": "Language",
   "analytics": "Analytics",
   "cliTutorMode": "CLI Tutor Mode",
+<<<<<<< HEAD
   "config": "BTFS Config",
   "languageModal": {
     "title": "Change language",
@@ -16,19 +17,39 @@
   "configApiNotAvailable": "The BTFS config API is not available. Please disable the \"BTFS Companion\" Web Extension and try again.",
   "ipfsDaemonOffline": "The BTFS daemon is offline. Please turn it on and try again.",
   "settingsUnavailable": "Settings not available. Please check your BTFS daemon is running.",
+=======
+  "config": "BTFS Config",
+  "languageModal": {
+    "title": "Change language",
+    "description": "Pick your preferred language.",
+    "translationProjectIntro": "Add or improve translations and make BTFS better for everyone!",
+    "translationProjectLink": "Join the BTFS Translation Project"
+  },
+  "apiDescription": "<0>If your node is configured with a <1>custom API address</1>, including a port other than the default 5001, enter it here.</0>",
+  "cliDescription": "<0>Enable this option to display a \"view code\" <1></1> icon next to common BTFS commands. Clicking it opens a modal with that command's CLI code, so you can paste it into the BTFS command-line interface in your terminal.</0>",
+  "fetchingSettings": "Fetching settings...",
+  "configApiNotAvailable": "The BTFS config API is not available. Please disable the \"BTFS Companion\" Web Extension and try again.",
+  "ipfsDaemonOffline": "The BTFS daemon is offline. Please turn it on and try again.",
+  "settingsUnavailable": "Settings not available. Please check your BTFS daemon is running.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "settingsHaveChanged": "The settings have changed; please click <1>Reset</1> to update the editor contents.",
   "errorOccured": "An error occured while saving your changes",
   "checkConsole": "Check the browser console for more info.",
   "changesSaved": "Your changes have been saved.",
+<<<<<<< HEAD
   "settingsWillBeUsedNextTime": "The new settings will be used next time you restart the BTFS daemon.",
   "ipfsConfigDescription": "The BTFS config file is a JSON document. It is read once when the BTFS daemon is started. Save your changes, then restart the BTFS daemon to apply them.",
+=======
+  "settingsWillBeUsedNextTime": "The new settings will be used next time you restart the BTFS daemon.",
+  "ipfsConfigDescription": "The BTFS config file is a JSON document. It is read once when the BTFS daemon is started. Save your changes, then restart the BTFS daemon to apply them.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "ipfsConfigHelp": "Check the documentation for further information.",
   "AnalyticsToggle": {
     "label": "Help improve this app by sending anonymous usage data",
     "summary": "Configure what is collected",
     "paragraph1": "No CIDs, filenames, or other personal information are collected. We want metrics to show us which features are useful to help us prioritise what to work on next, and system configuration information to guide our testing.",
     "paragraph2": "Protocol Labs hosts a <1>Countly</1> instance to record anonymous usage data for this app.",
-    "basicInfo": "The following additional information is sent to countly.ipfs.io",
+    "basicInfo": "The following additional information is sent to countly.btfs.io",
     "optionalInfo": "You can opt-in to send the following information:",
     "sessions": {
       "label": "Sessions",
@@ -62,8 +83,13 @@
   "tour": {
     "step1": {
       "title": "Settings page",
+<<<<<<< HEAD
       "paragraph1": "Here you can change the settings of your Web UI and BTFS node.",
       "paragraph2": "If you're running BTFS Desktop you'll have some specific settings for it too."
+=======
+      "paragraph1": "Here you can change the settings of your Web UI and BTFS node.",
+      "paragraph2": "If you're running BTFS Desktop you'll have some specific settings for it too."
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     },
     "step2": {
       "title": "Language selector",
@@ -76,11 +102,19 @@
     },
     "step4": {
       "title": "Custom API address",
+<<<<<<< HEAD
       "paragraph1": "If you've configured your BTFS node with a custom API address, you can update your config file right here instead of editing the JSON by hand."
     },
     "step5": {
       "title": "BTFS Config",
       "paragraph1": "You can change the config of your BTFS node right from Web UI!",
+=======
+      "paragraph1": "If you've configured your BTFS node with a custom API address, you can update your config file right here instead of editing the JSON by hand."
+    },
+    "step5": {
+      "title": "BTFS Config",
+      "paragraph1": "You can change the config of your BTFS node right from Web UI!",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "Don't forget to restart the daemon to apply the changes."
     }
   },

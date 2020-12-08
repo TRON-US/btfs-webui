@@ -1,23 +1,36 @@
 {
   "ipfsApiRequestFailed": "Impossible de se connecter. Vérifiez que votre daemon est en cours d'exécution.",
+<<<<<<< HEAD
   "windowIpfsRequestFailed": "La requête BTFS a échoué. Vérifiez les paramètres de BTFS Companion.",
   "ipfsIsBack": "Le service BTFS a repris normalement. Profitez !",
+=======
+  "windowIpfsRequestFailed": "La requête BTFS a échoué. Vérifiez les paramètres de BTFS Companion.",
+  "ipfsIsBack": "Le service BTFS a repris normalement. Profitez !",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "folderExists": "Un élément avec ce nom existe déjà. Merci d'en choisir un autre.",
   "filesFetchFailed": "Impossible d'obtenir ces fichiers. Merci de vérifier le chemin et de réessayer.",
   "filesRenameFailed": "Impossible de renommer les fichiers. Merci de réessayer.",
   "filesMakeDirFailed": "Impossible de créer le dossier. Merci de réessayer.",
   "filesCopyFailed": "Impossible de copier les fichiers. Merci de réessayer.",
   "filesDeleteFailed": "Impossible de supprimer les fichiers. Merci de réessayer.",
+<<<<<<< HEAD
   "filesAddFailed": "Impossible d'ajouter les fichiers sur BTFS. Merci de réessayer.",
+=======
+  "filesAddFailed": "Impossible d'ajouter les fichiers sur BTFS. Merci de réessayer.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "filesEventFailed": "Impossible d'exécuter votre requête. Merci de réessayer.",
   "couldntConnectToPeer": "Nous n'avons pas pu vous connecter au pair indiqué.",
   "connectedToPeer": "Connecté au pair indiqué avec succès.",
   "experimentsErrors": {
-    "npmOnIpfs": "Nous n'avons pas pu modifier votre système. Merci d'installer ou de désinstaller le paquet \"ipfs-npm\" manuellement."
+    "npmOnIpfs": "Nous n'avons pas pu modifier votre système. Merci d'installer ou de désinstaller le paquet \"btfs-npm\" manuellement."
   },
   "desktopToggleErrors": {
     "autoLaunch": "Nous n'avons pas pu activer/désactiver l'option de lancement au démarrage.",
+<<<<<<< HEAD
     "ipfsOnPath": "Nous n'avons pas pu activer/déactiver les outils de lignes de commande BTFS.",
+=======
+    "ipfsOnPath": "Nous n'avons pas pu activer/déactiver les outils de lignes de commande BTFS.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "downloadHashShortcut": "Nous n'avons pas pu activer/déactiver le raccourci pour télécharger un hash.",
     "screenshotShortcut": "Nous n'avons pas pu activer/déactiver le raccourci pour la capture d'écran."
   }

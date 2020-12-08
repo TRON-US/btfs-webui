@@ -52,9 +52,9 @@ const PreviewItem = ({ t, name, cid, size, type, availableGatewayUrl: gatewayUrl
   }, [buffer, content, read, size])
 
   useEffect(() => {
-      loadContent()
-    }, // eslint-disable-next-line react-hooks/exhaustive-deps
-    [])
+    loadContent()
+  }, // eslint-disable-next-line react-hooks/exhaustive-deps
+  [])
 
   const src = `${gatewayUrl}/btfs/${cid}?filename=${encodeURIComponent(name)}`
   const className = 'mw-100 mt3 bg-snow-muted pa2 br2 border-box'
@@ -62,7 +62,7 @@ const PreviewItem = ({ t, name, cid, size, type, availableGatewayUrl: gatewayUrl
   switch (type) {
     case 'audio':
       return (
-        // eslint-disable-next-line jsx-a11y/media-has-caption
+      // eslint-disable-next-line jsx-a11y/media-has-caption
         <audio width='100%' controls>
           <source src={src} />
         </audio>
@@ -76,7 +76,7 @@ const PreviewItem = ({ t, name, cid, size, type, availableGatewayUrl: gatewayUrl
       )
     case 'video':
       return (
-        // eslint-disable-next-line jsx-a11y/media-has-caption
+      // eslint-disable-next-line jsx-a11y/media-has-caption
         <video controls className={className}>
           <source src={src} />
         </video>
@@ -89,7 +89,7 @@ const PreviewItem = ({ t, name, cid, size, type, availableGatewayUrl: gatewayUrl
           <p className='b'>{t('cantBePreviewed')} <span role='img' aria-label='sad'>😢</span></p>
           <p>
             <Trans i18nKey='downloadInstead' t={t}>
-              Try <a href={src} download target='_blank' rel='noopener noreferrer' className='link blue' >downloading</a> it instead.
+                Try <a href={src} download target='_blank' rel='noopener noreferrer' className='link blue' >downloading</a> it instead.
             </Trans>
           </p>
         </div>

@@ -20,7 +20,7 @@ class WebuiTestEnvironment extends PuppeteerEnvironment {
     await page.goto(webuiUrl)
     const { apiHost, apiPort } = ipfs
     const apiMultiaddr = `/ip4/${apiHost}/tcp/${apiPort}`
-    // on initial page load webui checks page's localStorage for `ipfsApi` value
+    // on initial page load webui checks page's localStorage for `btfsApi` value
     // and uses the address if present. below sets it to the address of HTTP API
     await page.evaluate((apiMultiaddr) =>
       localStorage.setItem('ipfsApi', apiMultiaddr), apiMultiaddr)

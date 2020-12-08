@@ -12,7 +12,11 @@
   "downloadPDF": "Descargar PDF",
   "downloadInstead": "Intenta <1>descargarlo</1>",
   "cantBePreviewed": "Lo sentimos, este archivo no se puede previsualizar",
+<<<<<<< HEAD
   "addByPath": "De BTFS",
+=======
+  "addByPath": "De BTFS",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "newFolder": "Nueva carpeta",
   "generating": "Generando…",
   "actions": {
@@ -38,8 +42,13 @@
     "descriptionFile": "{count, plural, one {Are you sure you want to delete this file? This action is permanent and cannot be reversed.} other {Are you sure you want to delete these {count} files? This action is permanent and cannot be reversed.}}"
   },
   "addByPathModal": {
+<<<<<<< HEAD
     "title": "Importar desde BTFS",
     "description": "Inserte una ruta BTFS (CID) para importar.",
+=======
+    "title": "Importar desde BTFS",
+    "description": "Inserte una ruta BTFS (CID) para importar.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "examples": "Ejemplos:"
   },
   "newFolderModal": {
@@ -57,8 +66,13 @@
     "closeDropdown": "Cerrar menú desplegable",
     "count": "{count} de {count}"
   },
+<<<<<<< HEAD
   "addFilesInfo": "<0>No files here yet! Add files to your local BTFS node by clicking the <1>Import</1> button above.</0>",
   "companionInfo": "<0>Como estas usando <1>BTFS Companion</1>, la vista de archivos está limitada a los archivos agregados mientras se usa la extensión.</0>",
+=======
+  "addFilesInfo": "<0>No files here yet! Add files to your local BTFS node by clicking the <1>Import</1> button above.</0>",
+  "companionInfo": "<0>Como estas usando <1>BTFS Companion</1>, la vista de archivos está limitada a los archivos agregados mientras se usa la extensión.</0>",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "tour": {
     "step1": {
       "title": "Página de archivos",
@@ -73,7 +87,11 @@
       "title": "Agregar archivos",
       "paragraph1": "Aquí puede ver cuántos bloques y archivos ha anclado.",
       "paragraph2": "Puede agregar archivos o carpetas a su repositorio a través del menú desplegable a la derecha.",
+<<<<<<< HEAD
       "paragraph3": "<0>Si desea agregar algo que ya está en BTFS, puede importarlo a su MFS pasando su <1>Identificador de Contenido (CID)</1>.</0>"
+=======
+      "paragraph3": "<0>Si desea agregar algo que ya está en BTFS, puede importarlo a su MFS pasando su <1>Identificador de Contenido (CID)</1>.</0>"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     },
     "step5": {
       "title": "Lista de archivos",

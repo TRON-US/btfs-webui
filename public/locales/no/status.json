@@ -47,17 +47,29 @@
   "tour": {
     "step1": {
       "title": "Status page",
+<<<<<<< HEAD
       "paragraph1": "This is the starting point of your BTFS node and where you can check its basic info.",
+=======
+      "paragraph1": "This is the starting point of your BTFS node and where you can check its basic info.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "Click \"Next\" to learn more."
     },
     "step2": {
       "title": "Connection status",
+<<<<<<< HEAD
       "paragraph1": "This takes you to a page where you can check if you are connected to an BTFS daemon, and if not, how to connect to one.",
+=======
+      "paragraph1": "This takes you to a page where you can check if you are connected to an BTFS daemon, and if not, how to connect to one.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "You can configure your node with a custom API address, too."
     },
     "step3": {
       "title": "Node Info",
+<<<<<<< HEAD
       "paragraph1": "Here you have information about the size of your repo, how many peers are connected, your peer ID and the BTFS flavour that's currently in use.",
+=======
+      "paragraph1": "Here you have information about the size of your repo, how many peers are connected, your peer ID and the BTFS flavour that's currently in use.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "<0>Click on <1>Advanced</1> to see more info such as the gateway URL and addresses.</0>"
     },
     "step4": {
@@ -71,5 +83,9 @@
     }
   },
   "bandwidthStats": "Båndbredde Statistikk",
+<<<<<<< HEAD
   "bandwidthStatsDisabled": "Du har båndbreddeberegningene deaktivert. Du kan aktivere dem ved å skrive kommandoen under, eller endre nøkkelen <1>Swarm.DisableBandwidthMetrics</1> til <3>false</3> på <5>Innstillinger</5>. Deretter må du starte BTFS-demonen på nytt for å kunne bruke endringene."
+=======
+  "bandwidthStatsDisabled": "Du har båndbreddeberegningene deaktivert. Du kan aktivere dem ved å skrive kommandoen under, eller endre nøkkelen <1>Swarm.DisableBandwidthMetrics</1> til <3>false</3> på <5>Innstillinger</5>. Deretter må du starte BTFS-demonen på nytt for å kunne bruke endringene."
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
 }

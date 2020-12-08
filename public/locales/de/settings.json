@@ -3,6 +3,7 @@
   "language": "Sprache",
   "analytics": "Analysetools",
   "cliTutorMode": "CLI-Tutor-Modus",
+<<<<<<< HEAD
   "config": "BTFS-Konfiguration",
   "languageModal": {
     "title": "Sprache ändern",
@@ -16,19 +17,39 @@
   "configApiNotAvailable": "Die API zur BTFS-Konfigurations ist nicht verfügbar. Bitte deaktiviere die Browser-Erweiterung \"BTFS Companion\" und versuche es erneut.",
   "ipfsDaemonOffline": "Der BTFS Daemon ist offline. Bitte starten Sie ihn und versuchen es erneut.",
   "settingsUnavailable": "Einstellungen nicht verfügbar. Bitte überprüfe, ob Dein BTFS-Daemon läuft.",
+=======
+  "config": "BTFS-Konfiguration",
+  "languageModal": {
+    "title": "Sprache ändern",
+    "description": "Wähle Deine bevorzugte Sprache.",
+    "translationProjectIntro": "Füge Übersetzungen hinzu oder verbessere sie und mache BTFS besser für jeden!",
+    "translationProjectLink": "Dem BTFS-Übersetzungsprojekt beitreten"
+  },
+  "apiDescription": "<0>Wenn Dein Node mit einer <1>benutzerdefinierten API-Adresse</1> konfiguriert ist, einschließlich eines anderen Ports als dem Standard-Port 5001, gib sie bitte hier ein.</0>",
+  "cliDescription": "<0>Aktiviere diese Option, um ein \"Code anzeigen\" <1></1> Symbol neben häufigen BTFS Befehlen anzuzeigen. Wenn du auf das Symbol klickst, öffnet sich ein Fenster mit CLI-Code des Befehls, den du in die BTFS Kommandozeile deines Terminals einfügen kannst.</0>",
+  "fetchingSettings": "Einstellungen werden geladen...",
+  "configApiNotAvailable": "Die API zur BTFS-Konfigurations ist nicht verfügbar. Bitte deaktiviere die Browser-Erweiterung \"BTFS Companion\" und versuche es erneut.",
+  "ipfsDaemonOffline": "Der BTFS Daemon ist offline. Bitte starten Sie ihn und versuchen es erneut.",
+  "settingsUnavailable": "Einstellungen nicht verfügbar. Bitte überprüfe, ob Dein BTFS-Daemon läuft.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "settingsHaveChanged": "Die Einstellungen haben sich geändert. Bitte klicke auf <1>Zurücksetzen</1>, um den Inhalt des Editors zu aktualisieren.",
   "errorOccured": "Beim Speichern Deiner Änderungen ist ein Fehler aufgetreten",
   "checkConsole": "Öffne Deine Browser-Konsole, um mehr Informationen zu erhalten.",
   "changesSaved": "Deine Änderungen wurden gespeichert.",
+<<<<<<< HEAD
   "settingsWillBeUsedNextTime": "Die neuen Einstellungen werden beim nächsten Start des BTFS-Daemon verwendet.",
   "ipfsConfigDescription": "Die BTFS-Konfigurationsdatei ist ein JSON-Dokument. Es wird einmalig beim Start des BTFS-Daemon gelesen. Speichere Deine Änderungen und starte den BTFS-Daemon neu, um sie anzuwenden.",
+=======
+  "settingsWillBeUsedNextTime": "Die neuen Einstellungen werden beim nächsten Start des BTFS-Daemon verwendet.",
+  "ipfsConfigDescription": "Die BTFS-Konfigurationsdatei ist ein JSON-Dokument. Es wird einmalig beim Start des BTFS-Daemon gelesen. Speichere Deine Änderungen und starte den BTFS-Daemon neu, um sie anzuwenden.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "ipfsConfigHelp": "Weitere Informationen findest Du in der Dokumentation.",
   "AnalyticsToggle": {
     "label": "Helfen Sie uns die App zu verbessern, indem Sie anonyme Nutzerdaten senden.",
     "summary": "Konfigurieren Sie, was gesammelt wird.",
     "paragraph1": "Keine CIDs, Dateinamen oder andere persönlichen Daten werden gesammelt. Wir nutzen die Metriken um zu sehen, welche Features nützlich sind um zu entscheiden, was wir als nächstes erweitern sollen. Ferner nutzen wir Informationen zur Systemkonfiguration um unser Testing zu verfeinern.",
     "paragraph2": "Protocol Labs hosted eine <1>Countly</1> Instanz, die anonymisierte Nutzerdaten für diese App aufzeichnet",
-    "basicInfo": "Folgende zusätzliche Informationen werden an countly.ipfs.io gesendet",
+    "basicInfo": "Folgende zusätzliche Informationen werden an countly.btfs.io gesendet",
     "optionalInfo": "Sie können per Opt-in folgende Informationen senden:",
     "sessions": {
       "label": "Sitzungen",
@@ -62,8 +83,13 @@
   "tour": {
     "step1": {
       "title": "Einstellungsseite",
+<<<<<<< HEAD
       "paragraph1": "Hier kannst Du die Einstellungen deiner Web-UI und deines BTFS Node verändern.",
       "paragraph2": "Wenn Du BTFS Desktop benutzt, hast Du auch einige spezifische Einstellungen dafür."
+=======
+      "paragraph1": "Hier kannst Du die Einstellungen deiner Web-UI und deines BTFS Node verändern.",
+      "paragraph2": "Wenn Du BTFS Desktop benutzt, hast Du auch einige spezifische Einstellungen dafür."
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     },
     "step2": {
       "title": "Sprachauswahl",
@@ -76,16 +102,28 @@
     },
     "step4": {
       "title": "Benutzerdefinierte API-Adresse",
+<<<<<<< HEAD
       "paragraph1": "Wenn du deinen BTFS Knoten mit einer benutzerdefinierten API Adresse konfiguriert hast, kannst du deine Konfigurationsdatei direkt hier bearbeiten, anstatt das JSON von Hand zu bearbeiten."
     },
     "step5": {
       "title": "BTFS-Konfiguration",
       "paragraph1": "Du kannst die Konfiguration deines BTFS Nodes direkt mit der Web-UI bearbeiten!",
+=======
+      "paragraph1": "Wenn du deinen BTFS Knoten mit einer benutzerdefinierten API Adresse konfiguriert hast, kannst du deine Konfigurationsdatei direkt hier bearbeiten, anstatt das JSON von Hand zu bearbeiten."
+    },
+    "step5": {
+      "title": "BTFS-Konfiguration",
+      "paragraph1": "Du kannst die Konfiguration deines BTFS Nodes direkt mit der Web-UI bearbeiten!",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "Vergiss nicht, den Daemon neu zu starten, um die Änderungen anzuwenden."
     }
   },
   "Experiments": {
+<<<<<<< HEAD
     "description": "Hier kannst du eine frühe Vorschau neuer Funktionen in BTFS erhalten, indem du die folgenden Optionen aktivierst. Wir testen diese Ideen und sie sind möglicherweise noch nicht perfekt, deshalb würden wir uns über Dein Feedback freuen.",
+=======
+    "description": "Hier kannst du eine frühe Vorschau neuer Funktionen in BTFS erhalten, indem du die folgenden Optionen aktivierst. Wir testen diese Ideen und sie sind möglicherweise noch nicht perfekt, deshalb würden wir uns über Dein Feedback freuen.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "issueUrl": "Ein issue öffnen",
     "feedbackUrl": "💌Feedback geben",
     "readMoreUrl": "Mehr lesen"

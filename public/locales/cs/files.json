@@ -12,7 +12,11 @@
   "downloadPDF": "Stáhnout PDF",
   "downloadInstead": "Zkuste místo toho to <1>stáhnout</1>.",
   "cantBePreviewed": "Litujeme, tento soubor nelze zobrazit",
+<<<<<<< HEAD
   "addByPath": "Od BTFS",
+=======
+  "addByPath": "Od BTFS",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "newFolder": "Nová složka",
   "generating": "Vytváření…",
   "actions": {
@@ -38,8 +42,13 @@
     "descriptionFile": "{count, plural, one {Opravdu chcete tento souboy odstranit? Tato akce je trvalá a nelze ji zvrátit.} few {Opravdu chcete tyto {count} soubory odstranit? Tato akce je trvalá a nelze ji zvrátit.} many {Opravdu chcete těchto {count} souborů odstranit? Tato akce je trvalá a nelze ji zvrátit.} other {Opravdu chcete těchto {count} souborů odstranit? Tato akce je trvalá a nelze ji zvrátit.}}"
   },
   "addByPathModal": {
+<<<<<<< HEAD
     "title": "Import from BTFS",
     "description": "Insert an BTFS path (CID) to import.",
+=======
+    "title": "Import from BTFS",
+    "description": "Insert an BTFS path (CID) to import.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "examples": "Příklady:"
   },
   "newFolderModal": {
@@ -57,8 +66,13 @@
     "closeDropdown": "Close dropdown",
     "count": "{count} of {count}"
   },
+<<<<<<< HEAD
   "addFilesInfo": "<0>No files here yet! Add files to your local BTFS node by clicking the <1>Import</1> button above.</0>",
   "companionInfo": "<0>Jelikož používáte <1>BTFS Companion</1>, zobrazené soubory jsou omezeny pouze na ty které jste přidali během používání tohoto rozšíření.</0>",
+=======
+  "addFilesInfo": "<0>No files here yet! Add files to your local BTFS node by clicking the <1>Import</1> button above.</0>",
+  "companionInfo": "<0>Jelikož používáte <1>BTFS Companion</1>, zobrazené soubory jsou omezeny pouze na ty které jste přidali během používání tohoto rozšíření.</0>",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "tour": {
     "step1": {
       "title": "Stránka se soubory",
@@ -73,7 +87,11 @@
       "title": "Přidat soubory",
       "paragraph1": "Zde vidíte, kolik bloků a souborů jste přidali.",
       "paragraph2": "K repozitáři můžete přidat soubory nebo složky pomocí rozbalovací nabídky na pravé straně.",
+<<<<<<< HEAD
       "paragraph3": "<0>Pokud chcete přidat něco, co je již na BTFS, můžete jej importovat do vašeho MFS předáním jeho <1>identifikátoru obsahu (CID)</1>.</0>"
+=======
+      "paragraph3": "<0>Pokud chcete přidat něco, co je již na BTFS, můžete jej importovat do vašeho MFS předáním jeho <1>identifikátoru obsahu (CID)</1>.</0>"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     },
     "step5": {
       "title": "Seznam souborů",

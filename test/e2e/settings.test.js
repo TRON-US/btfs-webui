@@ -5,7 +5,7 @@ describe('Settings screen', () => {
     await page.goto(webuiUrl + '#/settings', { waitUntil: 'networkidle0' })
   })
 
-  it('should show config of IPFS node', async () => {
+  it('should show config of BTFS node', async () => {
     await expect(page).toMatch('Addresses')
     await expect(page).toMatch('Bootstrap')
     await expect(page).toMatch('PeerID')

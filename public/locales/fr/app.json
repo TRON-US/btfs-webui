@@ -28,7 +28,11 @@
     "unselectAll": "Tout désélectionner"
   },
   "cliModal": {
+<<<<<<< HEAD
     "description": "Collez la commande suivante dans votre terminal pour effectuer cette tâche dans BTFS via une ligne de commande. Souvenez-vous de remplacer certaines sections par vos propres paramètres aux endroits adéquats. ",
+=======
+    "description": "Collez la commande suivante dans votre terminal pour effectuer cette tâche dans BTFS via une ligne de commande. Souvenez-vous de remplacer certaines sections par vos propres paramètres aux endroits adéquats. ",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "extraNotes": "Si vous avez effectué des modifications à la configuration dans cette page de modification du code que vous voulez conserver, cliquez sur l'icône de téléchargement à côté du bouton de copie pour le télécharger en temps que fichier JSON."
   },
   "nav": {
@@ -37,9 +41,15 @@
     "revision": "Révision"
   },
   "status": {
+<<<<<<< HEAD
     "connectedToIpfs": "Connecté à BTFS",
     "connectingToIpfs": "Connexion à BTFS...",
     "couldNotConnect": "La connexion à l'API BTFS a échoué"
+=======
+    "connectedToIpfs": "Connecté à BTFS",
+    "connectingToIpfs": "Connexion à BTFS...",
+    "couldNotConnect": "La connexion à l'API BTFS a échoué"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   },
   "terms": {
     "address": "Adresse",

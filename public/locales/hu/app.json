@@ -37,9 +37,15 @@
     "revision": "Felülvizsgálat"
   },
   "status": {
+<<<<<<< HEAD
     "connectedToIpfs": "Csatlakozva az BTFS-hez",
     "connectingToIpfs": "Csatlakozás az BTFS-hez",
     "couldNotConnect": "Nem tudok csatlakozni az BTFS API-hoz"
+=======
+    "connectedToIpfs": "Csatlakozva az BTFS-hez",
+    "connectingToIpfs": "Csatlakozás az BTFS-hez",
+    "couldNotConnect": "Nem tudok csatlakozni az BTFS API-hoz"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   },
   "terms": {
     "address": "Cím",

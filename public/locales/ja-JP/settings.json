@@ -3,6 +3,7 @@
   "language": "言語",
   "analytics": "分析",
   "cliTutorMode": "CLI Tutor Mode",
+<<<<<<< HEAD
   "config": "BTFS設定",
   "languageModal": {
     "title": "言語を変更",
@@ -16,19 +17,43 @@
   "configApiNotAvailable": "BTFS設定APIが利用できません。拡張機能「BTFS Companion」を無効にして再度接続を試してください。",
   "ipfsDaemonOffline": "BTFSデーモンが起動していないようです。デーモンを起動して再度接続を試してください。",
   "settingsUnavailable": "設定を読み込めません。BTFSデーモンが起動していることを確認してください。",
+=======
+  "config": "BTFS設定",
+  "languageModal": {
+    "title": "言語を変更",
+    "description": "利用したい言語を選択してください",
+    "translationProjectIntro": "BTFSをみんなにとってよりよくするために翻訳を追加、校正しましょう!",
+    "translationProjectLink": "BTFS翻訳プロジェクトに参加"
+  },
+  "apiDescription": "<0>If your node is configured with a <1>custom API address</1>, including a port other than the default 5001, enter it here.</0>",
+  "cliDescription": "<0>Enable this option to display a \"view code\" <1></1> icon next to common BTFS commands. Clicking it opens a modal with that command's CLI code, so you can paste it into the BTFS command-line interface in your terminal.</0>",
+  "fetchingSettings": "設定を読み込んでいます",
+  "configApiNotAvailable": "BTFS設定APIが利用できません。拡張機能「BTFS Companion」を無効にして再度接続を試してください。",
+  "ipfsDaemonOffline": "BTFSデーモンが起動していないようです。デーモンを起動して再度接続を試してください。",
+  "settingsUnavailable": "設定を読み込めません。BTFSデーモンが起動していることを確認してください。",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "settingsHaveChanged": "設定が変更されました。<1>リセット</1>をクリックして編集しているファイルを再読み込みしてください。",
   "errorOccured": "変更の保存中にエラーが発生しました。",
   "checkConsole": "詳細については、ブラウザコンソールを参照してください。",
   "changesSaved": "変更が保存されました。",
+<<<<<<< HEAD
   "settingsWillBeUsedNextTime": "新しい変更は次にBTFSデーモンが起動したときに有効になります。",
   "ipfsConfigDescription": "BTFS設定ファイルはJSON形式のテキストファイルとなっています。BTFSデーモンは起動時に1度だけそれを読み込みます。設定を変更したときにはそれを反映させるためにBTFSデーモンを再起動する必要があります。",
+=======
+  "settingsWillBeUsedNextTime": "新しい変更は次にBTFSデーモンが起動したときに有効になります。",
+  "ipfsConfigDescription": "BTFS設定ファイルはJSON形式のテキストファイルとなっています。BTFSデーモンは起動時に1度だけそれを読み込みます。設定を変更したときにはそれを反映させるためにBTFSデーモンを再起動する必要があります。",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "ipfsConfigHelp": "より詳しい情報については、公式ドキュメントを参照してください。",
   "AnalyticsToggle": {
     "label": "匿名の利用状況データを送信することで、このアプリケーションの改善に協力する",
     "summary": "送信するデータを選択する",
+<<<<<<< HEAD
     "paragraph1": "CIDやファイル名、個人情報は収集されません。我々はどの機能を次に開発すれば便利なのかを判断するための指標として利用します。加えて、BTFSデーモンのシステム設定情報をテストのために利用します。",
+=======
+    "paragraph1": "CIDやファイル名、個人情報は収集されません。我々はどの機能を次に開発すれば便利なのかを判断するための指標として利用します。加えて、BTFSデーモンのシステム設定情報をテストのために利用します。",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "paragraph2": "Protocol Labsはこのアプリの匿名の使用状況を記録するために、<1>Countly</1>インスタンスを持っています。",
-    "basicInfo": "次に示すより詳しい情報はcountly.ipfs.ioに送信されます。",
+    "basicInfo": "次に示すより詳しい情報はcountly.btfs.ioに送信されます。",
     "optionalInfo": "あなたが送信する情報を選択してください:",
     "sessions": {
       "label": "セッション",
@@ -62,8 +87,13 @@
   "tour": {
     "step1": {
       "title": "設定",
+<<<<<<< HEAD
       "paragraph1": "ここではWebUIとBTFSノードの設定を変更できます",
       "paragraph2": "もしあなたがBTFS Desktopを利用しているのであれば、ここでも特殊な設定が確認できるでしょう"
+=======
+      "paragraph1": "ここではWebUIとBTFSノードの設定を変更できます",
+      "paragraph2": "もしあなたがBTFS Desktopを利用しているのであれば、ここでも特殊な設定が確認できるでしょう"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     },
     "step2": {
       "title": "言語リスト",
@@ -76,6 +106,7 @@
     },
     "step4": {
       "title": "Custom API address",
+<<<<<<< HEAD
       "paragraph1": "If you've configured your BTFS node with a custom API address, you can update your config file right here instead of editing the JSON by hand."
     },
     "step5": {
@@ -86,6 +117,18 @@
   },
   "Experiments": {
     "description": "ここでは、実験的なBTFSの機能の有効化ができます。これらはテスト中の機能であるため完璧に動作するとは限りません。フィードバックをお待ちしています。",
+=======
+      "paragraph1": "If you've configured your BTFS node with a custom API address, you can update your config file right here instead of editing the JSON by hand."
+    },
+    "step5": {
+      "title": "BTFS設定",
+      "paragraph1": "このWebUIではあなたのBTFSノードの設定を変更することができます!",
+      "paragraph2": "ただ、変更した設定を反映させるためのBTFSノードの再起動を忘れないでください！"
+    }
+  },
+  "Experiments": {
+    "description": "ここでは、実験的なBTFSの機能の有効化ができます。これらはテスト中の機能であるため完璧に動作するとは限りません。フィードバックをお待ちしています。",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "issueUrl": "WebUIに関する問題/議論/質問を投稿",
     "feedbackUrl": "フィードバックを送信",
     "readMoreUrl": "もっと読む"

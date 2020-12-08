@@ -12,7 +12,11 @@
   "downloadPDF": "Download PDF",
   "downloadInstead": "Try <1>downloading</1> it instead.",
   "cantBePreviewed": "Sorry, this file can’t be previewed",
+<<<<<<< HEAD
   "addByPath": "From BTFS",
+=======
+  "addByPath": "From BTFS",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "newFolder": "New folder",
   "generating": "Generating…",
   "actions": {
@@ -38,8 +42,13 @@
     "descriptionFile": "{count, plural, one {Are you sure you want to delete this file? This action is permanent and cannot be reversed.} other {Are you sure you want to delete these {count} files? This action is permanent and cannot be reversed.}}"
   },
   "addByPathModal": {
+<<<<<<< HEAD
     "title": "Import from BTFS",
     "description": "Insert an BTFS path (CID) to import.",
+=======
+    "title": "Import from BTFS",
+    "description": "Insert an BTFS path (CID) to import.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "examples": "Examples:"
   },
   "newFolderModal": {
@@ -57,8 +66,13 @@
     "closeDropdown": "Close dropdown",
     "count": "{count} of {count}"
   },
+<<<<<<< HEAD
   "addFilesInfo": "<0>No files here yet! Add files to your local BTFS node by clicking the <1>Import</1> button above.</0>",
   "companionInfo": "<0>As you are using <1>BTFS Companion</1>, the files view is limited to files added while using the extension.</0>",
+=======
+  "addFilesInfo": "<0>No files here yet! Add files to your local BTFS node by clicking the <1>Import</1> button above.</0>",
+  "companionInfo": "<0>As you are using <1>BTFS Companion</1>, the files view is limited to files added while using the extension.</0>",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "tour": {
     "step1": {
       "title": "Files page",
@@ -76,7 +90,11 @@
       "title": "Add files",
       "paragraph1": "Here you can see how many blocks and files you have pinned.",
       "paragraph2": "You can add files or folders to your repo through the dropdown on the right.",
+<<<<<<< HEAD
       "paragraph3": "<0>If you want to add something that is already on BTFS, you can import it to your MFS by passing its <1>Content Identifier (CID)</1>.</0>"
+=======
+      "paragraph3": "<0>If you want to add something that is already on BTFS, you can import it to your MFS by passing its <1>Content Identifier (CID)</1>.</0>"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     },
     "step5": {
       "title": "Files list",

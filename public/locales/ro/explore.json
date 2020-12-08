@@ -26,7 +26,11 @@
     "hashDigest": "Hash digest"
   },
   "ObjectInfo": {
+<<<<<<< HEAD
     "gatewayLink": "Vizualizează prin BTFS Gateway"
+=======
+    "gatewayLink": "Vizualizează prin BTFS Gateway"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   },
   "base": "bază",
   "version": "versiune",
@@ -49,7 +53,11 @@
       },
       "step3": {
         "title": "Informații nod",
+<<<<<<< HEAD
         "paragraph1": "Aici ai informații detaliate despre nod și poți să-l deschizi în gateway-ul BTFS.",
+=======
+        "paragraph1": "Aici ai informații detaliate despre nod și poți să-l deschizi în gateway-ul BTFS.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
         "paragraph2": "Dacă nodul este un director poți să-i vezi copiii și poți merge la aceștia."
       },
       "step4": {

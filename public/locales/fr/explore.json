@@ -3,7 +3,11 @@
   "tabName": "Explorer",
   "homeLink": "Accueil",
   "UpdateAvailable": {
+<<<<<<< HEAD
     "paragraph1": "Une nouvelle version d'BTFS Explorer est disponible. <1>Merci de rafraîchir</1>."
+=======
+    "paragraph1": "Une nouvelle version d'BTFS Explorer est disponible. <1>Merci de rafraîchir</1>."
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   },
   "StartExploringPage": {
     "title": "Explorer - IPLD",
@@ -49,7 +53,11 @@
       },
       "step3": {
         "title": "Information du pair",
+<<<<<<< HEAD
         "paragraph1": "Trouvez ici le détail des informations sur votre nœud et ouvrez-le dans la passerelle BTFS.",
+=======
+        "paragraph1": "Trouvez ici le détail des informations sur votre nœud et ouvrez-le dans la passerelle BTFS.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
         "paragraph2": "Si le nœud est un dossier vous pouvez voir les sous-dossiers et naviguer à l'intérieur. "
       },
       "step4": {

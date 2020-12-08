@@ -3,6 +3,7 @@
   "language": "Idioma",
   "analytics": "Analítica",
   "cliTutorMode": "CLI Tutor Mode",
+<<<<<<< HEAD
   "config": "Config. BTFS",
   "languageModal": {
     "title": "Cambiar idioma",
@@ -16,19 +17,39 @@
   "configApiNotAvailable": "La API de configuración de BTFS no está disponible. Desactive la Extensión Web \"BTFS Companion\" e inténtelo de nuevo.",
   "ipfsDaemonOffline": "El demonio BTFS está fuera de línea. Enciéndalo e intente nuevamente.",
   "settingsUnavailable": "Configuración no disponible. Por favor, compruebe que su servicio BTFS se está ejecutando.",
+=======
+  "config": "Config. BTFS",
+  "languageModal": {
+    "title": "Cambiar idioma",
+    "description": "Elige tu idioma preferido.",
+    "translationProjectIntro": "¡Agregue o mejore las traducciones y haga que BTFS sea mejor para todos!",
+    "translationProjectLink": "Únase al Proyecto de Traducción de BTFS"
+  },
+  "apiDescription": "<0>If your node is configured with a <1>custom API address</1>, including a port other than the default 5001, enter it here.</0>",
+  "cliDescription": "<0>Enable this option to display a \"view code\" <1></1> icon next to common BTFS commands. Clicking it opens a modal with that command's CLI code, so you can paste it into the BTFS command-line interface in your terminal.</0>",
+  "fetchingSettings": "Recuperando ajustes...",
+  "configApiNotAvailable": "La API de configuración de BTFS no está disponible. Desactive la Extensión Web \"BTFS Companion\" e inténtelo de nuevo.",
+  "ipfsDaemonOffline": "El demonio BTFS está fuera de línea. Enciéndalo e intente nuevamente.",
+  "settingsUnavailable": "Configuración no disponible. Por favor, compruebe que su servicio BTFS se está ejecutando.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "settingsHaveChanged": "La configuración ha cambiado; haga clic en <1>Restablecer</1>  para actualizar el contenido del editor. ",
   "errorOccured": "Se produjo un error al guardar sus cambios",
   "checkConsole": "Compruebe la consola del navegador para más información.",
   "changesSaved": "Se han guardado los cambios.",
+<<<<<<< HEAD
   "settingsWillBeUsedNextTime": "La nueva configuración se utilizará la próxima vez que reinicie el servicio de BTFS.",
   "ipfsConfigDescription": "El archivo de configuración de BTFS es un documento JSON. Se lee una vez cuando se inicia el demonio BTFS. Guarde sus cambios, luego reinicie el demonio BTFS para aplicarlos.",
+=======
+  "settingsWillBeUsedNextTime": "La nueva configuración se utilizará la próxima vez que reinicie el servicio de BTFS.",
+  "ipfsConfigDescription": "El archivo de configuración de BTFS es un documento JSON. Se lee una vez cuando se inicia el demonio BTFS. Guarde sus cambios, luego reinicie el demonio BTFS para aplicarlos.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "ipfsConfigHelp": "Consulte la documentación para más información.",
   "AnalyticsToggle": {
     "label": "Ayude a mejorar esta aplicación enviando datos de uso anónimos",
     "summary": "Configurar lo que se recopila",
     "paragraph1": "No se recopilan CID, nombres de archivo u otra información personal. Queremos que las métricas nos muestren qué características son útiles para ayudarnos a priorizar en qué trabajar a continuación, y la información de configuración del sistema para guiar nuestras pruebas.",
     "paragraph2": "Protocol Labs aloja una instancia de <1>Countly</1> para registrar datos de uso anónimos para esta aplicación.",
-    "basicInfo": "La siguiente información adicional se envía a countly.ipfs.io",
+    "basicInfo": "La siguiente información adicional se envía a countly.btfs.io",
     "optionalInfo": "Puede optar por enviar la siguiente información:",
     "sessions": {
       "label": "Sesiones",
@@ -62,8 +83,13 @@
   "tour": {
     "step1": {
       "title": "Página de configuración",
+<<<<<<< HEAD
       "paragraph1": "Aquí puede cambiar la configuración de su interfaz de usuario web y nodo BTFS.",
       "paragraph2": "Si está ejecutando BTFS Desktop, también tendrá algunas configuraciones específicas."
+=======
+      "paragraph1": "Aquí puede cambiar la configuración de su interfaz de usuario web y nodo BTFS.",
+      "paragraph2": "Si está ejecutando BTFS Desktop, también tendrá algunas configuraciones específicas."
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     },
     "step2": {
       "title": "Selector de idioma",
@@ -76,16 +102,28 @@
     },
     "step4": {
       "title": "Custom API address",
+<<<<<<< HEAD
       "paragraph1": "If you've configured your BTFS node with a custom API address, you can update your config file right here instead of editing the JSON by hand."
     },
     "step5": {
       "title": "Config. BTFS",
       "paragraph1": "¡Puede cambiar la configuración de su nodo BTFS directamente desde la interfaz de usuario Web!",
+=======
+      "paragraph1": "If you've configured your BTFS node with a custom API address, you can update your config file right here instead of editing the JSON by hand."
+    },
+    "step5": {
+      "title": "Config. BTFS",
+      "paragraph1": "¡Puede cambiar la configuración de su nodo BTFS directamente desde la interfaz de usuario Web!",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "No olvides reiniciar el demonio para aplicar los cambios."
     }
   },
   "Experiments": {
+<<<<<<< HEAD
     "description": "Aquí puede obtener una vista previa temprana de las nuevas características de BTFS habilitando las opciones a continuación. Estamos probando estas ideas y es posible que aún no sean perfectas, por lo que nos encantaría escuchar sus comentarios.",
+=======
+    "description": "Aquí puede obtener una vista previa temprana de las nuevas características de BTFS habilitando las opciones a continuación. Estamos probando estas ideas y es posible que aún no sean perfectas, por lo que nos encantaría escuchar sus comentarios.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "issueUrl": "Abrir un problema",
     "feedbackUrl": "💌Deja un comentario",
     "readMoreUrl": "Lee mas"

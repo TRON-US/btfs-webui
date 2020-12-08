@@ -12,7 +12,11 @@
   "downloadPDF": "下载 PDF 文件",
   "downloadInstead": "请尝试<1>下载</1>",
   "cantBePreviewed": "对不起，本文件不支持预览。",
+<<<<<<< HEAD
   "addByPath": "来自 BTFS 路径",
+=======
+  "addByPath": "来自 BTFS 路径",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "newFolder": "新建文件夹",
   "generating": "生成 ...",
   "actions": {
@@ -38,8 +42,13 @@
     "descriptionFile": "{count, plural, other {您是否确定要删除{count}个文件？本操作不可撤销。}}"
   },
   "addByPathModal": {
+<<<<<<< HEAD
     "title": "从BTFS导入",
     "description": "输入要导入到的BTFS路径（CID）。",
+=======
+    "title": "从BTFS导入",
+    "description": "输入要导入到的BTFS路径（CID）。",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "examples": "示例："
   },
   "newFolderModal": {
@@ -57,8 +66,13 @@
     "closeDropdown": "关闭下拉框",
     "count": "{count}个 / 共{count}个"
   },
+<<<<<<< HEAD
   "addFilesInfo": "<0>现在还没有任何文件！使用上方的<1>导入</1>按钮为您的本地 BTFS 节点添加文件。</0>",
   "companionInfo": "<0>如果您正在使用<1> BTFS 伴侣</1>，文件视图仅限于使用扩展程序时添加的文件。</0>",
+=======
+  "addFilesInfo": "<0>现在还没有任何文件！使用上方的<1>导入</1>按钮为您的本地BTFS 节点添加文件。</0>",
+  "companionInfo": "<0>如果您正在使用<1> BTFS 伴侣</1>，文件视图仅限于使用扩展程序时添加的文件。</0>",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "tour": {
     "step1": {
       "title": "文件页面",
@@ -76,7 +90,11 @@
       "title": "添加文件",
       "paragraph1": "在这里，您可以看到已固定的块数和文件数。",
       "paragraph2": "您可以通过右侧的下拉列表将文件或文件夹添加到您的仓库。",
+<<<<<<< HEAD
       "paragraph3": "<0>如果想要添加 BTFS 上已有的内容，可以通过传递其 <1>Content Identifier（CID）</1> 将其导入 MFS</0>"
+=======
+      "paragraph3": "<0>如果想要添加 BTFS 上已有的内容，可以通过传递其 <1>Content Identifier（CID）</1> 将其导入 MFS</0>"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     },
     "step5": {
       "title": "文件列表",

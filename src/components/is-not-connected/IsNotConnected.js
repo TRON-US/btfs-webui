@@ -15,7 +15,7 @@ const TABS = {
 
 const IsNotConnected = ({ t, apiUrl, connected, sameOrigin, ipfsApiAddress, doUpdateIpfsApiAddress }) => {
   const [activeTab, setActiveTab] = useState(TABS.UNIX)
-  const defaultDomains = ['http://localhost:3000', 'http://127.0.0.1:5001', 'https://webui.ipfs.io']
+  const defaultDomains = ['http://localhost:3000', 'http://127.0.0.1:5001', 'https://webui.btfs.io']
   const origin = window.location.origin
   const addOrigin = defaultDomains.indexOf(origin) === -1
   return (
@@ -29,10 +29,10 @@ const IsNotConnected = ({ t, apiUrl, connected, sameOrigin, ipfsApiAddress, doUp
       </Trans>
       <ol className='pl3 pt2'>
         <Trans i18nKey='notConnected.paragraph2' t={t}>
-          <li className='mb3'>Is your IPFS daemon running? Try starting or restarting it from your terminal:</li>
+          <li className='mb3'>Is your BTFS daemon running? Try starting or restarting it from your terminal:</li>
         </Trans>
         <Shell title='Any Shell'>
-          <code className='db'><b className='no-select'>$ </b>ipfs daemon</code>
+          <code className='db'><b className='no-select'>$ </b>btfs daemon</code>
           <code className='db'>Initializing daemon...</code>
           <code className='db'>API server listening on /ip4/127.0.0.1/tcp/5001</code>
         </Shell>

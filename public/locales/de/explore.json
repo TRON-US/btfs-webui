@@ -49,7 +49,11 @@
       },
       "step3": {
         "title": "Node informationen",
+<<<<<<< HEAD
         "paragraph1": "Hier findest Du detaillierte Informationen über den Node. Du kannst es außerdem im BTFS Gateway öffnen.",
+=======
+        "paragraph1": "Hier findest Du detaillierte Informationen über den Node. Du kannst es außerdem im BTFS Gateway öffnen.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
         "paragraph2": "Wenn der Knoten ein Verzeichnis ist, kannst Du seine Kinder sehen und zu ihnen navigieren."
       },
       "step4": {

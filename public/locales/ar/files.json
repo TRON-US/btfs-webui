@@ -12,7 +12,11 @@
   "downloadPDF": "تحميل PDF",
   "downloadInstead": "حاول<1> تنزيله</1> بدلاً من ذلك.",
   "cantBePreviewed": "عذرًا ، لا يمكن معاينة هذا الملف",
+<<<<<<< HEAD
   "addByPath": "من BTFS",
+=======
+  "addByPath": "من BTFS",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "newFolder": "ملف جديد",
   "generating": "جارٍ الإنشاء ...",
   "actions": {
@@ -38,8 +42,13 @@
     "descriptionFile": "{count, plural, zero {هل أنت متأكد أنك تريد حذف هذه الملفات؟ هذا الإجراء دائم ولا يمكن التراجع عنه.} one {Are you sure you want to delete this file? This action is permanent and cannot be reversed.} two {Are you sure you want to delete these {count} files? This action is permanent and cannot be reversed.} few {Are you sure you want to delete these {count} files? This action is permanent and cannot be reversed.} many {Are you sure you want to delete these {count} files? This action is permanent and cannot be reversed.} other {Are you sure you want to delete these {count} files? This action is permanent and cannot be reversed.}}"
   },
   "addByPathModal": {
+<<<<<<< HEAD
     "title": "استيراد من BTFS",
     "description": "إدراج مسار BTFS (CID) للاستيراد.",
+=======
+    "title": "استيراد من BTFS",
+    "description": "إدراج مسار BTFS (CID) للاستيراد.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "examples": "أمثلة:"
   },
   "newFolderModal": {
@@ -57,8 +66,13 @@
     "closeDropdown": "إغلاق القائمة المنسدلة",
     "count": "{count}من{count}"
   },
+<<<<<<< HEAD
   "addFilesInfo": "<0>لا توجد ملفات هنا حتى الآن! أضف ملفات إلى عقدة BTFS المحلية الخاصة بك عن طريق النقر فوق<1>استيراد</1>زر أعلاه.</0>",
   "companionInfo": "<0>أثناء استخدامك لـ<1> BTFS Companion</1> ، يقتصر عرض الملفات على الملفات المضافة أثناء استخدام الامتداد.</0>",
+=======
+  "addFilesInfo": "<0>لا توجد ملفات هنا حتى الآن! أضف ملفات إلى عقدة BTFS المحلية الخاصة بك عن طريق النقر فوق<1>استيراد</1>زر أعلاه.</0>",
+  "companionInfo": "<0>أثناء استخدامك لـ<1> BTFS Companion</1> ، يقتصر عرض الملفات على الملفات المضافة أثناء استخدام الامتداد.</0>",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "tour": {
     "step1": {
       "title": "صفحة الملفات",
@@ -76,7 +90,11 @@
       "title": "إضافة ملفات",
       "paragraph1": "هنا يمكنك أن ترى عدد الكتل والملفات التي قمت بتثبيتها.",
       "paragraph2": "يمكنك إضافة ملفات أو مجلدات إلى الريبو الخاص بك من خلال القائمة المنسدلة على اليمين.",
+<<<<<<< HEAD
       "paragraph3": "<0> إذا كنت تريد إضافة شيء موجود بالفعل على BTFS ، فيمكنك استيراده إلى MFS الخاص بك عن طريق تمرير معرف<1> المحتوى (CID) الخاص به</1>.</0>"
+=======
+      "paragraph3": "<0> إذا كنت تريد إضافة شيء موجود بالفعل على BTFS ، فيمكنك استيراده إلى MFS الخاص بك عن طريق تمرير معرف<1> المحتوى (CID) الخاص به</1>.</0>"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     },
     "step5": {
       "title": "قائمة الملفات",

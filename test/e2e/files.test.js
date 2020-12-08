@@ -17,7 +17,7 @@ describe('Files screen', () => {
     await page.waitForSelector('#add-file', { visible: true })
     await expect(page).toMatch('File')
     await expect(page).toMatch('Folder')
-    await expect(page).toMatch('From IPFS')
+    await expect(page).toMatch('From BTFS')
     await expect(page).toMatch('New folder')
     await page.click(button)
   })

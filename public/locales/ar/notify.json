@@ -1,23 +1,36 @@
 {
   "ipfsApiRequestFailed": "تعذر الاتصال. يرجى التحقق مما إذا كان البرنامج الخفي الخاص بك قيد التشغيل.",
+<<<<<<< HEAD
   "windowIpfsRequestFailed": "فشل طلب BTFS. يرجى التحقق من إعدادات BTFS Companion الخاصة بك.",
   "ipfsIsBack": "تم استئناف خدمة BTFS العادية. استمتع!",
+=======
+  "windowIpfsRequestFailed": "فشل طلب BTFS. يرجى التحقق من إعدادات BTFS Companion الخاصة بك.",
+  "ipfsIsBack": "تم استئناف خدمة BTFS العادية. استمتع!",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "folderExists": "يوجد عنصر بهذا الاسم بالفعل. الرجاء اختيار آخر.",
   "filesFetchFailed": "فشل الحصول على هذه الملفات. يرجى التحقق من المسار وحاول مرة أخرى.",
   "filesRenameFailed": "فشل في إعادة تسمية الملفات. حاول مرة اخرى.",
   "filesMakeDirFailed": "فشل إنشاء الدليل. حاول مرة اخرى.",
   "filesCopyFailed": "فشل نسخ الملفات. حاول مرة اخرى.",
   "filesDeleteFailed": "فشل حذف الملفات. حاول مرة اخرى.",
+<<<<<<< HEAD
   "filesAddFailed": "فشل في إضافة الملفات إلى BTFS. حاول مرة اخرى.",
+=======
+  "filesAddFailed": "فشل في إضافة الملفات إلى BTFS. حاول مرة اخرى.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "filesEventFailed": "فشل معالجة طلبك. حاول مرة اخرى.",
   "couldntConnectToPeer": "تعذر الاتصال بالنظير المقدم.",
   "connectedToPeer": "تم الاتصال بالنظير المقدم بنجاح.",
   "experimentsErrors": {
-    "npmOnIpfs": "لم نتمكن من إجراء تغييرات على نظامك. الرجاء تثبيت حزمة \"ipfs-npm\" أو إلغاء تثبيتها يدويًا."
+    "npmOnIpfs": "لم نتمكن من إجراء تغييرات على نظامك. الرجاء تثبيت حزمة \"btfs-npm\" أو إلغاء تثبيتها يدويًا."
   },
   "desktopToggleErrors": {
     "autoLaunch": "تعذر تبديل خيار التشغيل عند بدء التشغيل.",
+<<<<<<< HEAD
     "ipfsOnPath": "تعذر تبديل أدوات سطر أوامر BTFS.",
+=======
+    "ipfsOnPath": "تعذر تبديل أدوات سطر أوامر BTFS.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "downloadHashShortcut": "تعذر تبديل اختصار تجزئة التنزيل.",
     "screenshotShortcut": "تعذر تبديل اختصار لقطة الشاشة."
   }

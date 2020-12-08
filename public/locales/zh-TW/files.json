@@ -12,7 +12,11 @@
   "downloadPDF": "下載 PDF",
   "downloadInstead": "請嘗試<1>下載</1>它。",
   "cantBePreviewed": "抱歉，本文件不支持預覽。",
+<<<<<<< HEAD
   "addByPath": "來自 BTFS",
+=======
+  "addByPath": "來自 BTFS",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "newFolder": "新增資料夾",
   "generating": "生成…",
   "actions": {
@@ -38,8 +42,13 @@
     "descriptionFile": "{count, plural, other {您確定要刪除{count}個文件嗎？本操作不可撤銷。}}"
   },
   "addByPathModal": {
+<<<<<<< HEAD
     "title": "Import from BTFS",
     "description": "Insert an BTFS path (CID) to import.",
+=======
+    "title": "Import from BTFS",
+    "description": "Insert an BTFS path (CID) to import.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     "examples": "範例:"
   },
   "newFolderModal": {
@@ -57,8 +66,13 @@
     "closeDropdown": "Close dropdown",
     "count": "{count} of {count}"
   },
+<<<<<<< HEAD
   "addFilesInfo": "<0>No files here yet! Add files to your local BTFS node by clicking the <1>Import</1> button above.</0>",
   "companionInfo": "<0>如果你正在使用<1> BTFS 伴侶</1>，文件視圖僅限於使用擴展程序時添加的文件。</0>",
+=======
+  "addFilesInfo": "<0>No files here yet! Add files to your local BTFS node by clicking the <1>Import</1> button above.</0>",
+  "companionInfo": "<0>如果你正在使用<1> BTFS 伴侶</1>，文件視圖僅限於使用擴展程序時添加的文件。</0>",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
   "tour": {
     "step1": {
       "title": "檔案頁面",
@@ -73,7 +87,11 @@
       "title": "新增檔案",
       "paragraph1": "在這裡，您可以看到已固定的區塊數和文件數。",
       "paragraph2": "您可以通過右側的下拉列表將文件或文件夾添加到您的倉庫。",
+<<<<<<< HEAD
       "paragraph3": "<0>如果想要添加 BTFS 上已有的內容，可以通過傳遞其 <1>Content Identifier（CID）</1> 將其導入 MFS</0>"
+=======
+      "paragraph3": "<0>如果想要添加 BTFS 上已有的內容，可以通過傳遞其 <1>Content Identifier（CID）</1> 將其導入 MFS</0>"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
     },
     "step5": {
       "title": "檔案清單",

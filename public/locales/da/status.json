@@ -45,5 +45,9 @@
     "detailsLabel": "Mere info"
   },
   "bandwidthStats": "Bandwidth stats",
+<<<<<<< HEAD
   "bandwidthStatsDisabled": "Du har slået båndbreddemåling fra. Du kan slå det til igen ved at indtaste kommandoen neden for eller ved at ændre nøglen <1>Swarm.DisableBandwidthMetrics</1> til <3>false</3> for <5>Indstillinger</5>. Dernæst, er du nød til at genstarte BTFS baggrunds-processen for at ændringerne træder i kraft."
+=======
+  "bandwidthStatsDisabled": "Du har slået båndbreddemåling fra. Du kan slå det til igen ved at indtaste kommandoen neden for eller ved at ændre nøglen <1>Swarm.DisableBandwidthMetrics</1> til <3>false</3> for <5>Indstillinger</5>. Dernæst, er du nød til at genstarte BTFS baggrunds-processen for at ændringerne træder i kraft."
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
 }

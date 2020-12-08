@@ -19,17 +19,29 @@
   "tour": {
     "step1": {
       "title": "Page des status",
+<<<<<<< HEAD
       "paragraph1": "C'est le point de départ de votre nœud BTFS et où consulter les informations de base.",
+=======
+      "paragraph1": "C'est le point de départ de votre nœud BTFS et où consulter les informations de base.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "Cliquez sur \"Suivant\" pour en savoir plus."
     },
     "step2": {
       "title": "Statut de la connection",
+<<<<<<< HEAD
       "paragraph1": "Cliquez sur l'icône depuis n'importe quelle page de l'application pour revenir à la page Statut. Si vous perdez votre connexion avec l'API d'BTFS, l'icône deviendra rouge.",
+=======
+      "paragraph1": "Cliquez sur l'icône depuis n'importe quelle page de l'application pour revenir à la page Statut. Si vous perdez votre connexion avec l'API d'BTFS, l'icône deviendra rouge.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "Si vous voulez configurer une adresse d'API personnalisée pour votre nœud, cliquez sur le lien \"Modifier\" près d'où l'adresse d'API est indiquée, sur cette page. "
     },
     "step3": {
       "title": "Information du pair",
+<<<<<<< HEAD
       "paragraph1": "Ici se trouvent des informations sur la taille de votre répertoire, le nombre de nœuds auxquels vous êtes connecté, votre peerID et la version d'BTFS utilisée.",
+=======
+      "paragraph1": "Ici se trouvent des informations sur la taille de votre répertoire, le nombre de nœuds auxquels vous êtes connecté, votre peerID et la version d'BTFS utilisée.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "<0>Déplier le lien <1>Avancé</1> pour plus d'information, comme l'URL de la passerelle et ses adresses. Il y a aussi un lien dans la section Avancé pour changer votre adresse d'API.</0>"
     },
     "step4": {
@@ -43,5 +55,9 @@
     }
   },
   "bandwidthStats": "Statistiques réseau",
+<<<<<<< HEAD
   "bandwidthStatsDisabled": "Vous avez déactivé les statistiques de la bande passante. Vous pouvez les réactiver en tapant la ligne de commande ci-dessous ou en changeant la clé <1>Swarm.DisableBandwidthMetrics</1> à <3>false</3> dans <5>Paramètres</5>. Ensuite, vous devrez redémarrer le daemon BTFS pour que cela soit pris en compte. "
+=======
+  "bandwidthStatsDisabled": "Vous avez déactivé les statistiques de la bande passante. Vous pouvez les réactiver en tapant la ligne de commande ci-dessous ou en changeant la clé <1>Swarm.DisableBandwidthMetrics</1> à <3>false</3> dans <5>Paramètres</5>. Ensuite, vous devrez redémarrer le daemon BTFS pour que cela soit pris en compte. "
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
 }

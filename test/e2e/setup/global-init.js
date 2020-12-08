@@ -24,7 +24,7 @@ module.exports = async function globalSetup (globalConfig) {
   let ipfs
   if (endpoint) {
     // create http client for endpoint passed via E2E_API_URL=
-    ipfs = ipfsClient({ apiAddr: endpoint, apiPath: "api/v1"})
+    ipfs = ipfsClient({ apiAddr: endpoint })
   } else {
     // use ipfds-ctl to spawn daemon to expose http api used for e2e tests
     const type = process.env.E2E_IPFSD_TYPE || 'go'

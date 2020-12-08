@@ -19,17 +19,30 @@
   "tour": {
     "step1": {
       "title": "状态页面",
+<<<<<<< HEAD
       "paragraph1": "这是 BTFS 节点的起始页面，您可以在这里查看其基本信息。",
+=======
+      "paragraph1": "这是 BTFS 节点的起始页面，您可以在这里查看其基本信息。",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "单击“下一步”了解更多信息。"
     },
     "step2": {
       "title": "连接状态",
+<<<<<<< HEAD
       "paragraph1": "从任何地方点击这个图标都会回到“状态”页面。如果您失去和BTFS API的连接，这个图标会变成红色。",
       "paragraph2": "如果您需要为您的BTFS 节点配置自定义的API地址，只需要点击 “编辑” 按钮（需要点击展开“高级”按钮后），并在页面中找到当前配置的API地址并修改它。"
     },
     "step3": {
       "title": "节点信息",
       "paragraph1": "在这里您可以看到 repo（库）的大小、已经连接节点数量、你的节点 ID 和正在使用的 BTFS 版本信息。",
+=======
+      "paragraph1": "从任何地方点击这个图标都会回到“状态”页面。如果您失去和BTFS API的连接，这个图标会变成红色。",
+      "paragraph2": "如果您需要为您的BTFS 节点配置自定义的API地址，只需要点击 “编辑” 按钮（需要点击展开“高级”按钮后），并在页面中找到当前配置的API地址并修改它。"
+    },
+    "step3": {
+      "title": "节点信息",
+      "paragraph1": "在这里您可以看到 repo（库）的大小、已经连接节点数量、你的节点 ID 和正在使用的 BTFS 版本信息。",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "<0>点击展开<1>“高级”</1>连接可以查看更多信息，比如网关的URL和地址。在高级部分中还有一个链接可以更改API地址。</0>"
     },
     "step4": {
@@ -43,5 +56,9 @@
     }
   },
   "bandwidthStats": "带宽状态",
+<<<<<<< HEAD
   "bandwidthStatsDisabled": "带宽度量已经被禁用。可以在 <5>配置</5> 中修改 <1>Swarm.DisableBandwidthMetrics</1> 为 <3>false</3> 来重新激活。 修改完成后，需要重新启动 BTFS 守护进程才能生效。"
+=======
+  "bandwidthStatsDisabled": "带宽度量已经被禁用。可以在 <5>配置</5> 中修改 <1>Swarm.DisableBandwidthMetrics</1> 为 <3>false</3> 来重新激活。 修改完成后，需要重新启动 BTFS 守护进程才能生效。"
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
 }

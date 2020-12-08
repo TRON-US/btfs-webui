@@ -19,17 +19,29 @@
   "tour": {
     "step1": {
       "title": "Status Seite",
+<<<<<<< HEAD
       "paragraph1": "Dies ist der Startpunkt deines BTFS Node, an dem Du die grundlegenden Informationen abrufen kannst.",
+=======
+      "paragraph1": "Dies ist der Startpunkt deines BTFS Node, an dem Du die grundlegenden Informationen abrufen kannst.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "Klicke \"Weiter\", um mehr zu erfahren."
     },
     "step2": {
       "title": "Verbindungs-Status",
+<<<<<<< HEAD
       "paragraph1": "Klicke an beliebiger Stelle in der App dieses Symbol, um wieder zur Statusseite zurückzukehren. Wenn du die Verbindung mit der BTFS-API verlierst, wird das Symbol rot.",
+=======
+      "paragraph1": "Klicke an beliebiger Stelle in der App dieses Symbol, um wieder zur Statusseite zurückzukehren. Wenn du die Verbindung mit der BTFS-API verlierst, wird das Symbol rot.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "Wenn du eine benutzerdefinierte API-Adresse für deinen Knoten konfigurieren möchtest, klicke einfach auf \"Bearbeiten\" neben der API-Adresse auf dieser Seite."
     },
     "step3": {
       "title": "Node informationen",
+<<<<<<< HEAD
       "paragraph1": "Hier sind Informationen über die Größe deiner Ablage, mit wie vielen Peers du verbunden bist, deine Peer ID und die BTFS Version, die gerade benutzt wird.",
+=======
+      "paragraph1": "Hier sind Informationen über die Größe deiner Ablage, mit wie vielen Peers du verbunden bist, deine Peer ID und die BTFS Version, die gerade benutzt wird.",
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
       "paragraph2": "<0>Klicke auf <1>Erweitert</1>, um weitere Informationen, wie die Gateway URL und Adressen zu sehen. Es gibt auch einen Link im Abschnitt Erweitert, über den du deine API-Adresse ändern kannst."
     },
     "step4": {
@@ -43,5 +55,9 @@
     }
   },
   "bandwidthStats": "Informationen zur Bandbreite",
+<<<<<<< HEAD
   "bandwidthStatsDisabled": "Sie haben Metriken zur Bandbreite deaktiviert. Sie können diese aktivieren, indem Sie den unten angeführten Befehl ausführen oder die Einstellung <1>Swarm.DisableBandwidthMetrics</1> auf <3>false</3> in den <5>Einstellungen</5>ändern. Danach müssen Sie den  BTFS neu starten, um die Änderungen anzuwenden."
+=======
+  "bandwidthStatsDisabled": "Sie haben Metriken zur Bandbreite deaktiviert. Sie können diese aktivieren, indem Sie den unten angeführten Befehl ausführen oder die Einstellung <1>Swarm.DisableBandwidthMetrics</1> auf <3>false</3> in den <5>Einstellungen</5>ändern. Danach müssen Sie den  BTFS neu starten, um die Änderungen anzuwenden."
+>>>>>>> 69cd414ddcd81f03dd2945aa84f117f16287d1b1
 }
