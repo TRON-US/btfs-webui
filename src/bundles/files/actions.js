@@ -40,7 +40,7 @@ import { IGNORED_FILES, ACTIONS } from './consts'
  * @param {string} [prefix]
  * @returns {FileStat}
  */
-const fileFromStats = ({ cumulativeSize, type, size, cid, name, path, pinned, isParent }, prefix = '/ipfs') => ({
+const fileFromStats = ({ cumulativeSize, type, size, cid, name, path, pinned, isParent }, prefix = '/btfs') => ({
   size: cumulativeSize || size || 0,
   type: type === 'dir' ? 'directory' : type,
   cid,
@@ -78,7 +78,7 @@ const stat = async (ipfs, cidOrPath) => {
   const hashOrPath = cidOrPath.toString()
   const path = hashOrPath.startsWith('/')
     ? hashOrPath
-    : `/ipfs/${hashOrPath}`
+    : `/btfs/${hashOrPath}`
 
   try {
     const stats = await ipfs.files.stat(path)
@@ -196,7 +196,7 @@ const actions = () => ({
       }
     }
 
-    const resolvedPath = realPath.startsWith('/ipns')
+    const resolvedPath = realPath.startsWith('/btns')
       ? await last(ipfs.name.resolve(realPath))
       : realPath
 
@@ -282,7 +282,7 @@ const actions = () => ({
       for (const { path, cid } of added) {
         // Only go for direct children
         if (path.indexOf('/') === -1 && path !== '') {
-          const src = `/ipfs/${cid}`
+          const src = `/btfs/${cid}`
           const dst = join(realMfsPath(root || '/files'), path)
 
           try {
@@ -561,7 +561,7 @@ const dirStats = async (ipfs, cid, { path, isRoot, sorting }) => {
     if (parentInfo && (parentInfo.isMfs || !parentInfo.isRoot)) {
       const realPath = parentInfo.realPath
 
-      if (realPath && realPath.startsWith('/ipns')) {
+      if (realPath && realPath.startsWith('/btns')) {
         parentInfo.realPath = await last(ipfs.name.resolve(parentInfo.realPath))
       }
 

@@ -72,7 +72,7 @@ beforeAll(async () => {
     const preflight = req.method === 'OPTIONS' // need preflight working
     if (!preflight && !(auth && auth.name === user && auth.pass === password)) {
       res.writeHead(401, {
-        'WWW-Authenticate': 'Basic realm="IPFS API"'
+        'WWW-Authenticate': 'Basic realm="BTFS API"'
       })
       res.end('Access denied')
     } else {

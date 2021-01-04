@@ -12,13 +12,13 @@ const StatusNotConnected = ({ t }) => {
         <Trans i18nKey='bandwidthStatsDisabled' t={t}>
           You have the bandwidth metrics disabled. You can enable them by typing the command bellow
           or changing the key <code>Swarm.DisableBandwidthMetrics</code> to <code>false</code> on
-          <a className='link blue' href='#/settings'>Settings</a>. Then, you need to restart the IPFS
+          <a className='link blue' href='#/settings'>Settings</a>. Then, you need to restart the BTFS
           daemon to apply the changes.
         </Trans>
       </p>
 
       <Shell className='mw6'>
-        <code className='db'><b className='no-select'>$ </b>ipfs config --json Swarm.DisableBandwidthMetrics false</code>
+        <code className='db'><b className='no-select'>$ </b>btfs config --json Swarm.DisableBandwidthMetrics false</code>
       </Shell>
     </Box>
   )

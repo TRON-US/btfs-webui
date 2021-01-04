@@ -353,7 +353,7 @@ const actions = {
       })
 
       if (!result) {
-        throw Error('Could not connect to the IPFS API')
+        throw Error('Could not connect to the BTFS API')
       } else {
         return result
       }
@@ -399,7 +399,7 @@ const actions = {
     if (ipfs) {
       return await ipfs.files.stat(path)
     } else {
-      throw Error('IPFS is not initialized')
+      throw Error('BTFS is not initialized')
     }
   },
 
