@@ -82,7 +82,7 @@ export const cliCmdKeys = {
 }
 
 export const cliCommandList = {
-  [cliCmdKeys.UPDATE_IPFS_CONFIG]: () => 'ipfs config replace <path-to-settings.json>',
+  [cliCmdKeys.UPDATE_IPFS_CONFIG]: () => 'btfs config replace <path-to-settings.json>',
   /**
    * @param {string} filePath
    */

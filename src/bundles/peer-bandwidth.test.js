@@ -174,7 +174,7 @@ it('should get bandwidth for added peers', async () => {
   const store = composeBundlesRaw(
     createReactorBundle(),
     mockRoutesBundle,
-    // This IPFS takes at minimum 20ms to respond to a function call
+    // This BTFS takes at minimum 20ms to respond to a function call
     createMockIpfsBundle(createMockIpfs({ minLatency: 20, maxLatency: 30 })),
     mockPeersBundle,
     // Up the concurrency value for the bundle so all the bandwidth updates

@@ -4,7 +4,7 @@ index 5aeaf82..e08436c 100644
 +++ b/node_modules/ipld-explorer-components/dist/components/StartExploringPage.js
 @@ -11,8 +11,8 @@ var ExploreSuggestion = function ExploreSuggestion(_ref) {
        type = _ref.type;
- 
+
    return React.createElement(
 -    'a',
 -    { className: 'flex items-center lh-copy pl3 pl0-l pv3 bb b--black-10 link focus-outline', href: '#/explore/' + cid },
@@ -22,7 +22,7 @@ index 2872093..c6c1436 100644
        }) ? React.createElement(
          'a',
 -        { className: 'link avenir ml2 pa2 fw5 f6 blue', href: 'https://ipfs.io/ipfs/' + cid, target: '_external' },
-+        { className: 'link avenir ml2 pa2 fw5 f6 blue', href: 'https://gateway.btfssoter.io/btfs/' + cid, target: '_external' },
++        { className: 'link avenir ml2 pa2 fw5 f6 blue', href: 'https://gateway.btfs.io/btfs/' + cid, target: '_external' },
          t('ObjectInfo.gatewayLink')
        ) : null
      ),

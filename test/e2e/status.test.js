@@ -10,12 +10,12 @@ describe('Status page', () => {
     await expect(page).toMatch('Status')
   })
 
-  it('should inform it is sucessfully connected to IPFS', async () => {
+  it('should inform it is sucessfully connected to BTFS', async () => {
     // confirm webui thinks it is connected to node
-    await expect(page).toMatch('Connected to IPFS')
+    await expect(page).toMatch('Connected to BTFS')
   })
 
-  it('should display Peer ID of real IPFS node', async () => {
+  it('should display Peer ID of real BTFS node', async () => {
     // confirm webui is actually connected to expected node :^)
     const { id } = await ipfs.id()
     await expect(page).toMatch(id)

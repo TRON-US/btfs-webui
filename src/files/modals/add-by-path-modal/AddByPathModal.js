@@ -8,8 +8,8 @@ import TextInputModal from '../../../components/text-input-modal/TextInputModal'
 function ByPathModal ({ t, tReady, onCancel, onSubmit, className, ...props }) {
   //TODO: This needs to be updated for isBTFS
   const validatePath = (p) => {
-    if (!p.startsWith('/ipfs/')) {
-      p = `/ipfs/${p}`
+    if (!p.startsWith('/btfs/')) {
+      p = `/btfs/${p}`
     }
 
     return isIPFS.ipfsPath(p)

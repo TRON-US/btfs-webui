@@ -73,7 +73,7 @@ import * as Task from '../task'
 export const spawn = (type, task, ...[init]) => async (context) => {
   const ipfs = context.getIpfs()
   if (ipfs == null) {
-    throw Error('IPFS node was not found')
+    throw Error('BTFS node was not found')
   } else {
     const spawn = Task.spawn(
       type,
@@ -125,7 +125,7 @@ export const spawn = (type, task, ...[init]) => async (context) => {
 export const perform = (type, task, ...[init]) => async (context) => {
   const ipfs = context.getIpfs()
   if (ipfs == null) {
-    throw Error('IPFS node was not found')
+    throw Error('BTFS node was not found')
   } else {
     const perform = Task.perform(
       type,
@@ -213,9 +213,9 @@ export const infoFromPath = (path, uriDecode = true) => {
     info.isRoot = info.realPath === '/'
   }
 
-  if (info.path.startsWith('/ipns') || info.path.startsWith('/ipfs')) {
+  if (info.path.startsWith('/btns') || info.path.startsWith('/btfs')) {
     info.realPath = info.path
-    info.isRoot = info.path === '/ipns' || info.path === '/ipfs'
+    info.isRoot = info.path === '/btns' || info.path === '/btfs'
   } else if (info.path.startsWith('/files')) {
     check('/files')
     info.isMfs = true
@@ -224,7 +224,7 @@ export const infoFromPath = (path, uriDecode = true) => {
     info.isPins = true
 
     if (info.realPath !== '/') {
-      info.realPath = `/ipfs${info.realPath}`
+      info.realPath = `/btfs${info.realPath}`
     }
   } else {
     return

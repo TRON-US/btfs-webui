@@ -2,7 +2,7 @@ import memoize from 'p-memoize'
 import toUri from 'multiaddr-to-uri'
 import { createAsyncResourceBundle, createSelector } from 'redux-bundler'
 
-const DEFAULT_URI = 'https://ipfs.io'
+const DEFAULT_URI = 'https://gateway.btfs.io'
 const LOCAL_HOSTNAMES = ['127.0.0.1', '[::1]', '0.0.0.0', '[::]']
 
 const bundle = createAsyncResourceBundle({
@@ -110,7 +110,7 @@ function getURLFromAddress (name, config) {
 const checkIfGatewayUrlIsAccessible = memoize(async (url) => {
   try {
     const { status } = await fetch(
-    `${url}/ipfs/bafkqaaa`
+    `${url}/btfs/bafkqaaa`
     )
     return status === 200
   } catch (e) {
@@ -125,7 +125,7 @@ const checkIfGatewayUrlIsAccessible = memoize(async (url) => {
 const checkIfSubdomainGatewayUrlIsAccessible = memoize(async (url) => {
   try {
     url = new URL(url)
-    url.hostname = `bafkqaaa.ipfs.${url.hostname}`
+    url.hostname = `bafkqaaa.btfs.${url.hostname}`
     const { status } = await fetch(url.toString())
     return status === 200
   } catch (e) {

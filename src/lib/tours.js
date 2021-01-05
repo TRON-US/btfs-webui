@@ -141,7 +141,7 @@ export const filesTour = {
         <p className='tl f6'>{t('tour.step3.paragraph2')}</p>
         <Trans i18nKey='tour.step3.paragraph3' t={t}>
           <p className='tl f6'>
-            If you want to add something that is already on IPFS, you can import it to your MFS by passing its <a className='teal link' href='https://docs.ipfs.io/concepts/content-addressing/' rel='noopener noreferrer' target='_blank'>Content
+            If you want to add something that is already on BTFS, you can import it to your MFS by passing its <a className='teal link' href='https://docs.ipfs.io/concepts/content-addressing/' rel='noopener noreferrer' target='_blank'>Content
             Identifier (CID)</a>.
           </p>
         </Trans>

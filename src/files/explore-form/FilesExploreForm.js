@@ -82,7 +82,7 @@ class FilesExploreForm extends React.Component {
         <div className='flex-auto'>
           <div className='relative'>
             <input id='ipfs-path' className={`input-reset bn pa2 mb2 db w-100 f6 br-0 placeholder-light ${this.inputClass}`} style={{ borderRadius: '3px 0 0 3px' }} type='text' placeholder='QmHash/bafyHash' aria-describedby='ipfs-path-desc' onChange={this.onChange} onKeyDown={this.onKeyDown} value={this.state.path} />
-            <small id='ipfs-path-desc' className='o-0 absolute f6 black-60 db mb2'>Paste in a CID or IPFS path</small>
+            <small id='ipfs-path-desc' className='o-0 absolute f6 black-60 db mb2'>Paste in a CID or BTFS path</small>
           </div>
         </div>
         <div className='flex flex-row-reverse mb2'>
