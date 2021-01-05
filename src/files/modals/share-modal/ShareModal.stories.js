@@ -10,6 +10,8 @@ storiesOf('Files/Modals', module)
     <div className='ma3'>
       <ShareModal
         onLeave={action('Leave')}
-        link='https://ipfs.io/ipfs/QmQK3p7MmycDutWkWAzJ4hNN1YBKK9bLTDz9jTtkWf16wC' />
+        //TODO: upload the materials to btfs and replace
+        //link='https://ipfs.io/ipfs/QmQK3p7MmycDutWkWAzJ4hNN1YBKK9bLTDz9jTtkWf16wC' />
+        link='https://gatewaybtfs.io/btfs/QmQK3p7MmycDutWkWAzJ4hNN1YBKK9bLTDz9jTtkWf16wC' />
     </div>
   ))

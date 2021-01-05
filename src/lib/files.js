@@ -136,5 +136,5 @@ export async function getShareableLink (files, ipfs) {
     cid = await makeCIDFromFiles(files, ipfs)
   }
 
-  return `https://gateway.btfssoter.io/btfs/${cid}${filename || ''}`
+  return `https://gateway.btfs.io/btfs/${cid}${filename || ''}`
 }
