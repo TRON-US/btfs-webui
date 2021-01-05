@@ -2,7 +2,7 @@ import memoize from 'p-memoize'
 import toUri from 'multiaddr-to-uri'
 import { createAsyncResourceBundle, createSelector } from 'redux-bundler'
 
-const DEFAULT_URI = 'https://gateway.btfs.io:8080'
+const DEFAULT_URI = 'https://gateway.btfs.io'
 const LOCAL_HOSTNAMES = ['127.0.0.1', '[::1]', '0.0.0.0', '[::]']
 
 const bundle = createAsyncResourceBundle({
