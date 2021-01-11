@@ -28,7 +28,7 @@
     "summary": "Nakonfigurujte, co se shromažďuje",
     "paragraph1": "Neshromažďují se žádné CID, názvy souborů ani jiné osobní informace. Chceme, aby nám metriky ukázaly, které funkce jsou užitečné, aby nám pomohly upřednostnit, na čem budeme dále pracovat, a informace o konfiguraci systému, které povedou naše testování.",
     "paragraph2": "Protocol Labs je hostitelem aplikace <1>Countly</1> pro zaznamenávání anonymních dat o použití pro tuto aplikaci.",
-    "basicInfo": "Následující další informace jsou odeslány na countly.ipfs.io",
+    "basicInfo": "Následující další informace jsou odeslány na countly.btfs.io",
     "optionalInfo": "Můžete se přihlásit a odeslat následující informace:",
     "sessions": {
       "label": "Sessions",

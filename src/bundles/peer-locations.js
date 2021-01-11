@@ -195,7 +195,7 @@ const isPrivateAndNearby = (maddr, identity) => {
 const parseNotes = (peer, bootstrapPeers) => {
   const peerId = peer.peer
   const addr = peer.addr
-  const ipfsAddr = addr.encapsulate(`/ipfs/${peerId}`).toString()
+  const ipfsAddr = addr.encapsulate(`/btfs/${peerId}`).toString()
   const p2pAddr = addr.encapsulate(`/p2p/${peerId}`).toString()
 
   if (bootstrapPeers.includes(ipfsAddr) || bootstrapPeers.includes(p2pAddr)) {

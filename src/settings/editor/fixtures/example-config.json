@@ -105,8 +105,8 @@
   },
   "Mounts": {
     "FuseAllowOther": false,
-    "BTFS": "/ipfs",
-    "IPNS": "/ipns"
+    "IPFS": "/btfs",
+    "IPNS": "/btns"
   },
   "Reprovider": {
     "Interval": "12h",

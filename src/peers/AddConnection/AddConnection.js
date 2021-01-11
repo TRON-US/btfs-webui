@@ -39,12 +39,13 @@ class AddConnection extends React.Component {
 
   getDescription = () => {
     const { t } = this.props
-    // const codeClass = 'w-90 mb1 pa1 bg-snow f7 charcoal-muted truncate'
+    const codeClass = 'w-90 mb1 pa1 bg-snow f7 charcoal-muted truncate'
 
     return (
       <div className='mb3 flex flex-column items-center'>
         <p className='gray w-80'>{t('insertPeerAddress')}</p>
-        <span className='w-80 mv2 f7 charcoal-muted'>{t('example')}</span>
+        <span className='w-80 mv2 f7 charcoal-muted'>{t('app:terms.example')}</span>
+        <code className={codeClass}>/ip4/76.176.168.65/tcp/4001/p2p/QmbBHw1Xx9pUpAbrVZUKTPL5Rsph5Q9GQhRvcWVBPFgGtC</code>
       </div>
     )
   }

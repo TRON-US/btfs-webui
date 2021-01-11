@@ -28,7 +28,7 @@
     "summary": "Konfigurieren Sie, was gesammelt wird.",
     "paragraph1": "Keine CIDs, Dateinamen oder andere persönlichen Daten werden gesammelt. Wir nutzen die Metriken um zu sehen, welche Features nützlich sind um zu entscheiden, was wir als nächstes erweitern sollen. Ferner nutzen wir Informationen zur Systemkonfiguration um unser Testing zu verfeinern.",
     "paragraph2": "Protocol Labs hosted eine <1>Countly</1> Instanz, die anonymisierte Nutzerdaten für diese App aufzeichnet",
-    "basicInfo": "Folgende zusätzliche Informationen werden an countly.ipfs.io gesendet",
+    "basicInfo": "Folgende zusätzliche Informationen werden an countly.btfs.io gesendet",
     "optionalInfo": "Sie können per Opt-in folgende Informationen senden:",
     "sessions": {
       "label": "Sitzungen",

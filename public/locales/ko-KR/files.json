@@ -15,7 +15,7 @@
   "addFile": "파일 추가",
   "addFolder": "폴더 추가",
   "addByPath": "경로 추가",
-  "addToBTFS": "BTFS에 추가",
+  "addToIPFS": "BTFS에 추가",
   "newFolder": "새 폴더",
   "actions": {
     "add": "추가",

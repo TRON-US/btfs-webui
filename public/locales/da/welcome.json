@@ -24,7 +24,7 @@
     "header": "Hvad er BTFS?",
     "paragraph1": "<0><0>BTFS er en protokol</0> som definerer et indholds-adresseret filsystem, koordinerer indholdslevering og kombinerer idéerne fra Kademlia, Bitorrent, Git mm.</0>",
     "paragraph2": "<0><0>BTFS er et filsystem.</0> Det har biblioteker og filer og et monterbart filsystem ved hjælp af FUSE.</0>",
-    "paragraph3": "<0><0>BTFS is a web.</0> Files are accessible via HTTP gateways like <2>https://gateway.btfs.io</2>. Browsers <4>can be extended</4> to use the <6>ipfs://</6> scheme directly, and hash-addressed content guarantees authenticity.</0>",
+    "paragraph3": "<0><0>BTFS is a web.</0> Files are accessible via HTTP gateways like <2>https://gateway.btfs.io</2>. Browsers <4>can be extended</4> to use the <6>btfs://</6> scheme directly, and hash-addressed content guarantees authenticity.</0>",
     "paragraph4": "<0><0>BTFS er P2P.</0> Det understøtter verdensomspændende klient-til-klient overførsler med en decentral arkitektur og uden central single point of failure.</0>",
     "paragraph5": "<0><0>BTFS is a CDN.</0> Add a file to your local repository, and it's now available to the world with cache-friendly content-hash addressing and BitTorrent-like bandwidth distribution.</0>"
   }

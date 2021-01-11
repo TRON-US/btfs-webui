@@ -86,7 +86,7 @@ class FilesPage extends React.Component {
   }
 
   onInspect = (cid) => {
-    this.props.doUpdateHash(`/explore/ipfs/${cid}`)
+    this.props.doUpdateHash(`/explore/btfs/${cid}`)
   }
 
   showModal = (modal, files = null) => {

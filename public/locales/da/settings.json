@@ -70,10 +70,10 @@
     "readMoreUrl": "Læs mere",
     "npmOnIpfs": {
       "title": "NPM på BTFS",
-      "label": "Slå ipfs-npm til",
+      "label": "Slå btfs-npm til",
       "description": "Installér npm moduler via BTFS med 'btfs-npm' kommandolinje værktøjet!"
     }
   },
   "ipfsCmdTools": "BTFS kommandolinje værktøjer",
-  "ipfsCmdToolsDescription": "Tilføj <0>ipfs</0> binære fil til dit system's <0>PATH</0> så du kan benytte det via kommandolinjen."
+  "ipfsCmdToolsDescription": "Tilføj <0>btfs</0> binære fil til dit system's <0>PATH</0> så du kan benytte det via kommandolinjen."
 }
