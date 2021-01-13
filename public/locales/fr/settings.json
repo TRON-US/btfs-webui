@@ -28,7 +28,7 @@
     "summary": "Configurer ce qui est collecté",
     "paragraph1": "Aucun CID, nom de fichier ou autre information personnelle n'est collecté. Nous voulons des mesures pour nous indiquer les fonctionnalités utiles et nous aider à définir les priorités sur lesquelles travailler, ainsi que les informations sur la configuration du système pour guider nos tests.",
     "paragraph2": "Protocol Labs héberge une instance <1>Countly</1>  pour enregistrer les données d'usage anonymisées de cette application.",
-    "basicInfo": "Les informations supplémentaires suivantes sont envoyées à countly.ipfs.io",
+    "basicInfo": "Les informations supplémentaires suivantes sont envoyées à countly.btfs.io",
     "optionalInfo": "Vous pouvez choisir d'envoyer les informations suivantes :",
     "sessions": {
       "label": "Sessions",

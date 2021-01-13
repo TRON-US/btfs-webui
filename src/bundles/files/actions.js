@@ -345,7 +345,7 @@ const actions = () => ({
     /** @type {string} */
     const name = (path.split('/').pop())
     const dst = realMfsPath(join(root, name))
-    const srcPath = src.startsWith('/') ? src : `/ipfs/${name}`
+    const srcPath = src.startsWith('/') ? src : `/btfs/${name}`
 
     try {
       return ipfs.files.cp(srcPath, dst)

@@ -86,16 +86,16 @@ export const cliCommandList = {
   /**
    * @param {string} filePath
    */
-  [cliCmdKeys.DELETE_FILE_FROM_IPFS]: (filePath) => `ipfs files rm -r "${filePath}"`,
+  [cliCmdKeys.DELETE_FILE_FROM_IPFS]: (filePath) => `btfs files rm -r "${filePath}"`,
   /**
    * @param {string} cid
    */
-  [cliCmdKeys.DOWNLOAD_OBJECT_COMMAND]: (cid) => `ipfs get ${cid}`,
+  [cliCmdKeys.DOWNLOAD_OBJECT_COMMAND]: (cid) => `btfs get ${cid}`,
   /**
    * @param {string} cid
    * @param {string} op
    */
-  [cliCmdKeys.PIN_OBJECT]: (cid, op) => `ipfs pin ${op} ${cid}`,
+  [cliCmdKeys.PIN_OBJECT]: (cid, op) => `btfs pin ${op} ${cid}`,
   /**
    * @param {string} filePath
    * @param {string} fileName
@@ -107,18 +107,18 @@ export const cliCommandList = {
   /**
    * @param {string} path
    */
-  [cliCmdKeys.ADD_FILE]: (path) => `ipfs files cp /ipfs/$(ipfs add -Q <local-file>) "${path}/<dest-name>"`,
+  [cliCmdKeys.ADD_FILE]: (path) => `ipfs files cp /btfs/$(btfs add -Q <local-file>) "${path}/<dest-name>"`,
   /**
    * @param {string} path
    */
-  [cliCmdKeys.ADD_DIRECTORY]: (path) => `ipfs files cp /ipfs/$(ipfs add -r -Q <local-folder>) "${path}/<dest-name>"`,
+  [cliCmdKeys.ADD_DIRECTORY]: (path) => `ipfs files cp /btfs/$(btfs add -r -Q <local-folder>) "${path}/<dest-name>"`,
   /**
    * @param {string} path
    */
-  [cliCmdKeys.CREATE_NEW_DIRECTORY]: (path) => `ipfs files mkdir "${path}/<folder-name>"`,
+  [cliCmdKeys.CREATE_NEW_DIRECTORY]: (path) => `btfs files mkdir "${path}/<folder-name>"`,
   /**
    * @param {string} path
    */
-  [cliCmdKeys.FROM_IPFS]: (path) => `ipfs cp /ipfs/<cid> "${path}/<dest-name>"`,
-  [cliCmdKeys.ADD_NEW_PEER]: () => 'ipfs swarm connect <peer-multiaddr>'
+  [cliCmdKeys.FROM_IPFS]: (path) => `btfs cp /btfs/<cid> "${path}/<dest-name>"`,
+  [cliCmdKeys.ADD_NEW_PEER]: () => 'btfs swarm connect <peer-multiaddr>'
 }

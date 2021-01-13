@@ -28,7 +28,7 @@
     "summary": "設置收集哪些數據",
     "paragraph1": "不會收集任何CID 、文件名或個人信息。我們收集度量數據來幫助我們優化後續工作的優先級，並且收集系統設置信息引導我們進行測試。",
     "paragraph2": "Protocol Labs 運行了<1>Countly</1> 實例幫助我們收集這個應用產生的匿名數據。",
-    "basicInfo": "下列數據會發送到countly.ipfs.io",
+    "basicInfo": "下列數據會發送到countly.btfs.io",
     "optionalInfo": "你可以選擇發送下列數據：",
     "sessions": {
       "label": "會話",

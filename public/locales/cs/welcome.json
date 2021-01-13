@@ -24,7 +24,7 @@
     "header": "Co je to BTFS?",
     "paragraph1": "<0><0>BTFS je protokol</0>, který definuje obsah-adresující systém souborů, koordinuje doručování obsahu a kombinuje nápady z Kademlia, BitTorrent, Git a dalších.</0>",
     "paragraph2": "<0><0>BTFS je souborový systém.</0> Má adresáře a soubory a připojitelný souborový systém přes FUSE.</0>",
-    "paragraph3": "<0><0>BTFS je web.</0> Soubory jsou přístupné přes HTTP brány jako <2>https://gateway.btfs.io</2>. Prohlížeče <4>lze rozšířit tak</4>, aby přímo používaly schéma <6>ipfs://</6> a obsah adresovaný hash zaručuje autentičnost.</0>",
+    "paragraph3": "<0><0>BTFS je web.</0> Soubory jsou přístupné přes HTTP brány jako <2>https://gateway.btfs.io</2>. Prohlížeče <4>lze rozšířit tak</4>, aby přímo používaly schéma <6>btfs://</6> a obsah adresovaný hash zaručuje autentičnost.</0>",
     "paragraph4": "<0><0>BTFS je p2p.</0> Podporuje celosvětové přenosy souborů typu peer-to-peer s kompletně decentralizovanou architekturou a bez centrálního bodu selhání.</0>",
     "paragraph5": "<0><0>BTFS je CDN.</0> Přidejte soubor do svého místního úložiště a nyní je k dispozici pro celý svět pomocí adresování hashů a distribuce šířky pásma typu BitTorrent.</0>"
   }

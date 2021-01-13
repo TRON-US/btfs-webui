@@ -13,7 +13,7 @@
   "couldntConnectToPeer": "Nous n'avons pas pu vous connecter au pair indiqué.",
   "connectedToPeer": "Connecté au pair indiqué avec succès.",
   "experimentsErrors": {
-    "npmOnIpfs": "Nous n'avons pas pu modifier votre système. Merci d'installer ou de désinstaller le paquet \"ipfs-npm\" manuellement."
+    "npmOnIpfs": "Nous n'avons pas pu modifier votre système. Merci d'installer ou de désinstaller le paquet \"btfs-npm\" manuellement."
   },
   "desktopToggleErrors": {
     "autoLaunch": "Nous n'avons pas pu activer/désactiver l'option de lancement au démarrage.",

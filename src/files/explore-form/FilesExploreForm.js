@@ -33,7 +33,7 @@ class FilesExploreForm extends React.Component {
       let path = this.path
 
       if (isIPFS.cid(path)) {
-        path = `/ipfs/${path}`
+        path = `/btfs/${path}`
       }
 
       this.props.onBrowse(path)

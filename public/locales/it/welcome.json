@@ -24,7 +24,7 @@
     "header": "Che cos'è BTFS?",
     "paragraph1": "<0><0>BTFS è un protocollo</0> che definisce un file system content-addressed, coordina la distribuzione di contenuto e combina idee da Kademlia, BitTorrent, Git ed altro.</0>",
     "paragraph2": "<0><0>BTFS è un file system.</0> Ha percorsi, file ed un file system montabile via FUSE.</0>",
-    "paragraph3": "<0><0>BTFS è web.</0> I file sono accessibili via gateway HTTP come <2>https://gateway.btfs.io</2>. I browser <4>possono essere estesi</4> per utilizzare direttamente lo schema <6>ipfs://</6> ed il contenuto hash-addressed ne garantisce l'autenticità.</0>",
+    "paragraph3": "<0><0>BTFS è web.</0> I file sono accessibili via gateway HTTP come <2>https://gateway.btfs.io</2>. I browser <4>possono essere estesi</4> per utilizzare direttamente lo schema <6>btfs://</6> ed il contenuto hash-addressed ne garantisce l'autenticità.</0>",
     "paragraph4": "<0><0>BTFS è p2p.</0> Supporta trasferimenti di file peer-to-peer globali con un'architettura completamente decentralizzata e senza un punto di fallimento centrale.</0>",
     "paragraph5": "<0><0>BTFS è un CDN.</0> Aggiungi un file alla tua repository locale ed esso sarà direttamente disponibile al mondo con un indirizzamento content-hash cache-friendly ed una distribuzione della banda come BitTorrent.</0>"
   }

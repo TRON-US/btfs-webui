@@ -24,7 +24,7 @@
     "header": "Wat is BTFS?",
     "paragraph1": "<0><0>BTFS is een protocol</0> dat een inhoud-geadresseerd file systeem definieert, het ophalen coördineer en ideeën van onder andere Kademlia, BitTorrent en Git combineert.</0>",
     "paragraph2": "<0><0>BTFS is een bestandssysteem.</0> Het heeft bestanden en mappen en een mountbaar bestandssysteem door gebruik te maken van FUSE.</0>",
-    "paragraph3": "<0><0>BTFS is a web.</0> Files are accessible via HTTP gateways like <2>https://gateway.btfs.io</2>. Browsers <4>can be extended</4> to use the <6>ipfs://</6> scheme directly, and hash-addressed content guarantees authenticity.</0>",
+    "paragraph3": "<0><0>BTFS is a web.</0> Files are accessible via HTTP gateways like <2>https://gateway.btfs.io</2>. Browsers <4>can be extended</4> to use the <6>btfs://</6> scheme directly, and hash-addressed content guarantees authenticity.</0>",
     "paragraph4": "<0><0>BTFS is p2p.</0> Het ondersteund wereldwijde peer-to-peer overdracht van bestanden met een volledig gedecentraliseerde architectuur, zonder centrale zwakke punten.</0>",
     "paragraph5": "<0><0>BTFS is a CDN.</0> Add a file to your local repository, and it's now available to the world with cache-friendly content-hash addressing and BitTorrent-like bandwidth distribution.</0>"
   }

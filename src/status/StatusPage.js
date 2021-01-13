@@ -17,15 +17,15 @@ import { getJoyrideLocales } from '../helpers/i8n'
 import withTour from '../components/tour/withTour'
 
 const StatusPage = ({
-                      t,
-                      ipfsConnected,
-                      analyticsAskToEnable,
-                      doEnableAnalytics,
-                      doDisableAnalytics,
-                      toursEnabled,
-                      handleJoyrideCallback,
-                      nodeBandwidthEnabled
-                    }) => {
+  t,
+  ipfsConnected,
+  analyticsAskToEnable,
+  doEnableAnalytics,
+  doDisableAnalytics,
+  toursEnabled,
+  handleJoyrideCallback,
+  nodeBandwidthEnabled
+}) => {
   return (
     <div data-id='StatusPage' className='mw9 center'>
       <Helmet>
@@ -51,15 +51,15 @@ const StatusPage = ({
         </div>
       </Box>
       { ipfsConnected && analyticsAskToEnable &&
-      <AskToEnable
-        className='mt3'
-        label={t('AskToEnable.label')}
-        yesLabel={t('app:actions.ok')}
-        noLabel={t('app:actions.noThanks')}
-        detailsLabel={t('app:actions.moreInfo')}
-        detailsLink='#/settings/analytics'
-        onYes={doEnableAnalytics}
-        onNo={doDisableAnalytics} />
+        <AskToEnable
+          className='mt3'
+          label={t('AskToEnable.label')}
+          yesLabel={t('app:actions.ok')}
+          noLabel={t('app:actions.noThanks')}
+          detailsLabel={t('app:actions.moreInfo')}
+          detailsLink='#/settings/analytics'
+          onYes={doEnableAnalytics}
+          onNo={doDisableAnalytics} />
       }
       <div style={{ opacity: ipfsConnected ? 1 : 0.4 }}>
         { nodeBandwidthEnabled

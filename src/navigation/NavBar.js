@@ -2,8 +2,6 @@ import React from 'react'
 import { connect } from 'redux-bundler-react'
 import { withTranslation } from 'react-i18next'
 import classnames from 'classnames'
-import ipfsLogoTextVert from './btfs-logo.png'
-import ipfsLogoTextHoriz from './btfs-logo-text.png'
 import StrokeMarketing from '../icons/StrokeMarketing'
 import StrokeWeb from '../icons/StrokeWeb'
 import StrokeCube from '../icons/StrokeCube'
@@ -62,8 +60,6 @@ export const NavBar = ({ t }) => {
       <div className='flex flex-column'>
         <a href="#/welcome" role='menuitem' title={t('welcome:description')}>
           <div className='pt3 pb1 pb2-l'>
-            <img className='navbar-logo-vert center db-l dn pt3 pb1' style={{ height: 94 }} src={ipfsLogoTextVert} alt='' />
-            <img className='navbar-logo-horiz center db dn-l' style={{ height: 70 }} src={ipfsLogoTextHoriz} alt='' />
           </div>
         </a>
         <div className='db overflow-x-scroll overflow-x-hidden-l nowrap tc' role='menubar'>

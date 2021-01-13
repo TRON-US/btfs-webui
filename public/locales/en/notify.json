@@ -13,7 +13,7 @@
   "couldntConnectToPeer": "Could not connect to the provided peer.",
   "connectedToPeer": "Successfully connected to the provided peer.",
   "experimentsErrors": {
-    "npmOnIpfs": "We couldn't make changes to your system. Please install or uninstall 'ipfs-npm' package manually."
+    "npmOnIpfs": "We couldn't make changes to your system. Please install or uninstall 'btfs-npm' package manually."
   },
   "desktopToggleErrors": {
     "autoLaunch": "Could not toggle launch at startup option.",

@@ -15,7 +15,7 @@ storiesOf('Files/Header', module)
         onClick={action('Navigate')} />
 
       <Breadcrumbs
-        path='/btns/ipfs.io/index.html'
+        path='/btns/btfs.io/index.html'
         onClick={action('Navigate')} />
     </div>
   ))
