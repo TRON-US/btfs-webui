@@ -180,9 +180,6 @@ After all changes have been made and tested, follow the steps below to release a
 
 1. In the terminal, navigate to the `btfs-webui` directory. Then run `npm run build`. This builds the the WebUI files and places them in a newly created `build` folder.   
 2. SSH into the first bootstrap node(`/ip4/18.237.54.123/tcp/4001/p2p/QmWJWGxKKaqZUW4xga2BCzT5FBtYDL8Cc5Q5jywd6xPt1g`). Then upload the `build` folder by running `btfs add build/`, and republish the new hash value to `/btns/QmWJWGxKKaqZUW4xga2BCzT5FBtYDL8Cc5Q5jywd6xPt1g` by running `btfs name publish /btfs/$new_hash`. 
-3. Update the hash value at:
-   - go-btfs https://github.com/TRON-US/go-btfs/blob/master/core/corehttp/webui.go
-
 
 
 ## License
