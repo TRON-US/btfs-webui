@@ -61,7 +61,7 @@
   },
   "welcomeInfo": {
     "header": "Welcome to the BTFS Web UI",
-    "paragraph1": "<0><0>Check the status</0> of your node, it's Peer ID and connection info, the network traffic and the number of connected peers.</0>",
+    "paragraph1": "<0><0>Check the status</0> of your node, its Peer ID and connection info, the network traffic and the number of connected peers.</0>",
     "paragraph2": "<0>Easily manage files in your BTFS repo. Drag and drop here to add files, move and rename them, delete, share or download them.</0>",
     "paragraph3": "<0>You can <1>explore IPLD data</1> that underpins how BTFS works.</0>",
     "paragraph4": "<0>See all of your <1>connected peers</1>, geolocated by their IP address.</0>",
