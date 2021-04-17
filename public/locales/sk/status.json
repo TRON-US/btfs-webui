@@ -30,7 +30,7 @@
   "revision": "Revízia",
   "StatusConnected": {
     "header1": "Pripojené k BTFS",
-    "paragraph1": "Hostuje <0>{repoSize} súborov</0>",
+    "paragraph1": "Hostuje <0>{repoSize} GB súborov</0>",
     "paragraph2": "{count, plural, one {Objavený <0>1 uzol</0>} few {Objavených <0>{peersCount} uzlov</0>} many {Objavených <0>{peersCount} </0>uzlov} other {Objavených <0>{peersCount} uzlov</0>}}"
   },
   "StatusNotConnected": {

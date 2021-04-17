@@ -30,7 +30,7 @@
   "revision": "Revisão",
   "StatusConnected": {
     "header1": "Conectado ao BTFS",
-    "paragraph1": "A hospedar <0>{repoSize}em ficheiros</0>",
+    "paragraph1": "A hospedar <0>{repoSize} GB em ficheiros</0>",
     "paragraph2": "{count, plural, one {Encontrado <0>1 par</0>} other {Encontrados <0>{peersCount}pares</0>}}"
   },
   "StatusNotConnected": {
